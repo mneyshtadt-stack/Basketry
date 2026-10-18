@@ -8,7 +8,7 @@ function newId() {
 // Snapshots the current items as a new order, newest first. Empty lists are not saved.
 export function saveOrder(orders, items, date = new Date().toISOString().slice(0, 10)) {
   if (items.length === 0) return orders;
-  const snapshot = items.map(({ name, qty, category }) => ({ name, qty, category }));
+  const snapshot = items.map(({ id, done, ...kept }) => kept);
   return [{ id: newId(), date, items: snapshot }, ...orders];
 }
 
@@ -18,5 +18,5 @@ export function findOrder(orders, id) {
 
 // Adds every item of an order to the list as new, unchecked items.
 export function copyOrderToList(list, order) {
-  return order.items.reduce((acc, i) => addItem(acc, i.name, i.category, i.qty), list);
+  return order.items.reduce((acc, i) => addItem(acc, i.name, i.category, i.qty, i.he), list);
 }

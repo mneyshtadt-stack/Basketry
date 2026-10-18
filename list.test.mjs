@@ -1,7 +1,17 @@
 // Run with: node --test
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches } from './list.js';
+import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
+
+test('displayName shows the Hebrew in brackets when known', () => {
+  assert.equal(displayName({ name: 'Potatoes', he: 'תפוחי אדמה' }), 'Potatoes [תפוחי אדמה]');
+  assert.equal(displayName({ name: 'Soap' }), 'Soap');
+});
+
+test('addItem stores the Hebrew name only when given', () => {
+  assert.equal(addItem([], 'Potatoes', 'Produce', 1, 'תפוחי אדמה')[0].he, 'תפוחי אדמה');
+  assert.equal('he' in addItem([], 'Soap')[0], false);
+});
 
 test('suggestMatches finds substrings, ignores case, returns nothing for empty query', () => {
   const names = ['Tomatoes', 'Potatoes', 'Milk'];

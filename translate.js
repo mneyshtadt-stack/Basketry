@@ -9,7 +9,8 @@ export const HE_TO_EN = {
   'בצל': 'onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apples',
   'תפוח אדמה': 'potato', 'תפוחי אדמה': 'potatoes', 'בננה': 'banana', 'בננות': 'bananas',
   'תפוז': 'orange', 'תפוזים': 'oranges', 'לימון': 'lemon', 'גזר': 'carrot',
-  'חסה': 'lettuce', 'פלפל': 'pepper', 'אבוקדו': 'avocado', 'תות': 'strawberry',
+  'חסה': 'lettuce', 'פלפל': 'pepper', 'אבוקדו': 'avocado', 'משמש': 'apricot',
+  'משמשים': 'apricots', 'מישמש': 'apricot', 'תות': 'strawberry',
   'תותים': 'strawberries', 'תירס': 'corn', 'פטרוזיליה': 'parsley', 'כוסברה': 'coriander',
   'שמיר': 'dill', 'בשר': 'meat', 'עוף': 'chicken', 'דג': 'fish', 'נקניקיות': 'sausages',
   'אורז': 'rice', 'פסטה': 'pasta', 'קמח': 'flour', 'סוכר': 'sugar', 'מלח': 'salt',
@@ -23,9 +24,24 @@ export const HE_TO_EN = {
 
 const HEBREW = /[֐-׿]/;
 
+// English word to Hebrew (first match wins, so 'Potatoes' gives 'תפוחי אדמה').
+const EN_TO_HE = {};
+for (const [he, en] of Object.entries(HE_TO_EN)) {
+  if (!(en in EN_TO_HE)) EN_TO_HE[en] = he;
+}
+
+// Returns { name, he } where name is English and he is the Hebrew, when known.
+export function bilingual(input) {
+  const clean = String(input ?? '').trim();
+  if (!HEBREW.test(clean)) {
+    const he = EN_TO_HE[clean.toLowerCase()];
+    return he ? { name: clean, he } : { name: clean };
+  }
+  const en = HE_TO_EN[clean];
+  return en ? { name: en, he: clean } : { name: clean };
+}
+
 // Returns the English name for a Hebrew item, or the input unchanged.
 export function translateItem(name) {
-  const clean = String(name ?? '').trim();
-  if (!HEBREW.test(clean)) return clean;
-  return HE_TO_EN[clean] ?? clean;
+  return bilingual(name).name;
 }

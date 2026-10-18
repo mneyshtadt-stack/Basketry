@@ -60,8 +60,8 @@
   </footer>
 </main>
 <script type="module">
-  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches } from './list.js';
-  import { translateItem, HE_TO_EN } from './translate.js';
+  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
+  import { bilingual, HE_TO_EN } from './translate.js';
   import { saveOrder, findOrder, copyOrderToList } from './orders.js';
 
   const KEY = 'grocery.list.v1';
@@ -153,7 +153,7 @@
 
         const label = document.createElement('label');
         const span = document.createElement('span');
-        span.textContent = item.name;
+        span.textContent = displayName(item);
         if (readOnly) {
           label.append(span);
         } else {
@@ -222,9 +222,9 @@
   addForm.addEventListener('submit', e => {
     e.preventDefault();
     const f = e.currentTarget;
-    const name = translateItem(f.elements.name.value);
+    const { name, he } = bilingual(f.elements.name.value);
     // shortcut: every new item lands in Other, no category picker, upgrade when the list gets long to sort by aisle
-    update(addItem(items, name, 'Other', f.elements.qty.value));
+    update(addItem(items, name, 'Other', f.elements.qty.value, he));
     f.reset();
     suggestEl.hidden = true;
     nameInput.focus();
