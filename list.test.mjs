@@ -1,7 +1,14 @@
 // Run with: node --test
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames } from './list.js';
+import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches } from './list.js';
+
+test('suggestMatches finds substrings, ignores case, returns nothing for empty query', () => {
+  const names = ['Tomatoes', 'Potatoes', 'Milk'];
+  assert.deepEqual(suggestMatches(names, 'toma'), ['Tomatoes']);
+  assert.deepEqual(suggestMatches(names, 'TO'), ['Tomatoes', 'Potatoes']);
+  assert.deepEqual(suggestMatches(names, '  '), []);
+});
 
 test('suggestNames dedupes case-insensitively, capitalizes, sorts', () => {
   assert.deepEqual(suggestNames(['tomatoes', 'Milk', 'milk', ' ', 'Apples']), ['Apples', 'Milk', 'Tomatoes']);

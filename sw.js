@@ -1,5 +1,5 @@
 // Cache-first for the app shell, network for everything else.
-const CACHE = 'grocery-v7';
+const CACHE = 'grocery-v8';
 const SHELL = ['grocery.html', 'list.js', 'translate.js', 'orders.js', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => {

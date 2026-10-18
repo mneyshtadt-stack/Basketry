@@ -37,6 +37,13 @@ export function suggestNames(names) {
   return [...seen.values()].sort((a, b) => a.localeCompare(b));
 }
 
+// Names that contain the query (case-insensitive), at most `limit`. Empty query gives none.
+export function suggestMatches(names, query, limit = 6) {
+  const q = String(query ?? '').trim().toLowerCase();
+  if (!q) return [];
+  return names.filter(n => n.toLowerCase().includes(q)).slice(0, limit);
+}
+
 // Groups items by category in CATEGORIES order, skipping empty groups.
 export function groupByCategory(items) {
   return CATEGORIES

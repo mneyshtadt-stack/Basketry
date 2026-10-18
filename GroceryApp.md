@@ -41,9 +41,9 @@ Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase
 - Put pure logic in `list.js` and keep DOM code in `grocery.html`, so logic stays testable.
 - Storage key: `grocery.list.v1`. Change the version suffix if the item shape changes.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
-- The service worker caches the shell. After changing `grocery.html`, `list.js` or other shell files, bump `CACHE` in `sw.js` (currently `grocery-v7`); also list every module file in `SHELL`, or users keep the old version.
+- The service worker caches the shell. After changing `grocery.html`, `list.js` or other shell files, bump `CACHE` in `sw.js` (currently `grocery-v8`); also list every module file in `SHELL`, or users keep the old version.
 - Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Orders can't be deleted yet.
-- Suggestions: the add box has a `<datalist>` built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes").
+- Suggestions: a list under the add box (`#suggest`) filters as you type, built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes"). Tap a suggestion to fill the box.
 - `shortcut:` new items always get category "Other" (no picker yet).
 - `shortcut:` translation is a dictionary, not machine translation. A free online API (MyMemory) mistranslated single words (חלב became "Aleppo"), so it was not used.
 

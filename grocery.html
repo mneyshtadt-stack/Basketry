@@ -25,6 +25,10 @@
   button:disabled { opacity: .4; cursor: default; }
   button.ghost { background: transparent; color: var(--muted); border-color: transparent; }
   .bar { display: flex; gap: 8px; margin-bottom: 8px; }
+  .suggest { margin: -6px 0 12px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .suggest li { padding: 10px 12px; cursor: pointer; border-top: 1px solid var(--line); }
+  .suggest li:first-child { border-top: 0; }
+  .suggest li:hover { background: var(--line); }
   h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 18px 0 6px; }
   ul { list-style: none; padding: 0; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
   li { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-top: 1px solid var(--line); }
@@ -44,11 +48,11 @@
     <button class="ghost" id="save-order" type="button">Save as order</button>
   </div>
   <form id="add">
-    <input name="name" dir="auto" list="suggestions" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
-    <datalist id="suggestions"></datalist>
+    <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
     <button type="submit">Add</button>
   </form>
+  <ul id="suggest" class="suggest" hidden></ul>
   <div id="list"></div>
   <footer>
     <button class="ghost" id="clear" type="button">Clear checked</button>
@@ -56,7 +60,7 @@
   </footer>
 </main>
 <script type="module">
-  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames } from './list.js';
+  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches } from './list.js';
   import { translateItem, HE_TO_EN } from './translate.js';
   import { saveOrder, findOrder, copyOrderToList } from './orders.js';
 
@@ -82,15 +86,35 @@
   let view = ''; // '' = current list, otherwise an order id
 
   // Suggestions: grocery words plus anything already used in a list or order.
+  let knownNames = [];
   function renderSuggestions() {
-    const names = suggestNames([
+    knownNames = suggestNames([
       ...Object.values(HE_TO_EN),
       ...items.map(i => i.name),
       ...orders.flatMap(o => o.items.map(i => i.name)),
     ]);
-    document.getElementById('suggestions').replaceChildren(
-      ...names.map(n => { const o = document.createElement('option'); o.value = n; return o; }));
   }
+
+  const nameInput = addForm.elements.name;
+  const suggestEl = document.getElementById('suggest');
+  function showSuggestions() {
+    const matches = suggestMatches(knownNames, nameInput.value);
+    suggestEl.hidden = matches.length === 0;
+    suggestEl.replaceChildren(...matches.map(n => {
+      const li = document.createElement('li');
+      li.textContent = n;
+      // mousedown, not click, so the pick lands before the input loses focus
+      li.addEventListener('mousedown', e => {
+        e.preventDefault();
+        nameInput.value = n;
+        suggestEl.hidden = true;
+        nameInput.focus();
+      });
+      return li;
+    }));
+  }
+  nameInput.addEventListener('input', showSuggestions);
+  nameInput.addEventListener('blur', () => { suggestEl.hidden = true; });
 
   function renderViewOptions() {
     viewEl.replaceChildren(new Option('Current list', ''));
@@ -202,7 +226,8 @@
     // shortcut: every new item lands in Other, no category picker, upgrade when the list gets long to sort by aisle
     update(addItem(items, name, 'Other', f.elements.qty.value));
     f.reset();
-    f.elements.name.focus();
+    suggestEl.hidden = true;
+    nameInput.focus();
   });
 
   clearBtn.addEventListener('click', () => update(clearDone(items)));
