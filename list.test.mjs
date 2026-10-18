@@ -1,7 +1,11 @@
 // Run with: node --test
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { addItem, toggleItem, removeItem, clearDone, groupByCategory } from './list.js';
+import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames } from './list.js';
+
+test('suggestNames dedupes case-insensitively, capitalizes, sorts', () => {
+  assert.deepEqual(suggestNames(['tomatoes', 'Milk', 'milk', ' ', 'Apples']), ['Apples', 'Milk', 'Tomatoes']);
+});
 
 test('addItem trims name, defaults qty and category', () => {
   const items = addItem([], '  Milk  ');
@@ -10,6 +14,11 @@ test('addItem trims name, defaults qty and category', () => {
   assert.equal(items[0].qty, 1);
   assert.equal(items[0].category, 'Other');
   assert.equal(items[0].done, false);
+});
+
+test('addItem capitalizes the first letter', () => {
+  assert.equal(addItem([], 'milk')[0].name, 'Milk');
+  assert.equal(addItem([], 'פיצה')[0].name, 'פיצה');
 });
 
 test('addItem ignores blank names', () => {

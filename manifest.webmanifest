@@ -1,7 +1,7 @@
 {
   "name": "Family Groceries",
   "short_name": "Groceries",
-  "start_url": "index.html",
+  "start_url": "grocery.html",
   "display": "standalone",
   "background_color": "#f6f7f4",
   "theme_color": "#2e7d32"

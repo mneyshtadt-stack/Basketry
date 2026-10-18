@@ -8,8 +8,8 @@ v1: a single-device list with saved orders and an order filter. Data is stored i
 
 ## Files
 
-- `index.html` - UI, styles and page logic (ES module). Entry point.
-- `list.js` - pure list logic: add, toggle, remove, clear checked, group by category. No DOM.
+- `grocery.html` - UI, styles and page logic (ES module). Entry point.
+- `list.js` - pure list logic: add (first letter capitalized), toggle, remove, clear checked, group by category, suggestion names. No DOM.
 - `translate.js` - Hebrew to English dictionary for common grocery words (offline). Unknown words are kept as typed. Add words to `HE_TO_EN`.
 - `orders.js` - saved orders: snapshot the list (`saveOrder`), find one, copy one back into the list (`copyOrderToList`).
 - `list.test.mjs`, `translate.test.mjs`, `orders.test.mjs` - unit tests (node:test).
@@ -38,11 +38,12 @@ Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase
 
 ## Conventions and gotchas
 
-- Put pure logic in `list.js` and keep DOM code in `index.html`, so logic stays testable.
+- Put pure logic in `list.js` and keep DOM code in `grocery.html`, so logic stays testable.
 - Storage key: `grocery.list.v1`. Change the version suffix if the item shape changes.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
-- The service worker caches the shell. After changing `index.html`, `list.js` or other shell files, bump `CACHE` in `sw.js` (currently `grocery-v4`); also list every module file in `SHELL`, or users keep the old version.
+- The service worker caches the shell. After changing `grocery.html`, `list.js` or other shell files, bump `CACHE` in `sw.js` (currently `grocery-v7`); also list every module file in `SHELL`, or users keep the old version.
 - Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Orders can't be deleted yet.
+- Suggestions: the add box has a `<datalist>` built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes").
 - `shortcut:` new items always get category "Other" (no picker yet).
 - `shortcut:` translation is a dictionary, not machine translation. A free online API (MyMemory) mistranslated single words (חלב became "Aleppo"), so it was not used.
 

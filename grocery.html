@@ -44,7 +44,8 @@
     <button class="ghost" id="save-order" type="button">Save as order</button>
   </div>
   <form id="add">
-    <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
+    <input name="name" dir="auto" list="suggestions" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
+    <datalist id="suggestions"></datalist>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
     <button type="submit">Add</button>
   </form>
@@ -55,8 +56,8 @@
   </footer>
 </main>
 <script type="module">
-  import { addItem, toggleItem, removeItem, clearDone, groupByCategory } from './list.js';
-  import { translateItem } from './translate.js';
+  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames } from './list.js';
+  import { translateItem, HE_TO_EN } from './translate.js';
   import { saveOrder, findOrder, copyOrderToList } from './orders.js';
 
   const KEY = 'grocery.list.v1';
@@ -80,6 +81,17 @@
   let orders = load(ORDERS_KEY);
   let view = ''; // '' = current list, otherwise an order id
 
+  // Suggestions: grocery words plus anything already used in a list or order.
+  function renderSuggestions() {
+    const names = suggestNames([
+      ...Object.values(HE_TO_EN),
+      ...items.map(i => i.name),
+      ...orders.flatMap(o => o.items.map(i => i.name)),
+    ]);
+    document.getElementById('suggestions').replaceChildren(
+      ...names.map(n => { const o = document.createElement('option'); o.value = n; return o; }));
+  }
+
   function renderViewOptions() {
     viewEl.replaceChildren(new Option('Current list', ''));
     for (const o of orders) {
@@ -91,6 +103,7 @@
 
   function render() {
     renderViewOptions();
+    renderSuggestions();
     const order = findOrder(orders, view);
     const readOnly = Boolean(order);
     const shown = order ? order.items : items;

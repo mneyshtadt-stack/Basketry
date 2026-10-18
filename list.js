@@ -5,8 +5,9 @@ export const CATEGORIES = [
 ];
 
 export function addItem(items, name, category = 'Other', qty = 1) {
-  const clean = String(name ?? '').trim();
-  if (!clean) return items;
+  const trimmed = String(name ?? '').trim();
+  if (!trimmed) return items;
+  const clean = trimmed[0].toUpperCase() + trimmed.slice(1);
   const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
   const cat = CATEGORIES.includes(category) ? category : 'Other';
   return [...items, { id, name: clean, qty: Math.max(1, Number(qty) || 1), category: cat, done: false }];
@@ -22,6 +23,18 @@ export function removeItem(items, id) {
 
 export function clearDone(items) {
   return items.filter(i => !i.done);
+}
+
+// Unique names for the suggestion list, capitalized, sorted, case-insensitive dedupe.
+export function suggestNames(names) {
+  const seen = new Map();
+  for (const n of names) {
+    const t = String(n ?? '').trim();
+    if (!t) continue;
+    const cap = t[0].toUpperCase() + t.slice(1);
+    if (!seen.has(cap.toLowerCase())) seen.set(cap.toLowerCase(), cap);
+  }
+  return [...seen.values()].sort((a, b) => a.localeCompare(b));
 }
 
 // Groups items by category in CATEGORIES order, skipping empty groups.
