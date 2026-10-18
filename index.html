@@ -12,6 +12,7 @@
     :root { --bg: #15180f; --fg: #eef0ea; --muted: #9aa094; --card: #1e2218; --accent: #7fd17f; --line: #323826; }
   }
   :root[data-theme="light"] { --bg: #f6f7f4; --fg: #1d1f1b; --muted: #6b7068; --card: #fff; --accent: #2e7d32; --line: #e2e5de; }
+  [hidden] { display: none !important; }
   body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.4 system-ui, sans-serif; }
   main { max-width: 560px; margin: 0 auto; padding: 16px; }
   h1 { font-size: 1.4rem; margin: 8px 0 12px; }
@@ -19,8 +20,11 @@
   input, select, button { font: inherit; border-radius: 8px; border: 1px solid var(--line); padding: 10px; background: var(--card); color: var(--fg); }
   input[name="name"] { flex: 1; min-width: 0; }
   input[name="qty"] { width: 64px; }
+  select { flex: 1; min-width: 0; }
   button { cursor: pointer; background: var(--accent); color: #fff; border-color: var(--accent); }
+  button:disabled { opacity: .4; cursor: default; }
   button.ghost { background: transparent; color: var(--muted); border-color: transparent; }
+  .bar { display: flex; gap: 8px; margin-bottom: 8px; }
   h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 18px 0 6px; }
   ul { list-style: none; padding: 0; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
   li { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-top: 1px solid var(--line); }
@@ -35,6 +39,10 @@
 <body>
 <main>
   <h1>Family Groceries</h1>
+  <div class="bar">
+    <select id="view" aria-label="Show list or order"></select>
+    <button class="ghost" id="save-order" type="button">Save as order</button>
+  </div>
   <form id="add">
     <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
@@ -47,32 +55,58 @@
   </footer>
 </main>
 <script type="module">
-  import { CATEGORIES, addItem, toggleItem, removeItem, clearDone, groupByCategory } from './list.js';
+  import { addItem, toggleItem, removeItem, clearDone, groupByCategory } from './list.js';
   import { translateItem } from './translate.js';
+  import { saveOrder, findOrder, copyOrderToList } from './orders.js';
 
   const KEY = 'grocery.list.v1';
+  const ORDERS_KEY = 'grocery.orders.v1';
   const listEl = document.getElementById('list');
   const countEl = document.getElementById('count');
+  const viewEl = document.getElementById('view');
+  const saveBtn = document.getElementById('save-order');
+  const addForm = document.getElementById('add');
+  const clearBtn = document.getElementById('clear');
 
   // localStorage can be blocked (private mode, policies); the app still works in memory.
-  function load() {
-    try { return JSON.parse(localStorage.getItem(KEY)) ?? []; } catch { return []; }
+  function load(key) {
+    try { return JSON.parse(localStorage.getItem(key)) ?? []; } catch { return []; }
   }
-  function save(items) {
-    try { localStorage.setItem(KEY, JSON.stringify(items)); } catch { /* not persisted */ }
+  function store(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* not persisted */ }
   }
 
-  let items = load();
+  let items = load(KEY);
+  let orders = load(ORDERS_KEY);
+  let view = ''; // '' = current list, otherwise an order id
+
+  function renderViewOptions() {
+    viewEl.replaceChildren(new Option('Current list', ''));
+    for (const o of orders) {
+      viewEl.append(new Option(`${o.date} · ${o.items.length} items`, o.id));
+    }
+    viewEl.value = findOrder(orders, view) ? view : '';
+    view = viewEl.value;
+  }
 
   function render() {
+    renderViewOptions();
+    const order = findOrder(orders, view);
+    const readOnly = Boolean(order);
+    const shown = order ? order.items : items;
+
+    addForm.hidden = readOnly;
+    clearBtn.hidden = readOnly;
+    saveBtn.disabled = items.length === 0;
+
     listEl.replaceChildren();
-    if (items.length === 0) {
+    if (shown.length === 0) {
       const p = document.createElement('p');
       p.className = 'empty';
-      p.textContent = 'Nothing on the list yet.';
+      p.textContent = readOnly ? 'This order is empty.' : 'Nothing on the list yet.';
       listEl.append(p);
     }
-    for (const group of groupByCategory(items)) {
+    for (const group of groupByCategory(shown)) {
       const h = document.createElement('h2');
       h.textContent = group.category;
       const ul = document.createElement('ul');
@@ -81,41 +115,74 @@
         li.className = item.done ? 'done' : '';
 
         const label = document.createElement('label');
-        const box = document.createElement('input');
-        box.type = 'checkbox';
-        box.checked = item.done;
-        box.addEventListener('change', () => update(toggleItem(items, item.id)));
         const span = document.createElement('span');
         span.textContent = item.name;
-        label.append(box, span);
+        if (readOnly) {
+          label.append(span);
+        } else {
+          const box = document.createElement('input');
+          box.type = 'checkbox';
+          box.checked = item.done;
+          box.addEventListener('change', () => update(toggleItem(items, item.id)));
+          label.append(box, span);
+        }
 
         const qty = document.createElement('span');
         qty.className = 'qty';
         qty.textContent = item.qty > 1 ? `× ${item.qty}` : '';
 
-        const del = document.createElement('button');
-        del.className = 'ghost';
-        del.type = 'button';
-        del.textContent = '✕';
-        del.setAttribute('aria-label', `Remove ${item.name}`);
-        del.addEventListener('click', () => update(removeItem(items, item.id)));
-
-        li.append(label, qty, del);
+        li.append(label, qty);
+        if (!readOnly) {
+          const del = document.createElement('button');
+          del.className = 'ghost';
+          del.type = 'button';
+          del.textContent = '✕';
+          del.setAttribute('aria-label', `Remove ${item.name}`);
+          del.addEventListener('click', () => update(removeItem(items, item.id)));
+          li.append(del);
+        }
         ul.append(li);
       }
       listEl.append(h, ul);
     }
-    const open = items.filter(i => !i.done).length;
-    countEl.textContent = `${open} to buy`;
+
+    if (readOnly) {
+      const copy = document.createElement('button');
+      copy.type = 'button';
+      copy.textContent = 'Copy this order to my list';
+      copy.style.marginTop = '16px';
+      copy.addEventListener('click', () => {
+        items = copyOrderToList(items, order);
+        store(KEY, items);
+        view = '';
+        render();
+      });
+      listEl.append(copy);
+      countEl.textContent = `${order.date} · ${order.items.length} items`;
+    } else {
+      const open = items.filter(i => !i.done).length;
+      countEl.textContent = `${open} to buy`;
+    }
   }
 
   function update(next) {
     items = next;
-    save(items);
+    store(KEY, items);
     render();
   }
 
-  document.getElementById('add').addEventListener('submit', e => {
+  viewEl.addEventListener('change', () => {
+    view = viewEl.value;
+    render();
+  });
+
+  saveBtn.addEventListener('click', () => {
+    orders = saveOrder(orders, items);
+    store(ORDERS_KEY, orders);
+    render();
+  });
+
+  addForm.addEventListener('submit', e => {
     e.preventDefault();
     const f = e.currentTarget;
     const name = translateItem(f.elements.name.value);
@@ -125,7 +192,7 @@
     f.elements.name.focus();
   });
 
-  document.getElementById('clear').addEventListener('click', () => update(clearDone(items)));
+  clearBtn.addEventListener('click', () => update(clearDone(items)));
 
   render();
 
