@@ -1,6 +1,6 @@
 // Cache-first for the app shell, network for everything else.
-const CACHE = 'grocery-v1';
-const SHELL = ['./', 'index.html', 'list.js', 'manifest.webmanifest'];
+const CACHE = 'grocery-v2';
+const SHELL = ['./', 'index.html', 'list.js', 'translate.js', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)));

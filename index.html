@@ -36,7 +36,7 @@
 <main>
   <h1>Family Groceries</h1>
   <form id="add">
-    <input name="name" placeholder="Add an item" autocomplete="off" required>
+    <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
     <button type="submit">Add</button>
   </form>
@@ -48,6 +48,7 @@
 </main>
 <script type="module">
   import { CATEGORIES, addItem, toggleItem, removeItem, clearDone, groupByCategory } from './list.js';
+  import { translateItem } from './translate.js';
 
   const KEY = 'grocery.list.v1';
   const listEl = document.getElementById('list');
@@ -117,7 +118,7 @@
   document.getElementById('add').addEventListener('submit', e => {
     e.preventDefault();
     const f = e.currentTarget;
-    const name = f.elements.name.value;
+    const name = translateItem(f.elements.name.value);
     // shortcut: every new item lands in Other, no category picker, upgrade when the list gets long to sort by aisle
     update(addItem(items, name, 'Other', f.elements.qty.value));
     f.reset();

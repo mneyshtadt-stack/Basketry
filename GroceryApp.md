@@ -10,10 +10,18 @@ v1: a single-device list. Items are stored in the browser's localStorage. Family
 
 - `index.html` - UI, styles and page logic (ES module). Entry point.
 - `list.js` - pure list logic: add, toggle, remove, clear checked, group by category. No DOM.
-- `list.test.mjs` - unit tests for `list.js` (node:test).
+- `translate.js` - Hebrew to English dictionary for common grocery words (offline). Unknown words are kept as typed. Add words to `HE_TO_EN`.
+- `list.test.mjs`, `translate.test.mjs` - unit tests (node:test).
 - `sw.js` - service worker: caches the app shell (cache-first), so the app opens offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display).
 - `package.json` - `npm test` and `npm start` scripts. No dependencies.
+- `.gitignore` - ignores `node_modules/`.
+
+## Git
+
+- Local git repo on branch `main` (first commit `86a5e55`). Not yet pushed to GitHub.
+- Planned: public GitHub repo `GroceryApp` (needed for free GitHub Pages hosting).
+- The folder is inside OneDrive; if `.git` misbehaves (lock or sync errors), move the repo out of OneDrive.
 
 ## Run and test
 
@@ -32,8 +40,9 @@ Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase
 - Put pure logic in `list.js` and keep DOM code in `index.html`, so logic stays testable.
 - Storage key: `grocery.list.v1`. Change the version suffix if the item shape changes.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
-- The service worker caches the shell. After changing `index.html`, `list.js` or other shell files, bump `CACHE` in `sw.js` (currently `grocery-v1`), or users keep the old version.
+- The service worker caches the shell. After changing `index.html`, `list.js` or other shell files, bump `CACHE` in `sw.js` (currently `grocery-v2`); also list every module file in `SHELL`, or users keep the old version.
 - `shortcut:` new items always get category "Other" (no picker yet).
+- `shortcut:` translation is a dictionary, not machine translation. A free online API (MyMemory) mistranslated single words (חלב became "Aleppo"), so it was not used.
 
 ## Planned next steps
 
