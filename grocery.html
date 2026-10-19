@@ -48,6 +48,10 @@
     <select id="view" aria-label="Show list or order"></select>
     <button class="ghost" id="save-order" type="button">Save as order</button>
   </div>
+  <form id="join" hidden>
+    <input name="code" placeholder="Family code (same on every phone)" autocomplete="off" required>
+    <button type="submit">Join</button>
+  </form>
   <form id="add">
     <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
@@ -64,9 +68,39 @@
   import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
   import { bilingual, HE_TO_EN } from './translate.js';
   import { saveOrder, findOrder, copyOrderToList } from './orders.js';
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
+  import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js';
+  import { initializeFirestore, persistentLocalCache, doc, onSnapshot, setDoc } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js';
 
-  const KEY = 'grocery.list.v1';
-  const ORDERS_KEY = 'grocery.orders.v1';
+  // Public project identifiers, not secrets. Access is controlled by the Firestore security rules.
+  const firebaseConfig = {
+    apiKey: "AIzaSyDGthIpo2j1zZbCXSJnz3ofijJw2pPfShg",
+    authDomain: "basketry-28d9d.firebaseapp.com",
+    projectId: "basketry-28d9d",
+    storageBucket: "basketry-28d9d.firebasestorage.app",
+    messagingSenderId: "730917129251",
+    appId: "1:730917129251:web:6232da4a62a71276643596",
+  };
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  // Offline edits are kept on the phone and sent when the connection returns.
+  const db = initializeFirestore(app, { localCache: persistentLocalCache() });
+
+  // Everyone who types the same family code shares one list. The code is remembered per device.
+  const joinForm = document.getElementById('join');
+  let family = '';
+  try { family = localStorage.getItem('basketry.family') ?? ''; } catch { /* storage blocked */ }
+  if (!family) {
+    joinForm.hidden = false;
+    family = await new Promise(resolve => joinForm.addEventListener('submit', e => {
+      e.preventDefault();
+      resolve(e.currentTarget.elements.code.value.trim().toLowerCase().replace(/\//g, '-'));
+    }, { once: true }));
+    joinForm.hidden = true;
+    try { localStorage.setItem('basketry.family', family); } catch { /* asked again next visit */ }
+  }
+  const ref = doc(db, 'families', family);
+
   const listEl = document.getElementById('list');
   const countEl = document.getElementById('count');
   const viewEl = document.getElementById('view');
@@ -74,16 +108,13 @@
   const addForm = document.getElementById('add');
   const clearBtn = document.getElementById('clear');
 
-  // localStorage can be blocked (private mode, policies); the app still works in memory.
-  function load(key) {
-    try { return JSON.parse(localStorage.getItem(key)) ?? []; } catch { return []; }
-  }
-  function store(key, value) {
-    try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* not persisted */ }
+  // The whole family state (list and orders) lives in one Firestore document.
+  function persist() {
+    setDoc(ref, { items, orders }).catch(err => console.error('Save failed', err));
   }
 
-  let items = load(KEY);
-  let orders = load(ORDERS_KEY);
+  let items = [];
+  let orders = [];
   let view = ''; // '' = current list, otherwise an order id
 
   // Suggestions: grocery words plus anything already used in a list or order.
@@ -194,7 +225,7 @@
       copy.style.marginTop = '16px';
       copy.addEventListener('click', () => {
         items = copyOrderToList(items, order);
-        store(KEY, items);
+        persist();
         view = '';
         render();
       });
@@ -208,7 +239,7 @@
 
   function update(next) {
     items = next;
-    store(KEY, items);
+    persist();
     render();
   }
 
@@ -219,7 +250,7 @@
 
   saveBtn.addEventListener('click', () => {
     orders = saveOrder(orders, items);
-    store(ORDERS_KEY, orders);
+    persist();
     render();
   });
 
@@ -237,6 +268,18 @@
   clearBtn.addEventListener('click', () => update(clearDone(items)));
 
   render();
+
+  // Sign in anonymously, then keep the page in step with the family document on every phone.
+  signInAnonymously(auth)
+    .then(() => onSnapshot(ref, snap => {
+      const data = snap.data();
+      if (data) { items = data.items ?? []; orders = data.orders ?? []; }
+      render();
+    }))
+    .catch(err => {
+      console.error('Connection failed', err);
+      countEl.textContent = 'Could not connect to the family list';
+    });
 
   // Offline support: cache the app shell.
   if ('serviceWorker' in navigator) {

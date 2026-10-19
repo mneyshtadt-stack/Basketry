@@ -6,7 +6,7 @@ A shared grocery list for the family, as an installable web app (PWA). Works off
 
 ## Status
 
-v1: a single-device list with saved orders and an order filter. Data is stored in the browser's localStorage (`grocery.list.v1`, `grocery.orders.v1`). Family sync is not built yet (planned: Firebase Firestore or Supabase, see below).
+v1 with Firebase sync: the list and saved orders live in one Firestore document, `families/<family code>`. Each phone signs in anonymously and remembers the family code (localStorage `basketry.family`). Offline edits are kept and sent later.
 
 ## Files
 
@@ -15,6 +15,7 @@ v1: a single-device list with saved orders and an order filter. Data is stored i
 - `translate.js` - Hebrew to English dictionary for common grocery words (offline). `bilingual()` gives English name plus Hebrew (either direction). Unknown words are kept as typed. Add words to `HE_TO_EN`.
 - `orders.js` - saved orders: snapshot the list (`saveOrder`), find one, copy one back into the list (`copyOrderToList`).
 - `list.test.mjs`, `translate.test.mjs`, `orders.test.mjs` - unit tests (node:test).
+- `firestore.rules` - Firestore security rules. Paste into Firebase console → Firestore → Rules.
 - `sw.js` - service worker: caches the app shell (cache-first), so the app opens offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
 - `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
@@ -42,7 +43,10 @@ Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase
 ## Conventions and gotchas
 
 - Put pure logic in `list.js` and keep DOM code in `grocery.html`, so logic stays testable.
-- Storage key: `grocery.list.v1`. Change the version suffix if the item shape changes.
+- Data: one Firestore document per family, `families/<code>`, holding `{ items, orders }`. Changing the item shape is safe; old items just lack new fields.
+- Family code is the only secret: anyone who knows it can read and change that list. Firebase config values are public identifiers; the rules protect the data.
+- `shortcut:` two phones editing at the same moment: last save wins. Upgrade to per-item writes if this bites.
+- `shortcut:` a family code is typed once per device (join form on first visit); there is no way to switch codes in the app yet.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
 - Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v16`) only when the offline fallback's file list (`SHELL`) changes.
 - Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Orders can't be deleted yet.
@@ -52,7 +56,7 @@ Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase
 
 ## Planned next steps
 
-1. Pick a backend (Firebase Firestore or Supabase) and create a project. Needs your account, so it's not set up here.
-2. Family group: invite link or code, and an auth rule so only members can read or write the list.
-3. Replace the localStorage calls with the backend, keeping `list.js` unchanged.
-4. Category picker or name-based guessing; "staples" list for quick re-adding.
+1. Firebase is set up and saving works (tested in one browser). Still to do: test on two phones with the same family code.
+   Setup steps: Firestore Database created, Rules published from `firestore.rules`, Authentication → Anonymous enabled.
+2. Category picker or name-based guessing; "staples" list for quick re-adding.
+3. Delete saved orders; change family code.
