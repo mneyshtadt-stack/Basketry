@@ -20,6 +20,7 @@ export const HE_TO_EN = {
   'חומוס': 'hummus', 'טחינה': 'tahini', 'זיתים': 'olives', 'סבון': 'soap',
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
   'אבקת כביסה': 'laundry detergent', 'סוללות': 'batteries',
+  'פיצה': 'pizza', 'פיצה קפואה': 'frozen pizza',
 };
 
 const HEBREW = /[֐-׿]/;

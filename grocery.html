@@ -89,6 +89,7 @@
   let knownNames = [];
   function renderSuggestions() {
     knownNames = suggestNames([
+      ...Object.keys(HE_TO_EN),
       ...Object.values(HE_TO_EN),
       ...items.map(i => i.name),
       ...orders.flatMap(o => o.items.map(i => i.name)),
@@ -114,6 +115,8 @@
     }));
   }
   nameInput.addEventListener('input', showSuggestions);
+  // Select the default "1" on focus so typing a number replaces it instead of appending.
+  addForm.elements.qty.addEventListener('focus', e => e.target.select());
   nameInput.addEventListener('blur', () => { suggestEl.hidden = true; });
 
   function renderViewOptions() {
@@ -166,7 +169,7 @@
 
         const qty = document.createElement('span');
         qty.className = 'qty';
-        qty.textContent = item.qty > 1 ? `× ${item.qty}` : '';
+        qty.textContent = `× ${item.qty}`;
 
         li.append(label, qty);
         if (!readOnly) {
