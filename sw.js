@@ -1,6 +1,6 @@
 // Network-first: online loads always get the latest files; the cache is the offline fallback.
-const CACHE = 'grocery-v15';
-const SHELL = ['grocery.html', 'list.js', 'translate.js', 'orders.js', 'manifest.webmanifest'];
+const CACHE = 'grocery-v16';
+const SHELL = ['grocery.html', 'list.js', 'translate.js', 'orders.js', 'manifest.webmanifest', 'icon.svg'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

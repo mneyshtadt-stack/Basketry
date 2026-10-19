@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#2e7d32"/>
+  <!-- leaf -->
+  <path d="M300 150c60-40 120-20 128 0 8 60-30 120-100 128-30 3-50-20-28-128z" fill="#a5d6a7"/>
+  <!-- basket handle -->
+  <path d="M150 230c0-70 212-70 212 0" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+  <!-- basket body -->
+  <path d="M104 230h304l-36 150c-4 16-16 26-32 26H172c-16 0-28-10-32-26z" fill="#ffffff"/>
+  <!-- basket slats -->
+  <path d="M190 262v64M256 262v64M322 262v64" stroke="#2e7d32" stroke-width="14" stroke-linecap="round"/>
+</svg>

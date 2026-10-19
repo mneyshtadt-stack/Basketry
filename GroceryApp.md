@@ -1,4 +1,6 @@
-# GroceryApp
+# GroceryApp (brand: Basketry)
+
+Brand: **Basketry**. Colours: green `#2e7d32` (accent), off-white `#f6f7f4` (background). Logo: `icon.svg`. Check the name is free before publishing.
 
 A shared grocery list for the family, as an installable web app (PWA). Works offline.
 
@@ -14,7 +16,8 @@ v1: a single-device list with saved orders and an order filter. Data is stored i
 - `orders.js` - saved orders: snapshot the list (`saveOrder`), find one, copy one back into the list (`copyOrderToList`).
 - `list.test.mjs`, `translate.test.mjs`, `orders.test.mjs` - unit tests (node:test).
 - `sw.js` - service worker: caches the app shell (cache-first), so the app opens offline.
-- `manifest.webmanifest` - PWA metadata (name, colours, standalone display).
+- `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
+- `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
 - `package.json` - `npm test` and `npm start` scripts. No dependencies.
 - `.gitignore` - ignores `node_modules/`.
 
@@ -41,7 +44,7 @@ Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase
 - Put pure logic in `list.js` and keep DOM code in `grocery.html`, so logic stays testable.
 - Storage key: `grocery.list.v1`. Change the version suffix if the item shape changes.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
-- Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v15`) only when the offline fallback's file list (`SHELL`) changes.
+- Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v16`) only when the offline fallback's file list (`SHELL`) changes.
 - Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Orders can't be deleted yet.
 - Suggestions: a list under the add box (`#suggest`) filters as you type, built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes"). Tap a suggestion to fill the box.
 - `shortcut:` new items always get category "Other" (no picker yet).
