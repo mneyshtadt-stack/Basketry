@@ -41,13 +41,6 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
-  "white onion": {
-    "file": "white-onion.jpg",
-    "title": "Onion on White.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Onion_on_White.JPG",
-    "artist": "Colin",
-    "licence": "CC BY-SA 3.0"
-  },
   "green onion": {
     "file": "green-onion-own.jpg",
     "title": "Onions (owner's own photo)",

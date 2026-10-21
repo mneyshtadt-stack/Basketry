@@ -74,6 +74,5 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **tomato** - [Organic home-grown tomatoes - unripe to ripe.jpg](https://commons.wikimedia.org/wiki/File:Organic_home-grown_tomatoes_-_unripe_to_ripe.jpg) by Michal Klajban, CC BY-SA 4.0
 - **toothpaste** - [Toothpasteonbrush.jpg](https://commons.wikimedia.org/wiki/File:Toothpasteonbrush.jpg) by Thegreenj, CC BY-SA 3.0
 - **water** - [Metal Water Bottles.jpeg](https://commons.wikimedia.org/wiki/File:Metal_Water_Bottles.jpeg) by Amraepowell, CC0
-- **white onion** - [Onion on White.JPG](https://commons.wikimedia.org/wiki/File:Onion_on_White.JPG) by Colin, CC BY-SA 3.0
 - **yellow onion** - Yellow onions (owner's own photo), project owner, Owner's own photo
 - **yogurt** - [Joghurt.jpg](https://commons.wikimedia.org/wiki/File:Joghurt.jpg) by No machine-readable author provided. Rainer Zenz assumed (based on copyright claims)., CC BY-SA 3.0
