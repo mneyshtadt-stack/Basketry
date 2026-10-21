@@ -23,7 +23,8 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **cream** - [Pudding Dessert with Whipped Cream.jpg](https://commons.wikimedia.org/wiki/File:Pudding_Dessert_with_Whipped_Cream.jpg) by Karl Thomas Moore, CC BY-SA 4.0
 - **cucumber** - [Cucumber Slices (Alabama Extension).jpg](https://commons.wikimedia.org/wiki/File:Cucumber_Slices_(Alabama_Extension).jpg) by Alabama Extension, CC0
 - **dill** - [Aneth FR 2012.jpg](https://commons.wikimedia.org/wiki/File:Aneth_FR_2012.jpg) by JLPC, CC BY-SA 3.0
-- **egg** - [Chicken Egg without Eggshell 5859.jpg](https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg) by Biswarup Ganguly, CC BY 3.0
+- **egg** - Eggs (owner's own photo), project owner, Owner's own photo
+- **eggs** - Eggs (owner's own photo), project owner, Owner's own photo
 - **fish** - [Ensenada fish market 2.jpg](https://commons.wikimedia.org/wiki/File:Ensenada_fish_market_2.jpg) by Tomascastelazo, CC BY-SA 3.0
 - **flour** - [Home made sour dough bread.jpg](https://commons.wikimedia.org/wiki/File:Home_made_sour_dough_bread.jpg) by Tomascastelazo, CC BY-SA 4.0
 - **frozen pizza** - [Frozen pizzas at supermarket.jpg](https://commons.wikimedia.org/wiki/File:Frozen_pizzas_at_supermarket.jpg) by Carstenhag, CC BY-SA 4.0

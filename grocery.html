@@ -166,7 +166,7 @@
     const el = document.createElement(tile ? 'button' : 'div');
     el.className = tile ? 'tile' : 'row';
     if (tile) el.type = 'button';
-    const icon = ICON_FOR[n.toLowerCase()];
+    const icon = ICON_FOR[bilingual(n).name.toLowerCase()];
     const avatar = document.createElement(icon ? 'img' : 'span');
     avatar.className = icon ? 'avatar pic' : 'avatar';
     if (icon) { avatar.src = icon; avatar.alt = ''; } else { avatar.textContent = n[0].toUpperCase(); }

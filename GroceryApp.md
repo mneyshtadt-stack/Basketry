@@ -21,7 +21,7 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
 - Pictures are looked up by the English name (`bilingual(name).name`), so Hebrew suggestions get pictures too.
 - Onion words: בצל יבש = yellow onion (בצל also still works), בצל ירוק = green onion, בצל אדום = red onion. Typing English "onion" gives no Hebrew.
-- `icons.js` - `ICON_FOR` maps each lowercase English name to a photo in `photos/` (about 2.2 MB, 66 photos from Wikimedia Commons, plus the owner's own onion photos: yellow, green and red). Names without a photo show a letter circle. `photos/CREDITS.md` lists each photo's author and licence; keep it with the photos.
+- `icons.js` - `ICON_FOR` maps each lowercase English name to a photo in `photos/` (about 2.2 MB, 66 photos from Wikimedia Commons, plus the owner's own photos: onions (yellow, green, red) and eggs). Names without a photo show a letter circle. `photos/CREDITS.md` lists each photo's author and licence; keep it with the photos.
 - `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
 - `package.json` - `npm test` and `npm start` scripts. No dependencies.
 - `.gitignore` - ignores `node_modules/`.

@@ -1,10 +1,10 @@
 {
   "egg": {
-    "file": "egg.jpg",
-    "title": "Chicken Egg without Eggshell 5859.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg",
-    "artist": "Biswarup Ganguly",
-    "licence": "CC BY 3.0"
+    "file": "egg-own.jpg",
+    "title": "Eggs (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "cottage cheese": {
     "file": "cottage-cheese.jpg",
@@ -457,6 +457,13 @@
   "onion": {
     "file": "yellow-onion-own.jpg",
     "title": "Yellow onions (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "eggs": {
+    "file": "egg-own.jpg",
+    "title": "Eggs (owner's own photo)",
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
