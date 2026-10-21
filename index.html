@@ -3,12 +3,335 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Basketry</title>
-<meta http-equiv="refresh" content="0; url=grocery.html">
-<link rel="canonical" href="grocery.html">
+<meta name="theme-color" content="#2e7d32">
+<title>Basketry · Family Groceries</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+  :root { --bg: #f6f7f4; --fg: #1d1f1b; --muted: #6b7068; --card: #fff; --accent: #2e7d32; --line: #e2e5de; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15180f; --fg: #eef0ea; --muted: #9aa094; --card: #1e2218; --accent: #7fd17f; --line: #323826; }
+  }
+  :root[data-theme="light"] { --bg: #f6f7f4; --fg: #1d1f1b; --muted: #6b7068; --card: #fff; --accent: #2e7d32; --line: #e2e5de; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.4 system-ui, sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.4rem; margin: 8px 0 12px; }
+  form { display: flex; gap: 8px; margin-bottom: 12px; }
+  input, select, button { font: inherit; border-radius: 8px; border: 1px solid var(--line); padding: 10px; background: var(--card); color: var(--fg); }
+  input[name="name"] { flex: 1; min-width: 0; }
+  input[name="qty"] { width: 64px; }
+  select { flex: 1; min-width: 0; }
+  button { cursor: pointer; background: var(--accent); color: #fff; border-color: var(--accent); }
+  button:disabled { opacity: .4; cursor: default; }
+  button.ghost { background: transparent; color: var(--muted); border-color: transparent; }
+  .bar { display: flex; gap: 8px; margin-bottom: 8px; }
+  .add-wrap { position: relative; margin-bottom: 12px; }
+  .add-wrap form { margin-bottom: 0; }
+  .suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, .14); padding: 12px; }
+  .suggest h3 { font-size: .8rem; font-weight: 600; color: var(--muted); margin: 0 0 10px; }
+  .tiles { display: flex; gap: 8px; margin-bottom: 8px; }
+  .tile { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: 0; color: var(--fg); padding: 6px 4px; font-size: .85rem; overflow: hidden; }
+  .tile:hover { background: var(--line); }
+  .row { display: flex; align-items: center; gap: 12px; padding: 8px 4px; border-top: 1px solid var(--line); cursor: pointer; }
+  .row:hover { background: var(--line); }
+  .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 600; flex: none; }
+  .row .avatar { width: 32px; height: 32px; font-size: .8rem; background: var(--line); color: var(--fg); }
+  .row .arrow { margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 1.1rem; padding: 4px 8px; }
+  h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 18px 0 6px; }
+  ul { list-style: none; padding: 0; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  li { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-top: 1px solid var(--line); }
+  li:first-child { border-top: 0; }
+  li label { flex: 1; display: flex; gap: 10px; align-items: center; cursor: pointer; }
+  li.done span { text-decoration: line-through; color: var(--muted); }
+  .qty { color: var(--muted); font-size: .9rem; }
+  .empty { color: var(--muted); text-align: center; padding: 24px 0; }
+  footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
+</style>
 </head>
 <body>
-<p>Opening <a href="grocery.html">Basketry</a>…</p>
-<script>location.replace('grocery.html');</script>
+<main>
+  <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
+  <div class="bar">
+    <select id="view" aria-label="Show list or order"></select>
+    <button class="ghost" id="save-order" type="button">Save as order</button>
+  </div>
+  <form id="join" hidden>
+    <input name="code" placeholder="Family code (same on every phone)" autocomplete="off" required>
+    <button type="submit">Join</button>
+  </form>
+  <div class="add-wrap">
+  <form id="add">
+    <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
+    <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
+    <button type="submit">Add</button>
+  </form>
+    <div id="suggest" class="suggest" hidden></div>
+  </div>
+  <div id="list"></div>
+  <footer>
+    <button class="ghost" id="clear" type="button">Clear checked</button>
+    <span class="qty" id="count"></span>
+  </footer>
+</main>
+<script type="module">
+  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
+  import { bilingual, HE_TO_EN } from './translate.js';
+  import { saveOrder, findOrder, copyOrderToList } from './orders.js';
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
+  import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js';
+  import { initializeFirestore, persistentLocalCache, doc, onSnapshot, setDoc } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js';
+
+  // Public project identifiers, not secrets. Access is controlled by the Firestore security rules.
+  const firebaseConfig = {
+    apiKey: "AIzaSyDGthIpo2j1zZbCXSJnz3ofijJw2pPfShg",
+    authDomain: "basketry-28d9d.firebaseapp.com",
+    projectId: "basketry-28d9d",
+    storageBucket: "basketry-28d9d.firebasestorage.app",
+    messagingSenderId: "730917129251",
+    appId: "1:730917129251:web:6232da4a62a71276643596",
+  };
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  // Offline edits are kept on the phone and sent when the connection returns.
+  const db = initializeFirestore(app, { localCache: persistentLocalCache() });
+
+  // Everyone who types the same family code shares one list. The code is remembered per device.
+  const joinForm = document.getElementById('join');
+  let family = '';
+  try { family = localStorage.getItem('basketry.family') ?? ''; } catch { /* storage blocked */ }
+  if (!family) {
+    joinForm.hidden = false;
+    family = await new Promise(resolve => joinForm.addEventListener('submit', e => {
+      e.preventDefault();
+      resolve(e.currentTarget.elements.code.value.trim().toLowerCase().replace(/\//g, '-'));
+    }, { once: true }));
+    joinForm.hidden = true;
+    try { localStorage.setItem('basketry.family', family); } catch { /* asked again next visit */ }
+  }
+  const ref = doc(db, 'families', family);
+
+  const listEl = document.getElementById('list');
+  const countEl = document.getElementById('count');
+  const viewEl = document.getElementById('view');
+  const saveBtn = document.getElementById('save-order');
+  const addForm = document.getElementById('add');
+  const clearBtn = document.getElementById('clear');
+
+  // The whole family state (list and orders) lives in one Firestore document.
+  function persist() {
+    setDoc(ref, { items, orders }).catch(err => console.error('Save failed', err));
+  }
+
+  let items = [];
+  let orders = [];
+  let view = ''; // '' = current list, otherwise an order id
+
+  // Suggestions: grocery words plus anything already used in a list or order.
+  let knownNames = [];
+  function renderSuggestions() {
+    knownNames = suggestNames([
+      ...Object.keys(HE_TO_EN),
+      ...Object.values(HE_TO_EN),
+      ...items.map(i => i.name),
+      ...orders.flatMap(o => o.items.map(i => i.name)),
+    ]);
+  }
+
+  const nameInput = addForm.elements.name;
+  const suggestEl = document.getElementById('suggest');
+  // Puts the picked name in the box; the item is added only when the form is submitted.
+  function pickSuggestion(n) {
+    nameInput.value = n;
+    suggestEl.hidden = true;
+    nameInput.focus();
+  }
+
+  // Bold the part of the name that matches what was typed.
+  function highlight(name, query) {
+    const frag = document.createDocumentFragment();
+    const i = name.toLowerCase().indexOf(query.toLowerCase());
+    if (!query || i < 0) { frag.append(name); return frag; }
+    const bold = document.createElement('strong');
+    bold.textContent = name.slice(i, i + query.length);
+    frag.append(name.slice(0, i), bold, name.slice(i + query.length));
+    return frag;
+  }
+
+  function suggestionEl(n, query, tile) {
+    const el = document.createElement(tile ? 'button' : 'div');
+    el.className = tile ? 'tile' : 'row';
+    if (tile) el.type = 'button';
+    const avatar = document.createElement('span');
+    avatar.className = 'avatar';
+    avatar.textContent = n[0].toUpperCase();
+    const label = document.createElement('span');
+    label.append(highlight(n, nameInput.value.trim()));
+    el.append(avatar, label);
+    if (!tile) {
+      const arrow = document.createElement('button');
+      arrow.type = 'button';
+      arrow.className = 'arrow';
+      arrow.textContent = '↖';
+      arrow.setAttribute('aria-label', `Use ${n}`);
+      el.append(arrow);
+    }
+    // mousedown, not click, so the pick lands before the input loses focus
+    el.addEventListener('mousedown', e => { e.preventDefault(); pickSuggestion(n); });
+    return el;
+  }
+
+  function showSuggestions() {
+    const query = nameInput.value.trim();
+    const matches = suggestMatches(knownNames, query);
+    suggestEl.hidden = matches.length === 0;
+    if (matches.length === 0) return;
+    const heading = document.createElement('h3');
+    heading.textContent = 'Suggestions';
+    const tiles = document.createElement('div');
+    tiles.className = 'tiles';
+    tiles.append(...matches.slice(0, 3).map(n => suggestionEl(n, query, true)));
+    suggestEl.replaceChildren(heading, tiles, ...matches.slice(3).map(n => suggestionEl(n, query, false)));
+  }
+  nameInput.addEventListener('input', showSuggestions);
+  // Select the default "1" on focus so typing a number replaces it instead of appending.
+  addForm.elements.qty.addEventListener('focus', e => e.target.select());
+  nameInput.addEventListener('blur', () => { suggestEl.hidden = true; });
+
+  function renderViewOptions() {
+    viewEl.replaceChildren(new Option('Current list', ''));
+    for (const o of orders) {
+      viewEl.append(new Option(`${o.date} · ${o.items.length} items`, o.id));
+    }
+    viewEl.value = findOrder(orders, view) ? view : '';
+    view = viewEl.value;
+  }
+
+  function render() {
+    renderViewOptions();
+    renderSuggestions();
+    const order = findOrder(orders, view);
+    const readOnly = Boolean(order);
+    const shown = order ? order.items : items;
+
+    addForm.hidden = readOnly;
+    clearBtn.hidden = readOnly;
+    saveBtn.disabled = items.length === 0;
+
+    listEl.replaceChildren();
+    if (shown.length === 0) {
+      const p = document.createElement('p');
+      p.className = 'empty';
+      p.textContent = readOnly ? 'This order is empty.' : 'Nothing on the list yet.';
+      listEl.append(p);
+    }
+    for (const group of groupByCategory(shown)) {
+      const h = document.createElement('h2');
+      h.textContent = group.category;
+      const ul = document.createElement('ul');
+      for (const item of group.items) {
+        const li = document.createElement('li');
+        li.className = item.done ? 'done' : '';
+
+        const label = document.createElement('label');
+        const span = document.createElement('span');
+        span.textContent = displayName(item);
+        if (readOnly) {
+          label.append(span);
+        } else {
+          const box = document.createElement('input');
+          box.type = 'checkbox';
+          box.checked = item.done;
+          box.addEventListener('change', () => update(toggleItem(items, item.id)));
+          label.append(box, span);
+        }
+
+        const qty = document.createElement('span');
+        qty.className = 'qty';
+        qty.textContent = `× ${item.qty}`;
+
+        li.append(label, qty);
+        if (!readOnly) {
+          const del = document.createElement('button');
+          del.className = 'ghost';
+          del.type = 'button';
+          del.textContent = '✕';
+          del.setAttribute('aria-label', `Remove ${item.name}`);
+          del.addEventListener('click', () => update(removeItem(items, item.id)));
+          li.append(del);
+        }
+        ul.append(li);
+      }
+      listEl.append(h, ul);
+    }
+
+    if (readOnly) {
+      const copy = document.createElement('button');
+      copy.type = 'button';
+      copy.textContent = 'Copy this order to my list';
+      copy.style.marginTop = '16px';
+      copy.addEventListener('click', () => {
+        items = copyOrderToList(items, order);
+        persist();
+        view = '';
+        render();
+      });
+      listEl.append(copy);
+      countEl.textContent = `${order.date} · ${order.items.length} items`;
+    } else {
+      const open = items.filter(i => !i.done).length;
+      countEl.textContent = `${open} to buy`;
+    }
+  }
+
+  function update(next) {
+    items = next;
+    persist();
+    render();
+  }
+
+  viewEl.addEventListener('change', () => {
+    view = viewEl.value;
+    render();
+  });
+
+  saveBtn.addEventListener('click', () => {
+    orders = saveOrder(orders, items);
+    persist();
+    render();
+  });
+
+  addForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.currentTarget;
+    const { name, he } = bilingual(f.elements.name.value);
+    // shortcut: every new item lands in Other, no category picker, upgrade when the list gets long to sort by aisle
+    update(addItem(items, name, 'Other', f.elements.qty.value, he));
+    f.reset();
+    suggestEl.hidden = true;
+    nameInput.focus();
+  });
+
+  clearBtn.addEventListener('click', () => update(clearDone(items)));
+
+  render();
+
+  // Sign in anonymously, then keep the page in step with the family document on every phone.
+  signInAnonymously(auth)
+    .then(() => onSnapshot(ref, snap => {
+      const data = snap.data();
+      if (data) { items = data.items ?? []; orders = data.orders ?? []; }
+      render();
+    }))
+    .catch(err => {
+      console.error('Connection failed', err);
+      countEl.textContent = 'Could not connect to the family list';
+    });
+
+  // Offline support: cache the app shell.
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+</script>
 </body>
 </html>
