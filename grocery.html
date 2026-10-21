@@ -26,10 +26,18 @@
   button:disabled { opacity: .4; cursor: default; }
   button.ghost { background: transparent; color: var(--muted); border-color: transparent; }
   .bar { display: flex; gap: 8px; margin-bottom: 8px; }
-  .suggest { margin: -6px 0 12px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  .suggest li { padding: 10px 12px; cursor: pointer; border-top: 1px solid var(--line); }
-  .suggest li:first-child { border-top: 0; }
-  .suggest li:hover { background: var(--line); }
+  .add-wrap { position: relative; margin-bottom: 12px; }
+  .add-wrap form { margin-bottom: 0; }
+  .suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, .14); padding: 12px; }
+  .suggest h3 { font-size: .8rem; font-weight: 600; color: var(--muted); margin: 0 0 10px; }
+  .tiles { display: flex; gap: 8px; margin-bottom: 8px; }
+  .tile { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: 0; color: var(--fg); padding: 6px 4px; font-size: .85rem; overflow: hidden; }
+  .tile:hover { background: var(--line); }
+  .row { display: flex; align-items: center; gap: 12px; padding: 8px 4px; border-top: 1px solid var(--line); cursor: pointer; }
+  .row:hover { background: var(--line); }
+  .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 600; flex: none; }
+  .row .avatar { width: 32px; height: 32px; font-size: .8rem; background: var(--line); color: var(--fg); }
+  .row .arrow { margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 1.1rem; padding: 4px 8px; }
   h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 18px 0 6px; }
   ul { list-style: none; padding: 0; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
   li { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-top: 1px solid var(--line); }
@@ -52,12 +60,14 @@
     <input name="code" placeholder="Family code (same on every phone)" autocomplete="off" required>
     <button type="submit">Join</button>
   </form>
+  <div class="add-wrap">
   <form id="add">
     <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
     <button type="submit">Add</button>
   </form>
-  <ul id="suggest" class="suggest" hidden></ul>
+    <div id="suggest" class="suggest" hidden></div>
+  </div>
   <div id="list"></div>
   <footer>
     <button class="ghost" id="clear" type="button">Clear checked</button>
@@ -130,21 +140,58 @@
 
   const nameInput = addForm.elements.name;
   const suggestEl = document.getElementById('suggest');
+  // Puts the picked name in the box; the item is added only when the form is submitted.
+  function pickSuggestion(n) {
+    nameInput.value = n;
+    suggestEl.hidden = true;
+    nameInput.focus();
+  }
+
+  // Bold the part of the name that matches what was typed.
+  function highlight(name, query) {
+    const frag = document.createDocumentFragment();
+    const i = name.toLowerCase().indexOf(query.toLowerCase());
+    if (!query || i < 0) { frag.append(name); return frag; }
+    const bold = document.createElement('strong');
+    bold.textContent = name.slice(i, i + query.length);
+    frag.append(name.slice(0, i), bold, name.slice(i + query.length));
+    return frag;
+  }
+
+  function suggestionEl(n, query, tile) {
+    const el = document.createElement(tile ? 'button' : 'div');
+    el.className = tile ? 'tile' : 'row';
+    if (tile) el.type = 'button';
+    const avatar = document.createElement('span');
+    avatar.className = 'avatar';
+    avatar.textContent = n[0].toUpperCase();
+    const label = document.createElement('span');
+    label.append(highlight(n, nameInput.value.trim()));
+    el.append(avatar, label);
+    if (!tile) {
+      const arrow = document.createElement('button');
+      arrow.type = 'button';
+      arrow.className = 'arrow';
+      arrow.textContent = '↖';
+      arrow.setAttribute('aria-label', `Use ${n}`);
+      el.append(arrow);
+    }
+    // mousedown, not click, so the pick lands before the input loses focus
+    el.addEventListener('mousedown', e => { e.preventDefault(); pickSuggestion(n); });
+    return el;
+  }
+
   function showSuggestions() {
-    const matches = suggestMatches(knownNames, nameInput.value);
+    const query = nameInput.value.trim();
+    const matches = suggestMatches(knownNames, query);
     suggestEl.hidden = matches.length === 0;
-    suggestEl.replaceChildren(...matches.map(n => {
-      const li = document.createElement('li');
-      li.textContent = n;
-      // mousedown, not click, so the pick lands before the input loses focus
-      li.addEventListener('mousedown', e => {
-        e.preventDefault();
-        nameInput.value = n;
-        suggestEl.hidden = true;
-        nameInput.focus();
-      });
-      return li;
-    }));
+    if (matches.length === 0) return;
+    const heading = document.createElement('h3');
+    heading.textContent = 'Suggestions';
+    const tiles = document.createElement('div');
+    tiles.className = 'tiles';
+    tiles.append(...matches.slice(0, 3).map(n => suggestionEl(n, query, true)));
+    suggestEl.replaceChildren(heading, tiles, ...matches.slice(3).map(n => suggestionEl(n, query, false)));
   }
   nameInput.addEventListener('input', showSuggestions);
   // Select the default "1" on focus so typing a number replaces it instead of appending.

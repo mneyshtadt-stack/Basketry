@@ -24,8 +24,8 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 
 ## Git
 
-- Local git repo on branch `main` (first commit `86a5e55`). Not yet pushed to GitHub.
-- Planned: public GitHub repo `GroceryApp` (needed for free GitHub Pages hosting).
+- Repo: https://github.com/mneyshtadt-stack/Basketry (public, branch `main`). Local folder is the same repo; `origin` points there.
+- Push: `git push` from this folder. The GitHub repo was created with a README, so the history was merged once.
 - The folder is inside OneDrive; if `.git` misbehaves (lock or sync errors), move the repo out of OneDrive.
 
 ## Run and test
@@ -38,7 +38,9 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 
 ## Deploy
 
-Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase Hosting). Deploy the folder as-is; there is no build step.
+Planned: GitHub Pages from `main` (root). Live address: `https://mneyshtadt-stack.github.io/Basketry/grocery.html`. Pages must be switched on in repo Settings → Pages.
+Firebase: the new domain must be listed under Authentication → Settings → Authorized domains, or anonymous sign-in is refused there.
+No build step: deploy the folder as-is.
 
 ## Conventions and gotchas
 
@@ -50,7 +52,7 @@ Not deployed yet. Any static host works (Netlify, Vercel, GitHub Pages, Firebase
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
 - Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v16`) only when the offline fallback's file list (`SHELL`) changes.
 - Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Orders can't be deleted yet.
-- Suggestions: a list under the add box (`#suggest`) filters as you type, built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes"). Tap a suggestion to fill the box.
+- Suggestions: a floating card under the add box (`#suggest`, styled like a search dropdown: top 3 as tiles, rest as rows with an arrow that fills the box). It filters as you type, built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes"). Tap a suggestion to fill the box.
 - `shortcut:` new items always get category "Other" (no picker yet).
 - `shortcut:` translation is a dictionary, not machine translation. A free online API (MyMemory) mistranslated single words (חלב became "Aleppo"), so it was not used.
 
