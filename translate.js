@@ -3,7 +3,7 @@
 // shortcut: only the words listed here translate, add more as they come up.
 export const HE_TO_EN = {
   'חלב': 'milk', 'חלב סויה': 'soy milk', 'לחם': 'bread', 'פיתה': 'pita', 'פיתות': 'pitas',
-  'ביצה': 'egg', 'ביצים': 'eggs', 'גבינה': 'cheese', 'קוטג\'': 'cottage cheese',
+  'ביצים': 'eggs', 'גבינה': 'cheese', 'קוטג\'': 'cottage cheese',
   'יוגורט': 'yogurt', 'חמאה': 'butter', 'שמנת': 'cream', 'גלידה': 'ice cream',
   'עגבנייה': 'tomato', 'עגבניות': 'tomatoes', 'מלפפון': 'cucumber', 'מלפפונים': 'cucumbers',
   'בצל יבש': 'yellow onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apples',
@@ -21,6 +21,7 @@ export const HE_TO_EN = {
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
   'אבקת כביסה': 'laundry detergent', 'סוללות': 'batteries',
   'פיצה': 'pizza', 'פיצה קפואה': 'frozen pizza',
+  'אפרסק': 'peach', 'אפרסקים': 'peaches',
   'בצל אדום': 'red onion', 'בצל ירוק': 'green onion',
 };
 

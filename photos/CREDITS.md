@@ -55,6 +55,8 @@ Edited Version by: Arad, Public domain
 
 
 This work was made by Masum-al-Hasan Rocky and released under the license(s) stated below. Please feel free to use it for any purpose as long as you credit Masum-al-Hasan Rocky as author and follow the terms of the chosen license. If you use this work outside of the Wikimedia projects, I would very much like to get a note from you. Thanks!, CC BY-SA 4.0
+- **peach** - Peaches (owner's own photo), project owner, Owner's own photo
+- **peaches** - Peaches (owner's own photo), project owner, Owner's own photo
 - **pepper** - [Baby Bell pepper ''Capsicum annuum'' .jpg](https://commons.wikimedia.org/wiki/File:Baby_Bell_pepper_%27%27Capsicum_annuum%27%27_.jpg) by Brocken Inaglory, CC BY-SA 3.0
 - **pita** - [PileofpitaS.jpg](https://commons.wikimedia.org/wiki/File:PileofpitaS.jpg) by Gilabrand, CC BY-SA 3.0
 - **pizza** - [Vegetarian Pizza.jpg](https://commons.wikimedia.org/wiki/File:Vegetarian_Pizza.jpg) by Petar Milošević, CC BY-SA 4.0

@@ -467,5 +467,19 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "peach": {
+    "file": "peach-own.jpg",
+    "title": "Peaches (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "peaches": {
+    "file": "peach-own.jpg",
+    "title": "Peaches (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
