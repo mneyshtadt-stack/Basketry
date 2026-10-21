@@ -2,7 +2,7 @@
 // Unknown words are kept as typed (a wrong guess is worse than the original).
 // shortcut: only the words listed here translate, add more as they come up.
 export const HE_TO_EN = {
-  'חלב': 'milk', 'חלב סויה': 'soy milk', 'לחם': 'bread', 'פיתה': 'pita', 'פיתות': 'pitas',
+  'חלב': 'milk', 'חלב סויה': 'soy milk', 'חלב דל לקטוז': 'lactose-free milk', 'לחם': 'bread', 'פיתה': 'pita', 'פיתות': 'pitas',
   'ביצים': 'eggs', 'גבינה': 'cheese', 'קוטג\'': 'cottage cheese',
   'יוגורט': 'yogurt', 'חמאה': 'butter', 'שמנת': 'cream', 'גלידה': 'ice cream',
   'עגבנייה': 'tomato', 'עגבניות': 'tomatoes', 'מלפפון': 'cucumber', 'מלפפונים': 'cucumbers',
