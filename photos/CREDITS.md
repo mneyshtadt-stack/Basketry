@@ -35,6 +35,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **juice** - [Orange juice 1 edit1.jpg](https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg) by Agency of the United States Department of Agriculture
 Edited Version by: Arad, Public domain
 - **ketchup** - [French Fries with Ketchup 02.jpg](https://commons.wikimedia.org/wiki/File:French_Fries_with_Ketchup_02.jpg) by Kritzolina, CC BY-SA 4.0
+- **lactose-free milk** - Lactose-free milk (owner's own photo), project owner, Owner's own photo
 - **laundry detergent** - [Gold Dust Washing Soap box.jpg](https://commons.wikimedia.org/wiki/File:Gold_Dust_Washing_Soap_box.jpg) by The forum on-line antiques mall; original artwork by  E.W. Kemble, a staff artist for the Chicago Daily Graphic., Public domain
 - **lemon** - [Lemon.jpg](https://commons.wikimedia.org/wiki/File:Lemon.jpg) by André Karwath aka Aka, CC BY-SA 2.5
 - **lettuce** - [Lactuca sativa 'Ashbrook'.jpg](https://commons.wikimedia.org/wiki/File:Lactuca_sativa_%27Ashbrook%27.jpg) by DeFacto, CC BY-SA 4.0

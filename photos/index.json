@@ -488,5 +488,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "lactose-free milk": {
+    "file": "lactose-free-milk-own.jpg",
+    "title": "Lactose-free milk (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
