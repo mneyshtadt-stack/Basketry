@@ -54,7 +54,7 @@ No build step: deploy the folder as-is.
 - `shortcut:` a family code is typed once per device (join form on first visit); there is no way to switch codes in the app yet.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
 - Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v18`) only when the offline fallback's file list (`SHELL`) changes.
-- Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Orders can't be deleted yet.
+- Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Delete an order from its view with "Delete this order" (tap twice).
 - Suggestions: a floating card under the add box (`#suggest`, styled like a search dropdown: top 3 as tiles, rest as rows with an arrow that fills the box). It filters as you type, built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes"). Tap a suggestion to fill the box.
 - `shortcut:` new items always get category "Other" (no picker yet).
 - `shortcut:` translation is a dictionary, not machine translation. A free online API (MyMemory) mistranslated single words (חלב became "Aleppo"), so it was not used.
@@ -64,4 +64,4 @@ No build step: deploy the folder as-is.
 1. Firebase is set up and saving works (tested in one browser). Still to do: test on two phones with the same family code.
    Setup steps: Firestore Database created, Rules published from `firestore.rules`, Authentication → Anonymous enabled.
 2. Category picker or name-based guessing; "staples" list for quick re-adding.
-3. Delete saved orders; change family code.
+3. Change family code.

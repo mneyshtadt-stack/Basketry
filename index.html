@@ -80,7 +80,7 @@
   import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
   import { bilingual, HE_TO_EN } from './translate.js';
   import { ICON_FOR } from './icons.js';
-  import { saveOrder, findOrder, copyOrderToList } from './orders.js';
+  import { saveOrder, findOrder, copyOrderToList, deleteOrder } from './orders.js';
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
   import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js';
   import { initializeFirestore, persistentLocalCache, doc, onSnapshot, setDoc } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js';
@@ -129,6 +129,7 @@
   let items = [];
   let orders = [];
   let view = ''; // '' = current list, otherwise an order id
+  let pendingDelete = ''; // order id waiting for a second tap to delete
 
   // Suggestions: grocery words plus anything already used in a list or order.
   let knownNames = [];
@@ -282,7 +283,20 @@
         view = '';
         render();
       });
-      listEl.append(copy);
+      const del = document.createElement('button');
+      del.type = 'button';
+      del.className = 'ghost';
+      del.style.marginTop = '8px';
+      del.textContent = pendingDelete === order.id ? 'Tap again to delete this order' : 'Delete this order';
+      del.addEventListener('click', () => {
+        if (pendingDelete !== order.id) { pendingDelete = order.id; render(); return; }
+        orders = deleteOrder(orders, order.id);
+        persist();
+        pendingDelete = '';
+        view = '';
+        render();
+      });
+      listEl.append(copy, del);
       countEl.textContent = `${order.date} · ${order.items.length} items`;
     } else {
       const open = items.filter(i => !i.done).length;
@@ -298,6 +312,7 @@
 
   viewEl.addEventListener('change', () => {
     view = viewEl.value;
+    pendingDelete = '';
     render();
   });
 

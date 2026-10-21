@@ -2,7 +2,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { addItem, toggleItem } from './list.js';
-import { saveOrder, findOrder, copyOrderToList } from './orders.js';
+import { saveOrder, findOrder, copyOrderToList, deleteOrder } from './orders.js';
 
 test('saveOrder ignores an empty list', () => {
   assert.equal(saveOrder([], []).length, 0);
@@ -41,4 +41,12 @@ test('copyOrderToList adds new unchecked items with fresh ids', () => {
   assert.equal(list[1].qty, 3);
   assert.equal(list[1].done, false);
   assert.notEqual(list[1].id, orders[0].items[0].id);
+});
+
+test('deleteOrder removes only the matching order', () => {
+  let orders = saveOrder([], addItem([], 'Tea'), '2026-10-01');
+  orders = saveOrder(orders, addItem([], 'Rice'), '2026-10-02');
+  const keep = orders[1];
+  orders = deleteOrder(orders, orders[0].id);
+  assert.deepEqual(orders, [keep]);
 });

@@ -12,6 +12,10 @@ export function saveOrder(orders, items, date = new Date().toISOString().slice(0
   return [{ id: newId(), date, items: snapshot }, ...orders];
 }
 
+export function deleteOrder(orders, id) {
+  return orders.filter(o => o.id !== id);
+}
+
 export function findOrder(orders, id) {
   return orders.find(o => o.id === id);
 }
