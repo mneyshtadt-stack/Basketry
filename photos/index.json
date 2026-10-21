@@ -516,5 +516,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "iceberg lettuce": {
+    "file": "iceberg-own.jpg",
+    "title": "Iceberg lettuce (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }

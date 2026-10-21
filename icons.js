@@ -1,6 +1,7 @@
 // Pictures for grocery names (lowercase English). Photos are from Wikimedia Commons; see photos/CREDITS.md.
 // Items without a picture show a letter circle.
 export const ICON_FOR = {
+  'iceberg lettuce': 'photos/iceberg-own.jpg',
   'romaine lettuce': 'photos/romaine-own.jpg',
   'radish': 'photos/radish-own.jpg',
   'challah bread': 'photos/challah-own.jpg',
