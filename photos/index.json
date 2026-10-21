@@ -1,0 +1,464 @@
+{
+  "egg": {
+    "file": "egg.jpg",
+    "title": "Chicken Egg without Eggshell 5859.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg",
+    "artist": "Biswarup Ganguly",
+    "licence": "CC BY 3.0"
+  },
+  "cottage cheese": {
+    "file": "cottage-cheese.jpg",
+    "title": "Cottage Cheese.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cottage_Cheese.jpg",
+    "artist": "Stu Spivack - flickr.com",
+    "licence": "CC BY-SA 2.0"
+  },
+  "yogurt": {
+    "file": "yogurt.jpg",
+    "title": "Joghurt.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Joghurt.jpg",
+    "artist": "No machine-readable author provided. Rainer Zenz assumed (based on copyright claims).",
+    "licence": "CC BY-SA 3.0"
+  },
+  "ice cream": {
+    "file": "ice-cream.jpg",
+    "title": "Apple cake with vanilla ice cream 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Apple_cake_with_vanilla_ice_cream_2.jpg",
+    "artist": "W.carter",
+    "licence": "CC0"
+  },
+  "yellow onion": {
+    "file": "yellow-onion.jpg",
+    "title": "Onion on White.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Onion_on_White.JPG",
+    "artist": "Colin",
+    "licence": "CC BY-SA 3.0"
+  },
+  "red onion": {
+    "file": "red-onion.jpg",
+    "title": "Red Onion on White.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Red_Onion_on_White.JPG",
+    "artist": "Colin",
+    "licence": "CC BY-SA 3.0"
+  },
+  "white onion": {
+    "file": "white-onion.jpg",
+    "title": "Onion on White.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Onion_on_White.JPG",
+    "artist": "Colin",
+    "licence": "CC BY-SA 3.0"
+  },
+  "green onion": {
+    "file": "green-onion.jpg",
+    "title": "Food Market in Bizerte 03.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Food_Market_in_Bizerte_03.jpg",
+    "artist": "Kritzolina",
+    "licence": "CC BY-SA 4.0"
+  },
+  "garlic": {
+    "file": "garlic.jpg",
+    "title": "Garlic bulbs and cloves.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Garlic_bulbs_and_cloves.jpg",
+    "artist": "Ivar Leidus",
+    "licence": "CC BY-SA 4.0"
+  },
+  "apple": {
+    "file": "apple.jpg",
+    "title": "Red Apple.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Red_Apple.jpg",
+    "artist": "Abhijit Tembhekar from Mumbai, India",
+    "licence": "CC BY 2.0"
+  },
+  "potato": {
+    "file": "potato.jpg",
+    "title": "Potato flowers 2016 G1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Potato_flowers_2016_G1.jpg",
+    "artist": "George Chernilevsky",
+    "licence": "Public domain"
+  },
+  "banana": {
+    "file": "banana.jpg",
+    "title": "Cavendish banana from Maracaibo.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cavendish_banana_from_Maracaibo.jpg",
+    "artist": "Wilfredor",
+    "licence": "CC BY-SA 3.0"
+  },
+  "orange": {
+    "file": "orange.jpg",
+    "title": "Oranges - whole-halved-segment.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg",
+    "artist": "Ivar Leidus",
+    "licence": "CC BY-SA 4.0"
+  },
+  "lemon": {
+    "file": "lemon.jpg",
+    "title": "Lemon.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lemon.jpg",
+    "artist": "André Karwath aka Aka",
+    "licence": "CC BY-SA 2.5"
+  },
+  "carrot": {
+    "file": "carrot.jpg",
+    "title": "Carrots of many colors.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Carrots_of_many_colors.jpg",
+    "artist": "Stephen Ausmus",
+    "licence": "Public domain"
+  },
+  "lettuce": {
+    "file": "lettuce.jpg",
+    "title": "Lactuca sativa 'Ashbrook'.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lactuca_sativa_%27Ashbrook%27.jpg",
+    "artist": "DeFacto",
+    "licence": "CC BY-SA 4.0"
+  },
+  "pepper": {
+    "file": "pepper.jpg",
+    "title": "Baby Bell pepper ''Capsicum annuum'' .jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Baby_Bell_pepper_%27%27Capsicum_annuum%27%27_.jpg",
+    "artist": "Brocken Inaglory",
+    "licence": "CC BY-SA 3.0"
+  },
+  "avocado": {
+    "file": "avocado.jpg",
+    "title": "Avocado Hass - single and halved.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Avocado_Hass_-_single_and_halved.jpg",
+    "artist": "Ivar Leidus",
+    "licence": "CC BY-SA 4.0"
+  },
+  "apricot": {
+    "file": "apricot.jpg",
+    "title": "Apricots.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Apricots.jpg",
+    "artist": "Fir0002",
+    "licence": "CC BY-SA 3.0"
+  },
+  "strawberry": {
+    "file": "strawberry.jpg",
+    "title": "Garden strawberry (Fragaria × ananassa) single2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg",
+    "artist": "Ivar Leidus",
+    "licence": "CC BY-SA 4.0"
+  },
+  "corn": {
+    "file": "corn.jpg",
+    "title": "Air fried corn-on-the-cob (United States).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Air_fried_corn-on-the-cob_(United_States).jpg",
+    "artist": "NeoBatfreak",
+    "licence": "CC BY-SA 4.0"
+  },
+  "parsley": {
+    "file": "parsley.jpg",
+    "title": "Petroselinum crispum 003.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Petroselinum_crispum_003.JPG",
+    "artist": "H. Zell",
+    "licence": "CC BY-SA 3.0"
+  },
+  "coriander": {
+    "file": "coriander.jpg",
+    "title": "Coriander Seeds.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Coriander_Seeds.jpg",
+    "artist": "Sanjay Acharya",
+    "licence": "CC BY-SA 4.0"
+  },
+  "dill": {
+    "file": "dill.jpg",
+    "title": "Aneth FR 2012.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Aneth_FR_2012.jpg",
+    "artist": "JLPC",
+    "licence": "CC BY-SA 3.0"
+  },
+  "meat": {
+    "file": "meat.jpg",
+    "title": "A fresh and uncooked meat seller trying to cut his meat to sell to his customer.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:A_fresh_and_uncooked_meat_seller_trying_to_cut_his_meat_to_sell_to_his_customer.jpg",
+    "artist": "Oreoluwa Adetimehin",
+    "licence": "CC BY-SA 4.0"
+  },
+  "chicken": {
+    "file": "chicken.jpg",
+    "title": "Chickens in market.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chickens_in_market.jpg",
+    "artist": "Tomás Castelazo",
+    "licence": "CC BY-SA 3.0"
+  },
+  "fish": {
+    "file": "fish.jpg",
+    "title": "Ensenada fish market 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ensenada_fish_market_2.jpg",
+    "artist": "Tomascastelazo",
+    "licence": "CC BY-SA 3.0"
+  },
+  "sausages": {
+    "file": "sausages.jpg",
+    "title": "Sausage making-H-5-edited2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sausage_making-H-5-edited2.jpg",
+    "artist": "László Szalai (Beyond silence)",
+    "licence": "CC BY-SA 3.0"
+  },
+  "rice": {
+    "file": "rice.png",
+    "title": "Rice Grains .png",
+    "page": "https://commons.wikimedia.org/wiki/File:Rice_Grains_.png",
+    "artist": "Hpannu7",
+    "licence": "CC BY-SA 4.0"
+  },
+  "pasta": {
+    "file": "pasta.jpg",
+    "title": "A plate of red sauce pasta.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:A_plate_of_red_sauce_pasta.jpg",
+    "artist": "Rocky Masum \n\n\n\n\n\n\nThis work was made by Masum-al-Hasan Rocky and released under the license(s) stated below. Please feel free to use it for any purpose as long as you credit Masum-al-Hasan Rocky as author and follow the terms of the chosen license. If you use this work outside of the Wikimedia projects, I would very much like to get a note from you. Thanks!",
+    "licence": "CC BY-SA 4.0"
+  },
+  "flour": {
+    "file": "flour.jpg",
+    "title": "Home made sour dough bread.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Home_made_sour_dough_bread.jpg",
+    "artist": "Tomascastelazo",
+    "licence": "CC BY-SA 4.0"
+  },
+  "salt": {
+    "file": "salt.jpg",
+    "title": "Marakkanam Salt Pans.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Marakkanam_Salt_Pans.JPG",
+    "artist": "Dey.sandip",
+    "licence": "CC BY 3.0"
+  },
+  "oil": {
+    "file": "oil.jpg",
+    "title": "Vegetable oil products on sale.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Vegetable_oil_products_on_sale.jpg",
+    "artist": "Lord Ajax 001",
+    "licence": "CC BY-SA 4.0"
+  },
+  "olive oil": {
+    "file": "olive-oil.jpg",
+    "title": "2023 Oliwa z oliwek Garda DOP (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2023_Oliwa_z_oliwek_Garda_DOP_(1).jpg",
+    "artist": "Jacek Halicki",
+    "licence": "CC BY-SA 4.0"
+  },
+  "coffee": {
+    "file": "coffee.jpg",
+    "title": "A small cup of coffee.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:A_small_cup_of_coffee.JPG",
+    "artist": "Julius Schorzman",
+    "licence": "CC BY-SA 2.0"
+  },
+  "tea": {
+    "file": "tea.jpg",
+    "title": "2023 Filiżanki do herbaty.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2023_Fili%C5%BCanki_do_herbaty.jpg",
+    "artist": "Jacek Halicki",
+    "licence": "CC BY-SA 4.0"
+  },
+  "water": {
+    "file": "water.jpg",
+    "title": "Metal Water Bottles.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Metal_Water_Bottles.jpeg",
+    "artist": "Amraepowell",
+    "licence": "CC0"
+  },
+  "juice": {
+    "file": "juice.jpg",
+    "title": "Orange juice 1 edit1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg",
+    "artist": "Agency of the United States Department of Agriculture\nEdited Version by: Arad",
+    "licence": "Public domain"
+  },
+  "biscuits": {
+    "file": "biscuits.jpg",
+    "title": "Gurabija (гурабија,Qurabiya; Cuisine of Serbia).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gurabija_(%D0%B3%D1%83%D1%80%D0%B0%D0%B1%D0%B8%D1%98%D0%B0,Qurabiya;_Cuisine_of_Serbia).jpg",
+    "artist": "Petar Milošević",
+    "licence": "CC BY-SA 4.0"
+  },
+  "chocolate": {
+    "file": "chocolate.jpg",
+    "title": "Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg",
+    "artist": "Daria YakovlevaMinor edits made by Subsidiary account",
+    "licence": "CC0"
+  },
+  "snack": {
+    "file": "snack.jpg",
+    "title": "SnackfoodRackDF.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:SnackfoodRackDF.JPG",
+    "artist": "AlejandroLinaresGarcia",
+    "licence": "CC BY-SA 4.0"
+  },
+  "ketchup": {
+    "file": "ketchup.jpg",
+    "title": "French Fries with Ketchup 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:French_Fries_with_Ketchup_02.jpg",
+    "artist": "Kritzolina",
+    "licence": "CC BY-SA 4.0"
+  },
+  "mayonnaise": {
+    "file": "mayonnaise.jpg",
+    "title": "Mayonnaise (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mayonnaise_(1).jpg",
+    "artist": "jules",
+    "licence": "CC BY 2.0"
+  },
+  "hummus": {
+    "file": "hummus.jpg",
+    "title": "Homemade hummus and pita 03.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Homemade_hummus_and_pita_03.jpg",
+    "artist": "Satdeep Gill",
+    "licence": "CC BY-SA 4.0"
+  },
+  "tahini": {
+    "file": "tahini.jpg",
+    "title": "Tahini with oil.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Tahini_with_oil.JPG",
+    "artist": "Miansari66",
+    "licence": "CC0"
+  },
+  "olives": {
+    "file": "olives.jpg",
+    "title": "Air Olive 1.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Air_Olive_1.JPG",
+    "artist": "Ввласенко",
+    "licence": "CC BY-SA 3.0"
+  },
+  "soap": {
+    "file": "soap.jpg",
+    "title": "Handmade soap.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Handmade_soap.jpg",
+    "artist": "Malene Thyssen",
+    "licence": "CC BY 2.5"
+  },
+  "toilet paper": {
+    "file": "toilet-paper.jpg",
+    "title": "Toilet Tissue Paper Roll 350 Sheet.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Toilet_Tissue_Paper_Roll_350_Sheet.jpg",
+    "artist": "Tissue paper india",
+    "licence": "CC BY-SA 4.0"
+  },
+  "shampoo": {
+    "file": "shampoo.jpg",
+    "title": "Dove shampoo bottle in black background.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Dove_shampoo_bottle_in_black_background.jpg",
+    "artist": "Ranjima np",
+    "licence": "CC0"
+  },
+  "toothpaste": {
+    "file": "toothpaste.jpg",
+    "title": "Toothpasteonbrush.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Toothpasteonbrush.jpg",
+    "artist": "Thegreenj",
+    "licence": "CC BY-SA 3.0"
+  },
+  "batteries": {
+    "file": "batteries.jpg",
+    "title": "Lithium-Ion Cell cylindric.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Lithium-Ion_Cell_cylindric.JPG",
+    "artist": "RudolfSimon",
+    "licence": "CC BY-SA 3.0"
+  },
+  "pizza": {
+    "file": "pizza.jpg",
+    "title": "Vegetarian Pizza.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Vegetarian_Pizza.jpg",
+    "artist": "Petar Milošević",
+    "licence": "CC BY-SA 4.0"
+  },
+  "soy milk": {
+    "file": "soy-milk.jpg",
+    "title": "Soy Non-Dairy Milk (5082414499).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Soy_Non-Dairy_Milk_(5082414499).jpg",
+    "artist": "Veganbaking.net from USA",
+    "licence": "CC BY-SA 2.0"
+  },
+  "bread": {
+    "file": "bread.jpg",
+    "title": "Fresh made bread 05.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fresh_made_bread_05.jpg",
+    "artist": "FranHogan",
+    "licence": "CC BY-SA 4.0"
+  },
+  "pita": {
+    "file": "pita.jpg",
+    "title": "PileofpitaS.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PileofpitaS.jpg",
+    "artist": "Gilabrand",
+    "licence": "CC BY-SA 3.0"
+  },
+  "butter": {
+    "file": "butter.jpg",
+    "title": "Butter Stick at BUTTER Art Fair.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Butter_Stick_at_BUTTER_Art_Fair.jpg",
+    "artist": "Cerebral726",
+    "licence": "CC BY-SA 4.0"
+  },
+  "cucumber": {
+    "file": "cucumber.jpg",
+    "title": "Cucumber Slices (Alabama Extension).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cucumber_Slices_(Alabama_Extension).jpg",
+    "artist": "Alabama Extension",
+    "licence": "CC0"
+  },
+  "sugar": {
+    "file": "sugar.jpg",
+    "title": "Würfelzucker -- 2018 -- 3564.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:W%C3%BCrfelzucker_--_2018_--_3564.jpg",
+    "artist": "Dietmar Rabich",
+    "licence": "CC BY-SA 4.0"
+  },
+  "cola": {
+    "file": "cola.jpg",
+    "title": "Coca-cola 50cl can - Italia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Coca-cola_50cl_can_-_Italia.jpg",
+    "artist": "M0tty",
+    "licence": "CC BY-SA 3.0"
+  },
+  "cookies": {
+    "file": "cookies.jpg",
+    "title": "Choc-Chip-Cookie.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Choc-Chip-Cookie.jpg",
+    "artist": "Evan-Amos",
+    "licence": "Public domain"
+  },
+  "frozen pizza": {
+    "file": "frozen-pizza.jpg",
+    "title": "Frozen pizzas at supermarket.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Frozen_pizzas_at_supermarket.jpg",
+    "artist": "Carstenhag",
+    "licence": "CC BY-SA 4.0"
+  },
+  "tomato": {
+    "file": "tomato.jpg",
+    "title": "Organic home-grown tomatoes - unripe to ripe.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Organic_home-grown_tomatoes_-_unripe_to_ripe.jpg",
+    "artist": "Michal Klajban",
+    "licence": "CC BY-SA 4.0"
+  },
+  "cream": {
+    "file": "cream.jpg",
+    "title": "Pudding Dessert with Whipped Cream.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pudding_Dessert_with_Whipped_Cream.jpg",
+    "artist": "Karl Thomas Moore",
+    "licence": "CC BY-SA 4.0"
+  },
+  "laundry detergent": {
+    "file": "laundry-detergent.jpg",
+    "title": "Gold Dust Washing Soap box.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gold_Dust_Washing_Soap_box.jpg",
+    "artist": "The forum on-line antiques mall; original artwork by  E.W. Kemble, a staff artist for the Chicago Daily Graphic.",
+    "licence": "Public domain"
+  },
+  "cheese": {
+    "file": "cheese.jpg",
+    "title": "Cheese salad roll at The Original Tea Hut at High Beach, Essex, England 02 higher dynamic range.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cheese_salad_roll_at_The_Original_Tea_Hut_at_High_Beach,_Essex,_England_02_higher_dynamic_range.jpg",
+    "artist": "Acabashi",
+    "licence": "CC BY-SA 4.0"
+  },
+  "milk": {
+    "file": "milk.jpg",
+    "title": "Jug, milk (AM 1994.202-2).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Jug,_milk_(AM_1994.202-2).jpg",
+    "artist": "Crown Lynn Potteries Ltd",
+    "licence": "CC BY 4.0"
+  }
+}
