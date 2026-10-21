@@ -19,6 +19,7 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `index.html` - identical copy of `grocery.html`, so the GitHub Pages root opens the app. Copy `grocery.html` over it whenever the app changes (`cp grocery.html index.html`).
 - `sw.js` - service worker: network-first; the cached app shell is used only when offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
+- Onion words: בצל = yellow onion, בצל ירוק = green onion, בצל אדום = red onion, בצל לבן = white onion. Typing English "onion" gives no Hebrew.
 - `icons.js` + `icons/*.svg` - pictures for items (onion, red/white/yellow/green). `ICON_FOR` maps a lowercase English name to its picture; items without one show a letter circle.
 - `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
 - `package.json` - `npm test` and `npm start` scripts. No dependencies.
