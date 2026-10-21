@@ -10,14 +10,14 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 
 ## Files
 
-- `grocery.html` - UI, styles and page logic (ES module). Entry point.
+- `grocery.html` - the app: UI, styles and page logic (ES module).
 - `list.js` - pure list logic: add (first letter capitalized, optional Hebrew `he`), displayName ("Potatoes [תפוחי אדמה]"), toggle, remove, clear checked, group by category, suggestion names. No DOM.
 - `translate.js` - Hebrew to English dictionary for common grocery words (offline). `bilingual()` gives English name plus Hebrew (either direction). Unknown words are kept as typed. Add words to `HE_TO_EN`.
 - `orders.js` - saved orders: snapshot the list (`saveOrder`), find one, copy one back into the list (`copyOrderToList`).
 - `list.test.mjs`, `translate.test.mjs`, `orders.test.mjs` - unit tests (node:test).
 - `firestore.rules` - Firestore security rules. Paste into Firebase console → Firestore → Rules.
 - `index.html` - redirects to `grocery.html`, so the site root works on GitHub Pages.
-- `sw.js` - service worker: caches the app shell (cache-first), so the app opens offline.
+- `sw.js` - service worker: network-first; the cached app shell is used only when offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
 - `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
 - `package.json` - `npm test` and `npm start` scripts. No dependencies.
