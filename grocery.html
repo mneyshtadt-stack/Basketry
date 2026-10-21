@@ -37,6 +37,8 @@
   .row:hover { background: var(--line); }
   .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 600; flex: none; }
   .row .avatar { width: 32px; height: 32px; font-size: .8rem; background: var(--line); color: var(--fg); }
+  .avatar.pic { background: none; }
+  .list-pic { width: 28px; height: 28px; flex: none; }
   .row .arrow { margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 1.1rem; padding: 4px 8px; }
   h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 18px 0 6px; }
   ul { list-style: none; padding: 0; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
@@ -77,6 +79,7 @@
 <script type="module">
   import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
   import { bilingual, HE_TO_EN } from './translate.js';
+  import { ICON_FOR } from './icons.js';
   import { saveOrder, findOrder, copyOrderToList } from './orders.js';
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
   import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js';
@@ -162,9 +165,10 @@
     const el = document.createElement(tile ? 'button' : 'div');
     el.className = tile ? 'tile' : 'row';
     if (tile) el.type = 'button';
-    const avatar = document.createElement('span');
-    avatar.className = 'avatar';
-    avatar.textContent = n[0].toUpperCase();
+    const icon = ICON_FOR[n.toLowerCase()];
+    const avatar = document.createElement(icon ? 'img' : 'span');
+    avatar.className = icon ? 'avatar pic' : 'avatar';
+    if (icon) { avatar.src = icon; avatar.alt = ''; } else { avatar.textContent = n[0].toUpperCase(); }
     const label = document.createElement('span');
     label.append(highlight(n, nameInput.value.trim()));
     el.append(avatar, label);
@@ -236,14 +240,16 @@
         const label = document.createElement('label');
         const span = document.createElement('span');
         span.textContent = displayName(item);
+        const icon = ICON_FOR[item.name.toLowerCase()];
+        const pic = icon ? Object.assign(document.createElement('img'), { src: icon, alt: '', className: 'list-pic' }) : null;
         if (readOnly) {
-          label.append(span);
+          label.append(...[pic, span].filter(Boolean));
         } else {
           const box = document.createElement('input');
           box.type = 'checkbox';
           box.checked = item.done;
           box.addEventListener('change', () => update(toggleItem(items, item.id)));
-          label.append(box, span);
+          label.append(box, ...[pic, span].filter(Boolean));
         }
 
         const qty = document.createElement('span');

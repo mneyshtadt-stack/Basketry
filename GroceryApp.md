@@ -19,6 +19,7 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `index.html` - identical copy of `grocery.html`, so the GitHub Pages root opens the app. Copy `grocery.html` over it whenever the app changes (`cp grocery.html index.html`).
 - `sw.js` - service worker: network-first; the cached app shell is used only when offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
+- `icons.js` + `icons/*.svg` - pictures for items (onion, red/white/yellow/green). `ICON_FOR` maps a lowercase English name to its picture; items without one show a letter circle.
 - `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
 - `package.json` - `npm test` and `npm start` scripts. No dependencies.
 - `.gitignore` - ignores `node_modules/`.
@@ -51,7 +52,7 @@ No build step: deploy the folder as-is.
 - `shortcut:` two phones editing at the same moment: last save wins. Upgrade to per-item writes if this bites.
 - `shortcut:` a family code is typed once per device (join form on first visit); there is no way to switch codes in the app yet.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
-- Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v16`) only when the offline fallback's file list (`SHELL`) changes.
+- Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v17`) only when the offline fallback's file list (`SHELL`) changes.
 - Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Orders can't be deleted yet.
 - Suggestions: a floating card under the add box (`#suggest`, styled like a search dropdown: top 3 as tiles, rest as rows with an arrow that fills the box). It filters as you type, built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes"). Tap a suggestion to fill the box.
 - `shortcut:` new items always get category "Other" (no picker yet).

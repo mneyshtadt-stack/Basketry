@@ -21,6 +21,7 @@ export const HE_TO_EN = {
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
   'אבקת כביסה': 'laundry detergent', 'סוללות': 'batteries',
   'פיצה': 'pizza', 'פיצה קפואה': 'frozen pizza',
+  'בצל אדום': 'red onion', 'בצל לבן': 'white onion', 'בצל צהוב': 'yellow onion', 'בצל ירוק': 'green onion',
 };
 
 const HEBREW = /[֐-׿]/;
