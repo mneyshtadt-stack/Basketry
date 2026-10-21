@@ -20,7 +20,7 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `sw.js` - service worker: network-first; the cached app shell is used only when offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
 - Onion words: בצל = yellow onion, בצל ירוק = green onion, בצל אדום = red onion, בצל לבן = white onion. Typing English "onion" gives no Hebrew.
-- `icons.js` - `ICON_FOR` maps each lowercase English name to a photo in `photos/` (about 2.2 MB, 66 photos from Wikimedia Commons, plus the owner's own yellow onion photo). Names without a photo show a letter circle. `photos/CREDITS.md` lists each photo's author and licence; keep it with the photos.
+- `icons.js` - `ICON_FOR` maps each lowercase English name to a photo in `photos/` (about 2.2 MB, 66 photos from Wikimedia Commons, plus the owner's own onion photos: yellow, green and red). Names without a photo show a letter circle. `photos/CREDITS.md` lists each photo's author and licence; keep it with the photos.
 - `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
 - `package.json` - `npm test` and `npm start` scripts. No dependencies.
 - `.gitignore` - ignores `node_modules/`.

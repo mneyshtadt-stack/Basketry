@@ -35,11 +35,11 @@
     "licence": "Owner's own photo"
   },
   "red onion": {
-    "file": "red-onion.jpg",
-    "title": "Red Onion on White.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Red_Onion_on_White.JPG",
-    "artist": "Colin",
-    "licence": "CC BY-SA 3.0"
+    "file": "red-onion-own.jpg",
+    "title": "Onions (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "white onion": {
     "file": "white-onion.jpg",
@@ -49,11 +49,11 @@
     "licence": "CC BY-SA 3.0"
   },
   "green onion": {
-    "file": "green-onion.jpg",
-    "title": "Food Market in Bizerte 03.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Food_Market_in_Bizerte_03.jpg",
-    "artist": "Kritzolina",
-    "licence": "CC BY-SA 4.0"
+    "file": "green-onion-own.jpg",
+    "title": "Onions (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "garlic": {
     "file": "garlic.jpg",

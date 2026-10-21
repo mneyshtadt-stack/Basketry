@@ -28,7 +28,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **flour** - [Home made sour dough bread.jpg](https://commons.wikimedia.org/wiki/File:Home_made_sour_dough_bread.jpg) by Tomascastelazo, CC BY-SA 4.0
 - **frozen pizza** - [Frozen pizzas at supermarket.jpg](https://commons.wikimedia.org/wiki/File:Frozen_pizzas_at_supermarket.jpg) by Carstenhag, CC BY-SA 4.0
 - **garlic** - [Garlic bulbs and cloves.jpg](https://commons.wikimedia.org/wiki/File:Garlic_bulbs_and_cloves.jpg) by Ivar Leidus, CC BY-SA 4.0
-- **green onion** - [Food Market in Bizerte 03.jpg](https://commons.wikimedia.org/wiki/File:Food_Market_in_Bizerte_03.jpg) by Kritzolina, CC BY-SA 4.0
+- **green onion** - Onions (owner's own photo), project owner, Owner's own photo
 - **hummus** - [Homemade hummus and pita 03.jpg](https://commons.wikimedia.org/wiki/File:Homemade_hummus_and_pita_03.jpg) by Satdeep Gill, CC BY-SA 4.0
 - **ice cream** - [Apple cake with vanilla ice cream 2.jpg](https://commons.wikimedia.org/wiki/File:Apple_cake_with_vanilla_ice_cream_2.jpg) by W.carter, CC0
 - **juice** - [Orange juice 1 edit1.jpg](https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg) by Agency of the United States Department of Agriculture
@@ -58,7 +58,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **pita** - [PileofpitaS.jpg](https://commons.wikimedia.org/wiki/File:PileofpitaS.jpg) by Gilabrand, CC BY-SA 3.0
 - **pizza** - [Vegetarian Pizza.jpg](https://commons.wikimedia.org/wiki/File:Vegetarian_Pizza.jpg) by Petar Milošević, CC BY-SA 4.0
 - **potato** - [Potato flowers 2016 G1.jpg](https://commons.wikimedia.org/wiki/File:Potato_flowers_2016_G1.jpg) by George Chernilevsky, Public domain
-- **red onion** - [Red Onion on White.JPG](https://commons.wikimedia.org/wiki/File:Red_Onion_on_White.JPG) by Colin, CC BY-SA 3.0
+- **red onion** - Onions (owner's own photo), project owner, Owner's own photo
 - **rice** - [Rice Grains .png](https://commons.wikimedia.org/wiki/File:Rice_Grains_.png) by Hpannu7, CC BY-SA 4.0
 - **salt** - [Marakkanam Salt Pans.JPG](https://commons.wikimedia.org/wiki/File:Marakkanam_Salt_Pans.JPG) by Dey.sandip, CC BY 3.0
 - **sausages** - [Sausage making-H-5-edited2.jpg](https://commons.wikimedia.org/wiki/File:Sausage_making-H-5-edited2.jpg) by László Szalai (Beyond silence), CC BY-SA 3.0
