@@ -495,5 +495,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "challah bread": {
+    "file": "challah-own.jpg",
+    "title": "Challah (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }

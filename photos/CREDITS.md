@@ -11,6 +11,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **bread** - [Fresh made bread 05.jpg](https://commons.wikimedia.org/wiki/File:Fresh_made_bread_05.jpg) by FranHogan, CC BY-SA 4.0
 - **butter** - [Butter Stick at BUTTER Art Fair.jpg](https://commons.wikimedia.org/wiki/File:Butter_Stick_at_BUTTER_Art_Fair.jpg) by Cerebral726, CC BY-SA 4.0
 - **carrot** - [Carrots of many colors.jpg](https://commons.wikimedia.org/wiki/File:Carrots_of_many_colors.jpg) by Stephen Ausmus, Public domain
+- **challah bread** - Challah (owner's own photo), project owner, Owner's own photo
 - **cheese** - [Cheese salad roll at The Original Tea Hut at High Beach, Essex, England 02 higher dynamic range.jpg](https://commons.wikimedia.org/wiki/File:Cheese_salad_roll_at_The_Original_Tea_Hut_at_High_Beach,_Essex,_England_02_higher_dynamic_range.jpg) by Acabashi, CC BY-SA 4.0
 - **chicken** - [Chickens in market.jpg](https://commons.wikimedia.org/wiki/File:Chickens_in_market.jpg) by Tomás Castelazo, CC BY-SA 3.0
 - **chocolate** - [Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg](https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg) by Daria YakovlevaMinor edits made by Subsidiary account, CC0

@@ -2,11 +2,11 @@
 // Unknown words are kept as typed (a wrong guess is worse than the original).
 // shortcut: only the words listed here translate, add more as they come up.
 export const HE_TO_EN = {
-  'חלב': 'milk', 'חלב סויה': 'soy milk', 'חלב דל לקטוז': 'lactose-free milk', 'לחם': 'bread', 'פיתה': 'pita', 'פיתות': 'pitas',
-  'ביצים': 'eggs', 'גבינה': 'cheese', 'קוטג\'': 'cottage cheese',
+  'חלב': 'milk', 'חלב סויה': 'soy milk', 'חלב דל לקטוז': 'lactose-free milk', 'לחם': 'bread', 'חלה': 'challah bread', 'פיתה': 'pita', 'פיתות': 'pitas',
+  'ביצה': 'egg', 'ביצים': 'eggs', 'גבינה': 'cheese', 'קוטג\'': 'cottage cheese',
   'יוגורט': 'yogurt', 'חמאה': 'butter', 'שמנת': 'cream', 'גלידה': 'ice cream',
   'עגבנייה': 'tomato', 'עגבניות': 'tomatoes', 'מלפפון': 'cucumber', 'מלפפונים': 'cucumbers',
-  'בצל יבש': 'yellow onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apples',
+  'בצל יבש': 'yellow onion', 'בצל': 'yellow onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apples',
   'תפוח אדמה': 'potato', 'תפוחי אדמה': 'potatoes', 'בננה': 'banana', 'בננות': 'bananas',
   'תפוז': 'orange', 'תפוזים': 'oranges', 'לימון': 'lemon', 'גזר': 'carrot',
   'חסה': 'lettuce', 'פלפל': 'pepper', 'אבוקדו': 'avocado', 'משמש': 'apricot',
