@@ -18,7 +18,8 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `firestore.rules` - Firestore security rules. Paste into Firebase console → Firestore → Rules.
 - `index.html` - identical copy of `grocery.html`, so the GitHub Pages root opens the app. Copy `grocery.html` over it whenever the app changes (`cp grocery.html index.html`).
 - `sw.js` - service worker: network-first; the cached app shell is used only when offline.
-- `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
+- `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icons). Chrome needs a PNG icon of at least 192 px to offer install, so `icon-512.png` is listed first.
+- `icon-512.png` - app icon (512 px PNG), drawn to match `icon.svg`.
 - Pictures are looked up by the English name (`bilingual(name).name`), so Hebrew suggestions get pictures too.
 - Onion words: בצל יבש = yellow onion (בצל also still works), בצל ירוק = green onion, בצל אדום = red onion. Typing English "onion" gives no Hebrew.
 - `icons.js` - `ICON_FOR` maps each lowercase English name to a photo in `photos/` (about 2.2 MB, 66 photos from Wikimedia Commons, plus the owner's own photos: onions (yellow, green, red), eggs, peaches and oranges). Names without a photo show a letter circle. `photos/CREDITS.md` lists each photo's author and licence; keep it with the photos.
@@ -54,6 +55,7 @@ No build step: deploy the folder as-is.
 - `shortcut:` two phones editing at the same moment: last save wins. Upgrade to per-item writes if this bites.
 - `shortcut:` a family code is typed once per device (join form on first visit); there is no way to switch codes in the app yet.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
+- Install on Android needs `icon-512.png` (SVG alone is not enough for the install prompt). Keep it in the manifest.
 - Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v18`) only when the offline fallback's file list (`SHELL`) changes.
 - Orders: "Save as order" snapshots the current list (all items, checked or not). The filter switches between the current list and an order; an order is read-only, and "Copy this order to my list" adds its items as new. Delete an order from its view with "Delete this order" (tap twice).
 - Suggestions: a floating card under the add box (`#suggest`, styled like a search dropdown: top 3 as tiles, rest as rows with an arrow that fills the box). It filters as you type, built from the grocery dictionary and from names already used in lists and orders (typing "toma" offers "Tomatoes"). Tap a suggestion to fill the box.
