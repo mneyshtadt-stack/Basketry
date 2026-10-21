@@ -67,6 +67,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **radish** - Radish (owner's own photo), project owner, Owner's own photo
 - **red onion** - Onions (owner's own photo), project owner, Owner's own photo
 - **rice** - [Rice Grains .png](https://commons.wikimedia.org/wiki/File:Rice_Grains_.png) by Hpannu7, CC BY-SA 4.0
+- **romaine lettuce** - Romaine lettuce (owner's own photo), project owner, Owner's own photo
 - **salt** - [Marakkanam Salt Pans.JPG](https://commons.wikimedia.org/wiki/File:Marakkanam_Salt_Pans.JPG) by Dey.sandip, CC BY 3.0
 - **sausages** - [Sausage making-H-5-edited2.jpg](https://commons.wikimedia.org/wiki/File:Sausage_making-H-5-edited2.jpg) by László Szalai (Beyond silence), CC BY-SA 3.0
 - **shampoo** - [Dove shampoo bottle in black background.jpg](https://commons.wikimedia.org/wiki/File:Dove_shampoo_bottle_in_black_background.jpg) by Ranjima np, CC0

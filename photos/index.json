@@ -509,5 +509,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "romaine lettuce": {
+    "file": "romaine-own.jpg",
+    "title": "Romaine lettuce (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
