@@ -28,11 +28,11 @@
     "licence": "CC0"
   },
   "yellow onion": {
-    "file": "yellow-onion.jpg",
-    "title": "Onion on White.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Onion_on_White.JPG",
-    "artist": "Colin",
-    "licence": "CC BY-SA 3.0"
+    "file": "yellow-onion-own.jpg",
+    "title": "Yellow onions (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "red onion": {
     "file": "red-onion.jpg",
@@ -460,5 +460,12 @@
     "page": "https://commons.wikimedia.org/wiki/File:Jug,_milk_(AM_1994.202-2).jpg",
     "artist": "Crown Lynn Potteries Ltd",
     "licence": "CC BY 4.0"
+  },
+  "onion": {
+    "file": "yellow-onion-own.jpg",
+    "title": "Yellow onions (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }

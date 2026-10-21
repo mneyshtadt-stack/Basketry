@@ -43,6 +43,7 @@ Edited Version by: Arad, Public domain
 - **oil** - [Vegetable oil products on sale.jpg](https://commons.wikimedia.org/wiki/File:Vegetable_oil_products_on_sale.jpg) by Lord Ajax 001, CC BY-SA 4.0
 - **olive oil** - [2023 Oliwa z oliwek Garda DOP (1).jpg](https://commons.wikimedia.org/wiki/File:2023_Oliwa_z_oliwek_Garda_DOP_(1).jpg) by Jacek Halicki, CC BY-SA 4.0
 - **olives** - [Air Olive 1.JPG](https://commons.wikimedia.org/wiki/File:Air_Olive_1.JPG) by Ввласенко, CC BY-SA 3.0
+- **onion** - Yellow onions (owner's own photo), project owner, Owner's own photo
 - **orange** - [Oranges - whole-halved-segment.jpg](https://commons.wikimedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg) by Ivar Leidus, CC BY-SA 4.0
 - **parsley** - [Petroselinum crispum 003.JPG](https://commons.wikimedia.org/wiki/File:Petroselinum_crispum_003.JPG) by H. Zell, CC BY-SA 3.0
 - **pasta** - [A plate of red sauce pasta.jpg](https://commons.wikimedia.org/wiki/File:A_plate_of_red_sauce_pasta.jpg) by Rocky Masum 
@@ -74,5 +75,5 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **toothpaste** - [Toothpasteonbrush.jpg](https://commons.wikimedia.org/wiki/File:Toothpasteonbrush.jpg) by Thegreenj, CC BY-SA 3.0
 - **water** - [Metal Water Bottles.jpeg](https://commons.wikimedia.org/wiki/File:Metal_Water_Bottles.jpeg) by Amraepowell, CC0
 - **white onion** - [Onion on White.JPG](https://commons.wikimedia.org/wiki/File:Onion_on_White.JPG) by Colin, CC BY-SA 3.0
-- **yellow onion** - [Onion on White.JPG](https://commons.wikimedia.org/wiki/File:Onion_on_White.JPG) by Colin, CC BY-SA 3.0
+- **yellow onion** - Yellow onions (owner's own photo), project owner, Owner's own photo
 - **yogurt** - [Joghurt.jpg](https://commons.wikimedia.org/wiki/File:Joghurt.jpg) by No machine-readable author provided. Rainer Zenz assumed (based on copyright claims)., CC BY-SA 3.0
