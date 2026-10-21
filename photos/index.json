@@ -77,11 +77,11 @@
     "licence": "CC BY-SA 3.0"
   },
   "orange": {
-    "file": "orange.jpg",
-    "title": "Oranges - whole-halved-segment.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg",
-    "artist": "Ivar Leidus",
-    "licence": "CC BY-SA 4.0"
+    "file": "orange-own.jpg",
+    "title": "Oranges (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "lemon": {
     "file": "lemon.jpg",
@@ -478,6 +478,13 @@
   "peaches": {
     "file": "peach-own.jpg",
     "title": "Peaches (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "oranges": {
+    "file": "orange-own.jpg",
+    "title": "Oranges (owner's own photo)",
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"

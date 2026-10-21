@@ -45,7 +45,8 @@ Edited Version by: Arad, Public domain
 - **olive oil** - [2023 Oliwa z oliwek Garda DOP (1).jpg](https://commons.wikimedia.org/wiki/File:2023_Oliwa_z_oliwek_Garda_DOP_(1).jpg) by Jacek Halicki, CC BY-SA 4.0
 - **olives** - [Air Olive 1.JPG](https://commons.wikimedia.org/wiki/File:Air_Olive_1.JPG) by Ввласенко, CC BY-SA 3.0
 - **onion** - Yellow onions (owner's own photo), project owner, Owner's own photo
-- **orange** - [Oranges - whole-halved-segment.jpg](https://commons.wikimedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg) by Ivar Leidus, CC BY-SA 4.0
+- **orange** - Oranges (owner's own photo), project owner, Owner's own photo
+- **oranges** - Oranges (owner's own photo), project owner, Owner's own photo
 - **parsley** - [Petroselinum crispum 003.JPG](https://commons.wikimedia.org/wiki/File:Petroselinum_crispum_003.JPG) by H. Zell, CC BY-SA 3.0
 - **pasta** - [A plate of red sauce pasta.jpg](https://commons.wikimedia.org/wiki/File:A_plate_of_red_sauce_pasta.jpg) by Rocky Masum 
 
