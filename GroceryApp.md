@@ -16,6 +16,7 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `orders.js` - saved orders: snapshot the list (`saveOrder`), find one, copy one back into the list (`copyOrderToList`).
 - `list.test.mjs`, `translate.test.mjs`, `orders.test.mjs` - unit tests (node:test).
 - `firestore.rules` - Firestore security rules. Paste into Firebase console → Firestore → Rules.
+- `index.html` - redirects to `grocery.html`, so the site root works on GitHub Pages.
 - `sw.js` - service worker: caches the app shell (cache-first), so the app opens offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icon).
 - `icon.svg` - app logo and icon (green basket with a leaf). Used by the header, the browser tab and the installed app.
@@ -38,7 +39,7 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 
 ## Deploy
 
-Planned: GitHub Pages from `main` (root). Live address: `https://mneyshtadt-stack.github.io/Basketry/grocery.html`. Pages must be switched on in repo Settings → Pages.
+Planned: GitHub Pages from `main` (root). Live address: `https://mneyshtadt-stack.github.io/Basketry/` (redirects to `grocery.html`). Pages must be switched on in repo Settings → Pages.
 Firebase: the new domain must be listed under Authentication → Settings → Authorized domains, or anonymous sign-in is refused there.
 No build step: deploy the folder as-is.
 
