@@ -9,7 +9,7 @@ test('displayName shows the Hebrew in brackets when known', () => {
 });
 
 test('addItem stores the Hebrew name only when given', () => {
-  assert.equal(addItem([], 'Potatoes', 'Produce', 1, 'תפוחי אדמה')[0].he, 'תפוחי אדמה');
+  assert.equal(addItem([], 'Potatoes', 'Fruits', 1, 'תפוחי אדמה')[0].he, 'תפוחי אדמה');
   assert.equal('he' in addItem([], 'Soap')[0], false);
 });
 
@@ -73,7 +73,7 @@ test('removeItem and clearDone', () => {
 
 test('groupByCategory follows category order and skips empty groups', () => {
   let items = addItem([], 'Bread', 'Bakery');
-  items = addItem(items, 'Apples', 'Produce');
+  items = addItem(items, 'Apples', 'Fruits');
   const groups = groupByCategory(items);
-  assert.deepEqual(groups.map(g => g.category), ['Produce', 'Bakery']);
+  assert.deepEqual(groups.map(g => g.category), ['Fruits', 'Bakery']);
 });

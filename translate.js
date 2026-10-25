@@ -51,3 +51,24 @@ export function bilingual(input) {
 export function translateItem(name) {
   return bilingual(name).name;
 }
+
+// Product group for each English name; used to file items and to filter the list.
+export const GROUP_FOR = {
+  'Fruits': ['apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado'],
+  'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill'],
+  'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'cottage', 'yogurt', 'butter', 'cream'],
+  'Meat & Fish': ['meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
+  'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],
+  'Pantry': ['rice', 'pasta', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
+  'Frozen': ['frozen pizza', 'pizza', 'ice cream'],
+  'Drinks': ['water', 'juice', 'cola'],
+  'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries'],
+};
+
+// The group for an English product name, or 'Other'.
+export function groupOf(name) {
+  for (const [group, names] of Object.entries(GROUP_FOR)) {
+    if (names.includes(String(name ?? '').toLowerCase())) return group;
+  }
+  return 'Other';
+}

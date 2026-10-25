@@ -60,6 +60,7 @@
   <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
   <div class="bar">
     <select id="view" aria-label="Show list or order"></select>
+    <select id="group" aria-label="Filter by group"></select>
     <button class="ghost" id="save-order" type="button">Save as order</button>
   </div>
   <form id="join" hidden>
@@ -82,8 +83,8 @@
 </main>
 <dialog class="zoom" id="zoom"><img id="zoom-img" alt=""></dialog>
 <script type="module">
-  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
-  import { bilingual, HE_TO_EN } from './translate.js';
+  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName, CATEGORIES } from './list.js';
+  import { bilingual, HE_TO_EN, groupOf } from './translate.js';
   import { ICON_FOR } from './icons.js';
   import { saveOrder, findOrder, copyOrderToList, deleteOrder } from './orders.js';
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
@@ -135,6 +136,10 @@
   let orders = [];
   let view = ''; // '' = current list, otherwise an order id
   let pendingDelete = ''; // order id waiting for a second tap to delete
+  let group = ''; // '' = all groups, otherwise a group name
+  const groupEl = document.getElementById('group');
+  groupEl.replaceChildren(new Option('All groups', ''), ...CATEGORIES.map(c => new Option(c, c)));
+  groupEl.addEventListener('change', () => { group = groupEl.value; render(); });
 
   // Suggestions: grocery words plus anything already used in a list or order.
   let knownNames = [];
@@ -230,7 +235,7 @@
     renderSuggestions();
     const order = findOrder(orders, view);
     const readOnly = Boolean(order);
-    const shown = order ? order.items : items;
+    const shown = (order ? order.items : items).filter(i => !group || i.category === group);
 
     addForm.hidden = readOnly;
     clearBtn.hidden = readOnly;
@@ -340,7 +345,7 @@
     const f = e.currentTarget;
     const { name, he } = bilingual(f.elements.name.value);
     // shortcut: every new item lands in Other, no category picker, upgrade when the list gets long to sort by aisle
-    update(addItem(items, name, 'Other', f.elements.qty.value, he));
+    update(addItem(items, name, groupOf(name), f.elements.qty.value, he));
     f.reset();
     suggestEl.hidden = true;
     nameInput.focus();

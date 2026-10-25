@@ -1,6 +1,6 @@
 // Pure list logic, no DOM, so it can be tested with node.
 export const CATEGORIES = [
-  'Produce', 'Dairy & Eggs', 'Meat & Fish', 'Bakery', 'Pantry',
+  'Fruits', 'Vegetables', 'Dairy & Eggs', 'Meat & Fish', 'Bakery', 'Pantry',
   'Frozen', 'Drinks', 'Household', 'Other',
 ];
 
