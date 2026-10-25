@@ -18,6 +18,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **chili pepper** - Chili pepper (owner's own photo), project owner, Owner's own photo
 - **chocolate** - [Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg](https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg) by Daria YakovlevaMinor edits made by Subsidiary account, CC0
 - **clementine** - Clementines (owner's own photo), project owner, Owner's own photo
+- **clupeidae** - Clupeidae / sardines (owner's own photo), project owner, Owner's own photo
 - **coffee** - [A small cup of coffee.JPG](https://commons.wikimedia.org/wiki/File:A_small_cup_of_coffee.JPG) by Julius Schorzman, CC BY-SA 2.0
 - **cola** - [Coca-cola 50cl can - Italia.jpg](https://commons.wikimedia.org/wiki/File:Coca-cola_50cl_can_-_Italia.jpg) by M0tty, CC BY-SA 3.0
 - **cookies** - [Choc-Chip-Cookie.jpg](https://commons.wikimedia.org/wiki/File:Choc-Chip-Cookie.jpg) by Evan-Amos, Public domain

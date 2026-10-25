@@ -572,5 +572,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "clupeidae": {
+    "file": "clupeidae-own.jpg",
+    "title": "Clupeidae / sardines (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
