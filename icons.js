@@ -1,6 +1,7 @@
 // Pictures for grocery names (lowercase English). Photos are from Wikimedia Commons; see photos/CREDITS.md.
 // Items without a picture show a letter circle.
 export const ICON_FOR = {
+  'grapes': 'photos/grapes-own.jpg',
   'chili pepper': 'photos/chili-pepper-own.jpg',
   'cherry tomato': 'photos/cherry-tomato-own.jpg',
   'iceberg lettuce': 'photos/iceberg-own.jpg',

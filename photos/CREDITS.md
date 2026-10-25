@@ -32,6 +32,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **flour** - [Home made sour dough bread.jpg](https://commons.wikimedia.org/wiki/File:Home_made_sour_dough_bread.jpg) by Tomascastelazo, CC BY-SA 4.0
 - **frozen pizza** - [Frozen pizzas at supermarket.jpg](https://commons.wikimedia.org/wiki/File:Frozen_pizzas_at_supermarket.jpg) by Carstenhag, CC BY-SA 4.0
 - **garlic** - [Garlic bulbs and cloves.jpg](https://commons.wikimedia.org/wiki/File:Garlic_bulbs_and_cloves.jpg) by Ivar Leidus, CC BY-SA 4.0
+- **grapes** - Grapes (owner's own photo), project owner, Owner's own photo
 - **green onion** - Onions (owner's own photo), project owner, Owner's own photo
 - **hummus** - [Homemade hummus and pita 03.jpg](https://commons.wikimedia.org/wiki/File:Homemade_hummus_and_pita_03.jpg) by Satdeep Gill, CC BY-SA 4.0
 - **ice cream** - [Apple cake with vanilla ice cream 2.jpg](https://commons.wikimedia.org/wiki/File:Apple_cake_with_vanilla_ice_cream_2.jpg) by W.carter, CC0
