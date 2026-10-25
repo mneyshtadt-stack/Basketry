@@ -246,7 +246,7 @@
         const label = document.createElement('label');
         const span = document.createElement('span');
         span.textContent = displayName(item);
-        const icon = ICON_FOR[item.name.toLowerCase()];
+        const icon = ICON_FOR[bilingual(item.name).name.toLowerCase()];
         const pic = icon ? Object.assign(document.createElement('img'), { src: icon, alt: '', className: 'list-pic' }) : null;
         if (readOnly) {
           label.append(...[pic, span].filter(Boolean));
