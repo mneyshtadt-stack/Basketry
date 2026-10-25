@@ -593,5 +593,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "ground meat": {
+    "file": "ground-meat-own.jpg",
+    "title": "Ground meat (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
