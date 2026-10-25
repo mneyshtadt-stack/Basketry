@@ -9,7 +9,7 @@ export const HE_TO_EN = {
   'בצל יבש': 'onion', 'בצל': 'onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apple',
   'תפוח אדמה': 'potato', 'תפוחי אדמה': 'potato', 'בננה': 'banana', 'בננות': 'banana',
   'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'גזר': 'carrot', 'צנונית': 'radish',
-  'חסה': 'lettuce', 'חסה ערבית': 'romaine lettuce', 'חסה אייסברג': 'iceberg lettuce', 'פלפל': 'pepper', 'אבוקדו': 'avocado', 'משמש': 'apricot',
+  'חסה': 'lettuce', 'חסה ערבית': 'romaine lettuce', 'חסה אייסברג': 'iceberg lettuce', 'פלפל': 'pepper', 'פלפל חריף': 'chili pepper', 'אבוקדו': 'avocado', 'משמש': 'apricot',
   'משמשים': 'apricot', 'מישמש': 'apricot', 'תות': 'strawberry',
   'תותים': 'strawberry', 'תירס': 'corn', 'פטרוזיליה': 'parsley', 'כוסברה': 'coriander',
   'שמיר': 'dill', 'בשר': 'meat', 'עוף': 'chicken', 'דג': 'fish', 'נקניקיות': 'sausage',

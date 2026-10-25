@@ -15,6 +15,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **cheese** - [Cheese salad roll at The Original Tea Hut at High Beach, Essex, England 02 higher dynamic range.jpg](https://commons.wikimedia.org/wiki/File:Cheese_salad_roll_at_The_Original_Tea_Hut_at_High_Beach,_Essex,_England_02_higher_dynamic_range.jpg) by Acabashi, CC BY-SA 4.0
 - **cherry tomato** - Cherry tomatoes (owner's own photo), project owner, Owner's own photo
 - **chicken** - [Chickens in market.jpg](https://commons.wikimedia.org/wiki/File:Chickens_in_market.jpg) by Tomás Castelazo, CC BY-SA 3.0
+- **chili pepper** - Chili pepper (owner's own photo), project owner, Owner's own photo
 - **chocolate** - [Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg](https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg) by Daria YakovlevaMinor edits made by Subsidiary account, CC0
 - **coffee** - [A small cup of coffee.JPG](https://commons.wikimedia.org/wiki/File:A_small_cup_of_coffee.JPG) by Julius Schorzman, CC BY-SA 2.0
 - **cola** - [Coca-cola 50cl can - Italia.jpg](https://commons.wikimedia.org/wiki/File:Coca-cola_50cl_can_-_Italia.jpg) by M0tty, CC BY-SA 3.0

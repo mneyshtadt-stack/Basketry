@@ -530,5 +530,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "chili pepper": {
+    "file": "chili-pepper-own.jpg",
+    "title": "Chili pepper (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
