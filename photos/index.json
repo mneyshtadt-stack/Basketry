@@ -621,5 +621,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "chicken leg quarters": {
+    "file": "leg-quarters-own.jpg",
+    "title": "Chicken leg quarters (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
