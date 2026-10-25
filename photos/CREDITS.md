@@ -27,6 +27,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **cottage** - Cottage cheese (owner's own photo), project owner, Owner's own photo
 - **cottage cheese** - [Cottage Cheese.jpg](https://commons.wikimedia.org/wiki/File:Cottage_Cheese.jpg) by Stu Spivack - flickr.com, CC BY-SA 2.0
 - **cream** - [Pudding Dessert with Whipped Cream.jpg](https://commons.wikimedia.org/wiki/File:Pudding_Dessert_with_Whipped_Cream.jpg) by Karl Thomas Moore, CC BY-SA 4.0
+- **cream cheese** - Cream cheese (owner's own photo), project owner, Owner's own photo
 - **cucumber** - [Cucumber Slices (Alabama Extension).jpg](https://commons.wikimedia.org/wiki/File:Cucumber_Slices_(Alabama_Extension).jpg) by Alabama Extension, CC0
 - **dill** - [Aneth FR 2012.jpg](https://commons.wikimedia.org/wiki/File:Aneth_FR_2012.jpg) by JLPC, CC BY-SA 3.0
 - **egg** - Eggs (owner's own photo), project owner, Owner's own photo

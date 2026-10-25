@@ -586,5 +586,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "cream cheese": {
+    "file": "cream-cheese-own.jpg",
+    "title": "Cream cheese (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
