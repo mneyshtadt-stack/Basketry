@@ -3,7 +3,7 @@
 // shortcut: only the words listed here translate, add more as they come up.
 export const HE_TO_EN = {
   'חלב': 'milk', 'חלב סויה': 'soy milk', 'חלב דל לקטוז': 'lactose-free milk', 'לחם': 'bread', 'חלה': 'challah bread', 'פיתה': 'pita', 'פיתות': 'pitas',
-  'ביצה': 'egg', 'ביצים': 'eggs', 'גבינה': 'cheese', 'קוטג\'': 'cottage cheese',
+  'ביצה': 'egg', 'ביצים': 'eggs', 'גבינה': 'cheese', 'קוטג\'': 'cottage', 'קוטג': 'cottage', 'קוטג׳': 'cottage',
   'יוגורט': 'yogurt', 'חמאה': 'butter', 'שמנת': 'cream', 'גלידה': 'ice cream',
   'עגבנייה': 'tomato', 'עגבניות': 'tomatoes', 'מלפפון': 'cucumber', 'מלפפונים': 'cucumbers',
   'בצל יבש': 'yellow onion', 'בצל': 'yellow onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apples',
@@ -40,8 +40,11 @@ export function bilingual(input) {
     const he = EN_TO_HE[clean.toLowerCase()];
     return he ? { name: clean, he } : { name: clean };
   }
-  const en = HE_TO_EN[clean];
-  return en ? { name: en, he: clean } : { name: clean };
+  const stripped = clean.replace(/^['"]+/, '').trim();
+  const key = HE_TO_EN[clean] ? clean : stripped;
+  const en = HE_TO_EN[key];
+  if (!en) return { name: clean };
+  return { name: en, he: key };
 }
 
 // Returns the English name for a Hebrew item, or the input unchanged.
