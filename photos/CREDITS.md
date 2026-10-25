@@ -87,6 +87,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **snack** - [SnackfoodRackDF.JPG](https://commons.wikimedia.org/wiki/File:SnackfoodRackDF.JPG) by AlejandroLinaresGarcia, CC BY-SA 4.0
 - **soap** - [Handmade soap.jpg](https://commons.wikimedia.org/wiki/File:Handmade_soap.jpg) by Malene Thyssen, CC BY 2.5
 - **soy milk** - [Soy Non-Dairy Milk (5082414499).jpg](https://commons.wikimedia.org/wiki/File:Soy_Non-Dairy_Milk_(5082414499).jpg) by Veganbaking.net from USA, CC BY-SA 2.0
+- **spelt bread** - Spelt bread (owner's own photo), project owner, Owner's own photo
 - **strawberry** - [Garden strawberry (Fragaria × ananassa) single2.jpg](https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg) by Ivar Leidus, CC BY-SA 4.0
 - **sugar** - [Würfelzucker -- 2018 -- 3564.jpg](https://commons.wikimedia.org/wiki/File:W%C3%BCrfelzucker_--_2018_--_3564.jpg) by Dietmar Rabich, CC BY-SA 4.0
 - **sweet potato** - Sweet potato (owner's own photo), project owner, Owner's own photo

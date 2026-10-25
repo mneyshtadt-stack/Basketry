@@ -628,5 +628,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "spelt bread": {
+    "file": "spelt-bread-own.jpg",
+    "title": "Spelt bread (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
