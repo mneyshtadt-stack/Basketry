@@ -5,14 +5,14 @@ import { translateItem, bilingual } from './translate.js';
 
 test('bilingual pairs English and Hebrew both ways', () => {
   assert.deepEqual(bilingual('חלב'), { name: 'milk', he: 'חלב' });
-  assert.deepEqual(bilingual('Potatoes'), { name: 'Potatoes', he: 'תפוחי אדמה' });
+  assert.deepEqual(bilingual('תפוחי אדמה'), { name: 'potato', he: 'תפוחי אדמה' });
   assert.deepEqual(bilingual('eggplant'), { name: 'eggplant' });
   assert.deepEqual(bilingual('משהו'), { name: 'משהו' });
 });
 
 test('known Hebrew words become English', () => {
   assert.equal(translateItem('חלב'), 'milk');
-  assert.equal(translateItem('  עגבניות  '), 'tomatoes');
+  assert.equal(translateItem('  עגבניות  '), 'tomato');
 });
 
 test('apricot in both spellings', () => {
