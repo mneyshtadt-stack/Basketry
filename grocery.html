@@ -39,6 +39,10 @@
   .row .avatar { width: 56px; height: 56px; font-size: .9rem; background: var(--line); color: var(--fg); }
   .avatar.pic { background: none; object-fit: cover; }
   .list-pic { width: 64px; height: 64px; flex: none; border-radius: 50%; object-fit: cover; }
+  .list-pic { cursor: zoom-in; }
+  dialog.zoom { border: 0; padding: 0; background: transparent; max-width: 92vw; max-height: 92vh; }
+  dialog.zoom::backdrop { background: rgba(0, 0, 0, .75); }
+  dialog.zoom img { display: block; max-width: 92vw; max-height: 85vh; border-radius: 12px; }
   .row .arrow { margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 1.1rem; padding: 4px 8px; }
   h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 18px 0 6px; }
   ul { list-style: none; padding: 0; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
@@ -76,6 +80,7 @@
     <span class="qty" id="count"></span>
   </footer>
 </main>
+<dialog class="zoom" id="zoom"><img id="zoom-img" alt=""></dialog>
 <script type="module">
   import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
   import { bilingual, HE_TO_EN } from './translate.js';
@@ -334,6 +339,17 @@
   });
 
   clearBtn.addEventListener('click', () => update(clearDone(items)));
+
+  // Tap a list picture to see it large; the click must not toggle the item's checkbox.
+  const zoom = document.getElementById('zoom');
+  const zoomImg = document.getElementById('zoom-img');
+  listEl.addEventListener('click', e => {
+    if (!e.target.classList.contains('list-pic')) return;
+    e.preventDefault();
+    zoomImg.src = e.target.src;
+    zoom.showModal();
+  });
+  zoom.addEventListener('click', () => zoom.close());
 
   render();
 
