@@ -649,5 +649,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "baguette": {
+    "file": "baguette-own.jpg",
+    "title": "Baguette (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
