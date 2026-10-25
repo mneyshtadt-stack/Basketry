@@ -33,6 +33,11 @@ for (const [he, en] of Object.entries(HE_TO_EN)) {
   if (!(en in EN_TO_HE)) EN_TO_HE[en] = he;
 }
 
+// Hebrew label for an English name, or '' when unknown.
+export function hebrewOf(en) {
+  return EN_TO_HE[String(en).toLowerCase()] ?? '';
+}
+
 // Returns { name, he } where name is English and he is the Hebrew, when known.
 export function bilingual(input) {
   const clean = String(input ?? '').trim();

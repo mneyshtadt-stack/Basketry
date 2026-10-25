@@ -26,6 +26,8 @@
   button:disabled { opacity: .4; cursor: default; }
   button.ghost { background: transparent; color: var(--muted); border-color: transparent; }
   .bar { display: flex; gap: 8px; margin-bottom: 8px; }
+  .pick-row { display: flex; gap: 8px; margin-bottom: 8px; }
+  .pick-row select { flex: 1; min-width: 0; }
   .add-wrap { position: relative; margin-bottom: 12px; }
   .add-wrap form { margin-bottom: 0; }
   .suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, .14); padding: 12px; }
@@ -60,13 +62,16 @@
   <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
   <div class="bar">
     <select id="view" aria-label="Show list or order"></select>
-    <select id="group" aria-label="Filter by group"></select>
     <button class="ghost" id="save-order" type="button">Save as order</button>
   </div>
   <form id="join" hidden>
     <input name="code" placeholder="Family code (same on every phone)" autocomplete="off" required>
     <button type="submit">Join</button>
   </form>
+  <div class="pick-row">
+    <select id="group" aria-label="Choose a group"></select>
+    <select id="pick" aria-label="Choose an item" hidden></select>
+  </div>
   <div class="add-wrap">
   <form id="add">
     <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
@@ -84,7 +89,7 @@
 <dialog class="zoom" id="zoom"><img id="zoom-img" alt=""></dialog>
 <script type="module">
   import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName, CATEGORIES } from './list.js';
-  import { bilingual, HE_TO_EN, groupOf } from './translate.js';
+  import { bilingual, HE_TO_EN, groupOf, GROUP_FOR, hebrewOf } from './translate.js';
   import { ICON_FOR } from './icons.js';
   import { saveOrder, findOrder, copyOrderToList, deleteOrder } from './orders.js';
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
@@ -138,8 +143,26 @@
   let pendingDelete = ''; // order id waiting for a second tap to delete
   let group = ''; // '' = all groups, otherwise a group name
   const groupEl = document.getElementById('group');
+  const pickEl = document.getElementById('pick');
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  function renderPicker() {
+    const names = group ? (GROUP_FOR[group] ?? []) : [];
+    pickEl.hidden = !group;
+    pickEl.replaceChildren(new Option('Choose an item', ''), ...names.map(n => new Option(cap(n) + (hebrewOf(n) ? ` [${hebrewOf(n)}]` : ''), n)));
+  }
+  groupEl.addEventListener('change', () => {
+    group = groupEl.value;
+    renderPicker();
+    suggestEl.hidden = true;
+    render();
+  });
+  pickEl.addEventListener('change', () => {
+    if (!pickEl.value) return;
+    nameInput.value = pickEl.value;
+    pickEl.value = '';
+    nameInput.focus();
+  });
   groupEl.replaceChildren(new Option('All groups', ''), ...CATEGORIES.map(c => new Option(c, c)));
-  groupEl.addEventListener('change', () => { group = groupEl.value; render(); });
 
   // Suggestions: grocery words plus anything already used in a list or order.
   let knownNames = [];
@@ -197,6 +220,7 @@
   }
 
   function showSuggestions() {
+    if (group) { suggestEl.hidden = true; return; } // a group is chosen: use the item list instead
     const query = nameInput.value.trim();
     const matches = suggestMatches(knownNames, query);
     suggestEl.hidden = matches.length === 0;
@@ -235,7 +259,7 @@
     renderSuggestions();
     const order = findOrder(orders, view);
     const readOnly = Boolean(order);
-    const shown = (order ? order.items : items).filter(i => !group || i.category === group);
+    const shown = order ? order.items : items;
 
     addForm.hidden = readOnly;
     clearBtn.hidden = readOnly;
