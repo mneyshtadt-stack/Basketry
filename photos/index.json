@@ -614,5 +614,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "chicken drumsticks": {
+    "file": "drumsticks-own.jpg",
+    "title": "Chicken drumsticks (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }

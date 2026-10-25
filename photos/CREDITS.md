@@ -16,6 +16,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **cherry tomato** - Cherry tomatoes (owner's own photo), project owner, Owner's own photo
 - **chicken** - [Chickens in market.jpg](https://commons.wikimedia.org/wiki/File:Chickens_in_market.jpg) by Tomás Castelazo, CC BY-SA 3.0
 - **chicken breast** - Chicken breast (owner's own photo), project owner, Owner's own photo
+- **chicken drumsticks** - Chicken drumsticks (owner's own photo), project owner, Owner's own photo
 - **chili pepper** - Chili pepper (owner's own photo), project owner, Owner's own photo
 - **chocolate** - [Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg](https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg) by Daria YakovlevaMinor edits made by Subsidiary account, CC0
 - **clementine** - Clementines (owner's own photo), project owner, Owner's own photo
