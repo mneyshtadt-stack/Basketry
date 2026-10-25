@@ -420,11 +420,11 @@
     "licence": "CC BY-SA 4.0"
   },
   "tomato": {
-    "file": "tomato.jpg",
-    "title": "Organic home-grown tomatoes - unripe to ripe.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Organic_home-grown_tomatoes_-_unripe_to_ripe.jpg",
-    "artist": "Michal Klajban",
-    "licence": "CC BY-SA 4.0"
+    "file": "tomato-own.jpg",
+    "title": "Tomatoes (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "cream": {
     "file": "cream.jpg",

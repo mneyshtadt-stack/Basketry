@@ -80,7 +80,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **tahini** - [Tahini with oil.JPG](https://commons.wikimedia.org/wiki/File:Tahini_with_oil.JPG) by Miansari66, CC0
 - **tea** - [2023 Filiżanki do herbaty.jpg](https://commons.wikimedia.org/wiki/File:2023_Fili%C5%BCanki_do_herbaty.jpg) by Jacek Halicki, CC BY-SA 4.0
 - **toilet paper** - [Toilet Tissue Paper Roll 350 Sheet.jpg](https://commons.wikimedia.org/wiki/File:Toilet_Tissue_Paper_Roll_350_Sheet.jpg) by Tissue paper india, CC BY-SA 4.0
-- **tomato** - [Organic home-grown tomatoes - unripe to ripe.jpg](https://commons.wikimedia.org/wiki/File:Organic_home-grown_tomatoes_-_unripe_to_ripe.jpg) by Michal Klajban, CC BY-SA 4.0
+- **tomato** - Tomatoes (owner's own photo), project owner, Owner's own photo
 - **toothpaste** - [Toothpasteonbrush.jpg](https://commons.wikimedia.org/wiki/File:Toothpasteonbrush.jpg) by Thegreenj, CC BY-SA 3.0
 - **water** - [Metal Water Bottles.jpeg](https://commons.wikimedia.org/wiki/File:Metal_Water_Bottles.jpeg) by Amraepowell, CC0
 - **yellow onion** - Yellow onions (owner's own photo), project owner, Owner's own photo
