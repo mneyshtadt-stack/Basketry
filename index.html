@@ -170,8 +170,8 @@
     knownNames = suggestNames([
       ...Object.keys(HE_TO_EN),
       ...Object.values(HE_TO_EN),
-      ...items.map(i => i.name),
-      ...orders.flatMap(o => o.items.map(i => i.name)),
+      ...items.map(englishName),
+      ...orders.flatMap(o => o.items.map(englishName)),
     ]);
   }
 
