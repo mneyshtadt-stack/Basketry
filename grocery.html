@@ -29,8 +29,20 @@
   .pick-row { display: flex; gap: 8px; margin-bottom: 8px; }
   .pick-row select { flex: 1; min-width: 0; }
   .add-wrap { position: relative; margin-bottom: 12px; }
+  aside.side { display: none; }
+  @media (min-width: 900px) {
+    main { max-width: 1100px; display: grid; grid-template-columns: 260px minmax(0, 1fr); column-gap: 32px; align-items: start; }
+    main > aside.side { display: flex; flex-direction: column; gap: 20px; grid-row: 1 / span 30; position: sticky; top: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px 16px; box-sizing: border-box; }
+    main > :not(aside.side) { grid-column: 2; min-width: 0; }
+    main > h1 { margin-top: 0; }
+  }
+  .side-brand { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; }
+  .side-label { font-size: 12px; font-weight: 600; letter-spacing: .05em; color: var(--muted); margin-bottom: 6px; }
+  .side-item { display: block; width: 100%; text-align: left; background: transparent; color: var(--fg); border: 0; border-radius: 8px; padding: 10px 12px; font-size: 15px; }
+  .side-item.active { background: var(--line); color: var(--accent); font-weight: 600; }
+  .side-foot { margin-top: auto; font-size: 13px; color: var(--muted); }
   .add-wrap form { margin-bottom: 0; }
-  .suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, .14); padding: 12px; }
+  .suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, .14); padding: 12px; max-height: 60vh; overflow-y: auto; }
   .suggest h3 { font-size: .8rem; font-weight: 600; color: var(--muted); margin: 0 0 10px; }
   .tiles { display: flex; gap: 8px; margin-bottom: 8px; }
   .tile { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: 0; color: var(--fg); padding: 6px 4px; font-size: .85rem; overflow: hidden; }
@@ -59,6 +71,18 @@
 </head>
 <body>
 <main>
+  <aside class="side" aria-label="Lists and orders">
+    <div class="side-brand"><img src="icon.svg" alt="" width="32" height="32">Basketry</div>
+    <div>
+      <div class="side-label">LISTS</div>
+      <button class="side-item" id="side-current" type="button">Current list</button>
+    </div>
+    <div>
+      <div class="side-label">SAVED ORDERS</div>
+      <div id="side-orders"></div>
+    </div>
+    <div class="side-foot">Family code: <span id="side-family"></span></div>
+  </aside>
   <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
   <div class="bar">
     <select id="view" aria-label="Show list or order"></select>
@@ -149,8 +173,8 @@
   }
   groupEl.addEventListener('change', () => {
     group = groupEl.value;
-    suggestEl.hidden = true;
     render();
+    showSuggestions();
   });
   groupEl.replaceChildren(new Option('All groups', ''), ...CATEGORIES.map(c => new Option(c, c)));
 
@@ -167,6 +191,7 @@
 
   const nameInput = addForm.elements.name;
   const suggestEl = document.getElementById('suggest');
+  nameInput.addEventListener('focus', showSuggestions);
   // Puts the picked name in the box; the item is added only when the form is submitted.
   function pickSuggestion(n) {
     nameInput.value = n;
@@ -212,7 +237,7 @@
   function showSuggestions() {
     const query = nameInput.value.trim();
     const pool = group ? groupCandidates() : knownNames;
-    const matches = query ? suggestMatches(pool, query) : (group ? pool.slice(0, 6) : []);
+    const matches = query ? suggestMatches(pool, query) : (group ? (GROUP_FOR[group] ?? []).map(cap) : []);
     suggestEl.hidden = matches.length === 0;
     if (matches.length === 0) return;
     const heading = document.createElement('h3');
@@ -244,7 +269,25 @@
     view = viewEl.value;
   }
 
+  // Desktop sidebar: the current list, the saved orders (click to open one), and the family code.
+  function renderSidebar() {
+    const current = document.getElementById('side-current');
+    current.classList.toggle('active', view === '');
+    current.onclick = () => { view = ''; render(); };
+    const ordersEl = document.getElementById('side-orders');
+    ordersEl.replaceChildren(...orders.map(o => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'side-item' + (view === o.id ? ' active' : '');
+      b.textContent = `${o.date} · ${o.items.length} items`;
+      b.addEventListener('click', () => { view = o.id; render(); });
+      return b;
+    }));
+    document.getElementById('side-family').textContent = family;
+  }
+
   function render() {
+    renderSidebar();
     renderViewOptions();
     renderSuggestions();
     const order = findOrder(orders, view);

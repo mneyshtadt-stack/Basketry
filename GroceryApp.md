@@ -58,6 +58,7 @@ No build step: deploy the folder as-is.
 - `shortcut:` two phones editing at the same moment: last save wins. Upgrade to per-item writes if this bites.
 - `shortcut:` a family code is typed once per device (join form on first visit); there is no way to switch codes in the app yet.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
+- On screens 900 px and wider, a sidebar (current list, saved orders, family code) sits beside the list (`aside.side`, `renderSidebar()`); on phones it is hidden and the layout is unchanged.
 - Tap a picture in the list to see it full size (a `<dialog>`; tap anywhere to close). The click is stopped so it doesn't tick the item.
 - Install on Android needs `icon-512.png` (SVG alone is not enough for the install prompt). Keep it in the manifest.
 - Service worker is network-first: online loads fetch the latest files and refresh the cache; the cache is used only when offline. Users get updates on reload without a hard refresh. Bump `CACHE` in `sw.js` (currently `grocery-v18`) only when the offline fallback's file list (`SHELL`) changes.
