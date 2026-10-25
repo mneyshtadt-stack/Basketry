@@ -635,5 +635,19 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "salmon": {
+    "file": "salmon-own.jpg",
+    "title": "Salmon (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "smoked salmon": {
+    "file": "smoked-salmon-own.jpg",
+    "title": "Smoked salmon (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
