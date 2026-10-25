@@ -173,6 +173,7 @@
   }
   groupEl.addEventListener('change', () => {
     group = groupEl.value;
+    nameInput.value = ''; // the name typed for the old group does not carry over
     render();
     showSuggestions();
   });
