@@ -82,6 +82,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **soy milk** - [Soy Non-Dairy Milk (5082414499).jpg](https://commons.wikimedia.org/wiki/File:Soy_Non-Dairy_Milk_(5082414499).jpg) by Veganbaking.net from USA, CC BY-SA 2.0
 - **strawberry** - [Garden strawberry (Fragaria × ananassa) single2.jpg](https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg) by Ivar Leidus, CC BY-SA 4.0
 - **sugar** - [Würfelzucker -- 2018 -- 3564.jpg](https://commons.wikimedia.org/wiki/File:W%C3%BCrfelzucker_--_2018_--_3564.jpg) by Dietmar Rabich, CC BY-SA 4.0
+- **sweet potato** - Sweet potato (owner's own photo), project owner, Owner's own photo
 - **tahini** - [Tahini with oil.JPG](https://commons.wikimedia.org/wiki/File:Tahini_with_oil.JPG) by Miansari66, CC0
 - **tea** - [2023 Filiżanki do herbaty.jpg](https://commons.wikimedia.org/wiki/File:2023_Fili%C5%BCanki_do_herbaty.jpg) by Jacek Halicki, CC BY-SA 4.0
 - **toilet paper** - [Toilet Tissue Paper Roll 350 Sheet.jpg](https://commons.wikimedia.org/wiki/File:Toilet_Tissue_Paper_Roll_350_Sheet.jpg) by Tissue paper india, CC BY-SA 4.0

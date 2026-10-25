@@ -558,5 +558,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "sweet potato": {
+    "file": "sweet-potato-own.jpg",
+    "title": "Sweet potato (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
