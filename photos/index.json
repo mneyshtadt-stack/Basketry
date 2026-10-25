@@ -523,5 +523,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "cherry tomato": {
+    "file": "cherry-tomato-own.jpg",
+    "title": "Cherry tomatoes (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }

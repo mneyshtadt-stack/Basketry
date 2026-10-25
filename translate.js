@@ -5,7 +5,7 @@ export const HE_TO_EN = {
   'חלב': 'milk', 'חלב סויה': 'soy milk', 'חלב דל לקטוז': 'lactose-free milk', 'לחם': 'bread', 'חלה': 'challah bread', 'פיתה': 'pita', 'פיתות': 'pita',
   'ביצה': 'egg', 'ביצים': 'egg', 'גבינה': 'cheese', 'קוטג\'': 'cottage', 'קוטג': 'cottage', 'קוטג׳': 'cottage',
   'יוגורט': 'yogurt', 'חמאה': 'butter', 'שמנת': 'cream', 'גלידה': 'ice cream',
-  'עגבנייה': 'tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'מלפפונים': 'cucumber',
+  'עגבנייה': 'tomato', 'עגבניות שרי': 'cherry tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'מלפפונים': 'cucumber',
   'בצל יבש': 'onion', 'בצל': 'onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apple',
   'תפוח אדמה': 'potato', 'תפוחי אדמה': 'potato', 'בננה': 'banana', 'בננות': 'banana',
   'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'גזר': 'carrot', 'צנונית': 'radish',
