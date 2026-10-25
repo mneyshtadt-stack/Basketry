@@ -21,6 +21,7 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icons). Chrome needs a PNG icon of at least 192 px to offer install, so `icon-512.png` is listed first.
 - `icon-512.png` - app icon (512 px PNG), drawn to match `icon.svg`.
 - Potato, tomato and cherry tomato use the owner's own photos (`photos/potato-own.jpg`, `photos/tomato-own.jpg`, `photos/cherry-tomato-own.jpg`, `photos/chili-pepper-own.jpg`, `photos/grapes-own.jpg`, `photos/clementine-own.jpg`, `photos/laundry-detergent-own.jpg`, `photos/oil-own.jpg`).
+- The list shows the English name from the Hebrew label when known (`englishName` in grocery.html), so older rows update without re-adding.
 - Pictures are looked up by the English name (`bilingual(name).name`), so Hebrew suggestions get pictures too.
 - English item names are singular (Cucumber, Tomato, Apple); the quantity box handles counts.
 - Onion words: בצל יבש and בצל = Onion (English name is Onion, with the yellow onion photo), בצל ירוק = green onion, בצל אדום = red onion. Typing English "onion" gives no Hebrew.

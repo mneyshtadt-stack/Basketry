@@ -208,6 +208,13 @@
   addForm.elements.qty.addEventListener('focus', e => e.target.select());
   nameInput.addEventListener('blur', () => { suggestEl.hidden = true; });
 
+  // The English name comes from the Hebrew label when it is known, so items saved earlier
+  // (for example "Yellow onion [בצל יבש]") show the current English name.
+  function englishName(item) {
+    const known = item.he ? bilingual(item.he) : null;
+    return known?.he ? known.name : item.name;
+  }
+
   function renderViewOptions() {
     viewEl.replaceChildren(new Option('Current list', ''));
     for (const o of orders) {
@@ -245,8 +252,8 @@
 
         const label = document.createElement('label');
         const span = document.createElement('span');
-        span.textContent = displayName(item);
-        const icon = ICON_FOR[bilingual(item.name).name.toLowerCase()];
+        span.textContent = displayName({ ...item, name: englishName(item) });
+        const icon = ICON_FOR[englishName(item).toLowerCase()];
         const pic = icon ? Object.assign(document.createElement('img'), { src: icon, alt: '', className: 'list-pic' }) : null;
         if (readOnly) {
           label.append(...[pic, span].filter(Boolean));
