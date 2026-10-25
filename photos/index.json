@@ -544,5 +544,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "clementine": {
+    "file": "clementine-own.jpg",
+    "title": "Clementines (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
