@@ -1,6 +1,7 @@
 // Pictures for grocery names (lowercase English). Photos are from Wikimedia Commons; see photos/CREDITS.md.
 // Items without a picture show a letter circle.
 export const ICON_FOR = {
+  'turkey breast': 'photos/turkey-breast-own.jpg',
   'ground meat': 'photos/ground-meat-own.jpg',
   'cream cheese': 'photos/cream-cheese-own.jpg',
   'tuna': 'photos/tuna-own.jpg',
