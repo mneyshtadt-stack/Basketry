@@ -579,5 +579,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "tuna": {
+    "file": "tuna-own.jpg",
+    "title": "Tuna (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
