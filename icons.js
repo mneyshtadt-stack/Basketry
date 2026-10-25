@@ -49,7 +49,7 @@ export const ICON_FOR = {
   'mayonnaise': 'photos/mayonnaise.jpg',
   'meat': 'photos/meat.jpg',
   'milk': 'photos/milk.jpg',
-  'oil': 'photos/oil.jpg',
+  'oil': 'photos/oil-own.jpg',
   'olive oil': 'photos/olive-oil.jpg',
   'olives': 'photos/olives.jpg',
   'orange': 'photos/orange-own.jpg',

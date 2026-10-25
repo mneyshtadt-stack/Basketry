@@ -217,11 +217,11 @@
     "licence": "CC BY 3.0"
   },
   "oil": {
-    "file": "oil.jpg",
-    "title": "Vegetable oil products on sale.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Vegetable_oil_products_on_sale.jpg",
-    "artist": "Lord Ajax 001",
-    "licence": "CC BY-SA 4.0"
+    "file": "oil-own.jpg",
+    "title": "Oil (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "olive oil": {
     "file": "olive-oil.jpg",

@@ -48,7 +48,7 @@ Edited Version by: Arad, Public domain
 - **mayonnaise** - [Mayonnaise (1).jpg](https://commons.wikimedia.org/wiki/File:Mayonnaise_(1).jpg) by jules, CC BY 2.0
 - **meat** - [A fresh and uncooked meat seller trying to cut his meat to sell to his customer.jpg](https://commons.wikimedia.org/wiki/File:A_fresh_and_uncooked_meat_seller_trying_to_cut_his_meat_to_sell_to_his_customer.jpg) by Oreoluwa Adetimehin, CC BY-SA 4.0
 - **milk** - [Jug, milk (AM 1994.202-2).jpg](https://commons.wikimedia.org/wiki/File:Jug,_milk_(AM_1994.202-2).jpg) by Crown Lynn Potteries Ltd, CC BY 4.0
-- **oil** - [Vegetable oil products on sale.jpg](https://commons.wikimedia.org/wiki/File:Vegetable_oil_products_on_sale.jpg) by Lord Ajax 001, CC BY-SA 4.0
+- **oil** - Oil (owner's own photo), project owner, Owner's own photo
 - **olive oil** - [2023 Oliwa z oliwek Garda DOP (1).jpg](https://commons.wikimedia.org/wiki/File:2023_Oliwa_z_oliwek_Garda_DOP_(1).jpg) by Jacek Halicki, CC BY-SA 4.0
 - **olives** - [Air Olive 1.JPG](https://commons.wikimedia.org/wiki/File:Air_Olive_1.JPG) by Ввласенко, CC BY-SA 3.0
 - **onion** - Yellow onions (owner's own photo), project owner, Owner's own photo
