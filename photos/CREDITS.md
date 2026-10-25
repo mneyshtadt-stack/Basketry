@@ -64,7 +64,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **pepper** - [Baby Bell pepper ''Capsicum annuum'' .jpg](https://commons.wikimedia.org/wiki/File:Baby_Bell_pepper_%27%27Capsicum_annuum%27%27_.jpg) by Brocken Inaglory, CC BY-SA 3.0
 - **pita** - [PileofpitaS.jpg](https://commons.wikimedia.org/wiki/File:PileofpitaS.jpg) by Gilabrand, CC BY-SA 3.0
 - **pizza** - [Vegetarian Pizza.jpg](https://commons.wikimedia.org/wiki/File:Vegetarian_Pizza.jpg) by Petar Milošević, CC BY-SA 4.0
-- **potato** - [Potato flowers 2016 G1.jpg](https://commons.wikimedia.org/wiki/File:Potato_flowers_2016_G1.jpg) by George Chernilevsky, Public domain
+- **potato** - Potatoes (owner's own photo), project owner, Owner's own photo
 - **radish** - Radish (owner's own photo), project owner, Owner's own photo
 - **red onion** - Onions (owner's own photo), project owner, Owner's own photo
 - **rice** - [Rice Grains .png](https://commons.wikimedia.org/wiki/File:Rice_Grains_.png) by Hpannu7, CC BY-SA 4.0

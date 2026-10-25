@@ -63,11 +63,11 @@
     "licence": "CC BY 2.0"
   },
   "potato": {
-    "file": "potato.jpg",
-    "title": "Potato flowers 2016 G1.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Potato_flowers_2016_G1.jpg",
-    "artist": "George Chernilevsky",
-    "licence": "Public domain"
+    "file": "potato-own.jpg",
+    "title": "Potatoes (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "banana": {
     "file": "banana.jpg",

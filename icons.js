@@ -54,7 +54,7 @@ export const ICON_FOR = {
   'pepper': 'photos/pepper.jpg',
   'pita': 'photos/pita.jpg',
   'pizza': 'photos/pizza.jpg',
-  'potato': 'photos/potato.jpg',
+  'potato': 'photos/potato-own.jpg',
   'red onion': 'photos/red-onion-own.jpg',
   'rice': 'photos/rice.png',
   'salt': 'photos/salt.jpg',
@@ -81,7 +81,7 @@ export const ICON_FOR = {
   'onion': 'photos/yellow-onion-own.jpg',
   'oranges': 'photos/orange-own.jpg',
   'pitas': 'photos/pita.jpg',
-  'potatoes': 'photos/potato.jpg',
+  'potatoes': 'photos/potato-own.jpg',
   'strawberries': 'photos/strawberry.jpg',
   'tomatoes': 'photos/tomato.jpg',
 };
