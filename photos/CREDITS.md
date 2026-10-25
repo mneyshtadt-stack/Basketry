@@ -23,6 +23,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **cookies** - [Choc-Chip-Cookie.jpg](https://commons.wikimedia.org/wiki/File:Choc-Chip-Cookie.jpg) by Evan-Amos, Public domain
 - **coriander** - [Coriander Seeds.jpg](https://commons.wikimedia.org/wiki/File:Coriander_Seeds.jpg) by Sanjay Acharya, CC BY-SA 4.0
 - **corn** - [Air fried corn-on-the-cob (United States).jpg](https://commons.wikimedia.org/wiki/File:Air_fried_corn-on-the-cob_(United_States).jpg) by NeoBatfreak, CC BY-SA 4.0
+- **cottage** - Cottage cheese (owner's own photo), project owner, Owner's own photo
 - **cottage cheese** - [Cottage Cheese.jpg](https://commons.wikimedia.org/wiki/File:Cottage_Cheese.jpg) by Stu Spivack - flickr.com, CC BY-SA 2.0
 - **cream** - [Pudding Dessert with Whipped Cream.jpg](https://commons.wikimedia.org/wiki/File:Pudding_Dessert_with_Whipped_Cream.jpg) by Karl Thomas Moore, CC BY-SA 4.0
 - **cucumber** - [Cucumber Slices (Alabama Extension).jpg](https://commons.wikimedia.org/wiki/File:Cucumber_Slices_(Alabama_Extension).jpg) by Alabama Extension, CC0

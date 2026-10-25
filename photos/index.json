@@ -565,5 +565,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "cottage": {
+    "file": "cottage-own.jpg",
+    "title": "Cottage cheese (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
