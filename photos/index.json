@@ -441,11 +441,11 @@
     "licence": "Owner's own photo"
   },
   "cheese": {
-    "file": "cheese.jpg",
-    "title": "Cheese salad roll at The Original Tea Hut at High Beach, Essex, England 02 higher dynamic range.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Cheese_salad_roll_at_The_Original_Tea_Hut_at_High_Beach,_Essex,_England_02_higher_dynamic_range.jpg",
-    "artist": "Acabashi",
-    "licence": "CC BY-SA 4.0"
+    "file": "cheese-own.jpg",
+    "title": "Cheese (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "milk": {
     "file": "milk.jpg",
