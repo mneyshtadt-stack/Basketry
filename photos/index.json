@@ -551,5 +551,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "parmesan": {
+    "file": "parmesan-own.jpg",
+    "title": "Parmesan (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
