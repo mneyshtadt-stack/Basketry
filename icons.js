@@ -80,7 +80,7 @@ export const ICON_FOR = {
   'pita': 'photos/pita.jpg',
   'pizza': 'photos/pizza.jpg',
   'potato': 'photos/potato-own.jpg',
-  'red onion': 'photos/red-onion-own.jpg',
+  'red onion': 'photos/red-onion-own2.jpg',
   'rice': 'photos/rice.png',
   'salt': 'photos/salt.jpg',
   'sausages': 'photos/sausages.jpg',
