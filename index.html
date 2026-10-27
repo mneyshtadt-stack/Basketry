@@ -89,6 +89,10 @@
     <select id="view" aria-label="Show list or order"></select>
     <button class="ghost" id="save-order" type="button">Save as order</button>
   </div>
+  <div class="bar" id="orders-bar" hidden>
+    <input type="search" id="order-search" placeholder="Search orders by item (English or Hebrew)" aria-label="Search orders" dir="auto">
+    <button class="ghost" id="more-orders" type="button"></button>
+  </div>
   <form id="join" hidden>
     <input name="code" placeholder="Family code (same on every phone)" autocomplete="off" required>
     <input name="who" placeholder="Your name" autocomplete="name" required>
@@ -116,7 +120,7 @@
   import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName, CATEGORIES } from './list.js';
   import { bilingual, HE_TO_EN, groupOf, GROUP_FOR, hebrewOf } from './translate.js';
   import { ICON_FOR } from './icons.js';
-  import { saveOrder, findOrder, copyOrderToList, deleteOrder } from './orders.js';
+  import { saveOrder, findOrder, copyOrderToList, deleteOrder, searchOrders, recentOrders, ordersByMonth, notBoughtCount } from './orders.js';
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
   import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js';
   import { initializeFirestore, persistentLocalCache, doc, onSnapshot, setDoc } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js';
@@ -171,6 +175,11 @@
   let orders = [];
   let view = ''; // '' = current list, otherwise an order id
   let pendingDelete = ''; // order id waiting for a second tap to delete
+  let orderQuery = ''; // item name typed in the order search
+  let showAllOrders = false; // false = newest 12 orders only
+  const ordersBar = document.getElementById('orders-bar');
+  const orderSearch = document.getElementById('order-search');
+  const moreBtn = document.getElementById('more-orders');
   let group = ''; // '' = all groups, otherwise a group name
   const groupEl = document.getElementById('group');
   const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
@@ -268,30 +277,60 @@
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
 
+  // Orders to list: the search results, or the newest 12 unless "show all" is on.
+  function visibleOrders() {
+    if (orderQuery) return searchOrders(orders, orderQuery);
+    return showAllOrders ? orders : recentOrders(orders).recent;
+  }
+
+  // Newest first; an open order stays listed even when a search hides it.
+  function listedOrders() {
+    const shown = new Set(visibleOrders());
+    return orders.filter(o => shown.has(o) || o.id === view);
+  }
+
+  // "2026-10-08 · 12 items · 5 not bought"
+  function orderLabel(o) {
+    return `${o.date} · ${o.items.length} items · ${notBoughtCount(o)} not bought`;
+  }
+
+  function monthLabel(month) {
+    return new Date(`${month}-01T00:00:00`).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+  }
+
   function renderViewOptions() {
     viewEl.replaceChildren(new Option(`Current list (${items.length})`, ''));
-    for (const o of orders) {
-      viewEl.append(new Option(`${o.date} · ${o.items.length} items`, o.id));
+    for (const { month, orders: list } of ordersByMonth(listedOrders())) {
+      const optgroup = document.createElement('optgroup');
+      optgroup.label = monthLabel(month);
+      for (const o of list) optgroup.append(new Option(orderLabel(o), o.id));
+      viewEl.append(optgroup);
     }
     viewEl.value = findOrder(orders, view) ? view : '';
     view = viewEl.value;
+    ordersBar.hidden = orders.length === 0;
+    moreBtn.hidden = orderQuery !== '' || orders.length <= 12;
+    moreBtn.textContent = showAllOrders ? 'Show fewer orders' : `Show ${recentOrders(orders).older.length} older orders`;
   }
 
-  // Desktop sidebar: the current list, the saved orders (click to open one), and the family code.
+  // Desktop sidebar: the current list, the saved orders by month (click to open one), and the family code.
   function renderSidebar() {
     const current = document.getElementById('side-current');
     current.classList.toggle('active', view === '');
     current.textContent = `Current list (${items.length})`;
     current.onclick = () => { view = ''; render(); };
     const ordersEl = document.getElementById('side-orders');
-    ordersEl.replaceChildren(...orders.map(o => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'side-item' + (view === o.id ? ' active' : '');
-      b.textContent = `${o.date} · ${o.items.length} items`;
-      b.addEventListener('click', () => { view = o.id; render(); });
-      return b;
-    }));
+    ordersEl.replaceChildren(...ordersByMonth(listedOrders()).flatMap(({ month, orders: list }) => [
+      Object.assign(document.createElement('div'), { className: 'side-label', textContent: monthLabel(month) }),
+      ...list.map(o => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'side-item' + (view === o.id ? ' active' : '');
+        b.textContent = orderLabel(o);
+        b.addEventListener('click', () => { view = o.id; render(); });
+        return b;
+      }),
+    ]));
     document.getElementById('side-family').textContent = family;
   }
 
@@ -392,7 +431,7 @@
         render();
       });
       listEl.append(copy, del);
-      countEl.textContent = `${order.date} · ${order.items.length} items`;
+      countEl.textContent = orderLabel(order);
     } else {
       const open = items.filter(i => !i.done).length;
       countEl.textContent = `${items.length} items · ${open} to buy`;
@@ -408,6 +447,16 @@
   viewEl.addEventListener('change', () => {
     view = viewEl.value;
     pendingDelete = '';
+    render();
+  });
+
+  orderSearch.addEventListener('input', () => {
+    orderQuery = orderSearch.value.trim();
+    render();
+  });
+
+  moreBtn.addEventListener('click', () => {
+    showAllOrders = !showAllOrders;
     render();
   });
 
