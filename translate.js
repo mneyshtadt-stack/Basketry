@@ -21,7 +21,7 @@ export const HE_TO_EN = {
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
   'אבקת כביסה': 'laundry detergent', 'סוללות': 'batteries',
   'פיצה': 'pizza', 'פיצה קפואה': 'frozen pizza',
-  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi',
+  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi', 'ג\'ינג\'ר': 'ginger',
   'בצל אדום': 'red onion', 'בצל ירוק': 'green onion',
 };
 
@@ -60,7 +60,7 @@ export function translateItem(name) {
 // Product group for each English name; used to file items and to filter the list.
 export const GROUP_FOR = {
   'Fruits': ['apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado', 'kiwi'],
-  'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
+  'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'ginger', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
   'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'cottage', 'yogurt', 'butter', 'cream'],
   'Meat & Fish': ['meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],

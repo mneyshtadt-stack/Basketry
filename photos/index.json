@@ -726,5 +726,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "ginger": {
+    "file": "ginger-own.jpg",
+    "title": "Ginger (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
