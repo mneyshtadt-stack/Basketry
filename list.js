@@ -4,14 +4,15 @@ export const CATEGORIES = [
   'Frozen', 'Drinks', 'Household', 'Other',
 ];
 
-export function addItem(items, name, category = 'Other', qty = 1, he) {
+export function addItem(items, name, category = 'Other', qty = 1, he, by) {
   const trimmed = String(name ?? '').trim();
   if (!trimmed) return items;
   const clean = trimmed[0].toUpperCase() + trimmed.slice(1);
   const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
   const cat = CATEGORIES.includes(category) ? category : 'Other';
   const hebrew = he ? { he: String(he).trim() } : {};
-  return [...items, { id, name: clean, qty: Math.max(1, Number(qty) || 1), category: cat, done: false, ...hebrew }];
+  const author = by ? { by: String(by).trim() } : {};
+  return [...items, { id, name: clean, qty: Math.max(1, Number(qty) || 1), category: cat, done: false, ...hebrew, ...author }];
 }
 
 // "Potatoes [תפוחי אדמה]" when the Hebrew is known, otherwise just the name.

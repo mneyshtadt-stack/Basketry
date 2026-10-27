@@ -73,3 +73,5 @@ No build step: deploy the folder as-is.
    Setup steps: Firestore Database created, Rules published from `firestore.rules`, Authentication → Anonymous enabled.
 2. Category picker or name-based guessing; "staples" list for quick re-adding.
 3. Change family code.
+
+- Who added: each phone enters a name on join (localStorage `basketry.name`); new items show "by <name>".

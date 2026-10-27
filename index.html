@@ -90,6 +90,7 @@
   </div>
   <form id="join" hidden>
     <input name="code" placeholder="Family code (same on every phone)" autocomplete="off" required>
+    <input name="who" placeholder="Your name" autocomplete="name" required>
     <button type="submit">Join</button>
   </form>
   <div class="pick-row">
@@ -136,17 +137,22 @@
   // Everyone who types the same family code shares one list. The code is remembered per device.
   const joinForm = document.getElementById('join');
   let family = '';
-  try { family = localStorage.getItem('basketry.family') ?? ''; } catch { /* storage blocked */ }
-  if (!family) {
+  let me = '';
+  try { family = localStorage.getItem('basketry.family') ?? ''; me = localStorage.getItem('basketry.name') ?? ''; } catch { /* storage blocked */ }
+  if (!family || !me) {
     joinForm.hidden = false;
-    family = await new Promise(resolve => joinForm.addEventListener('submit', e => {
+    joinForm.elements.code.value = family;
+    const got = await new Promise(resolve => joinForm.addEventListener('submit', e => {
       e.preventDefault();
-      resolve(e.currentTarget.elements.code.value.trim().toLowerCase().replace(/\//g, '-'));
+      resolve({ code: e.currentTarget.elements.code.value.trim().toLowerCase().replace(/\//g, '-'), who: e.currentTarget.elements.who.value.trim() });
     }, { once: true }));
+    family = got.code;
+    me = got.who;
     joinForm.hidden = true;
-    try { localStorage.setItem('basketry.family', family); } catch { /* asked again next visit */ }
+    try { localStorage.setItem('basketry.family', family); localStorage.setItem('basketry.name', me); } catch { /* asked again next visit */ }
   }
   const ref = doc(db, 'families', family);
+  const who = me;
 
   const listEl = document.getElementById('list');
   const countEl = document.getElementById('count');
@@ -333,7 +339,10 @@
         qty.className = 'qty';
         qty.textContent = `× ${item.qty}`;
 
-        li.append(label, qty);
+        const by = document.createElement('span');
+        by.className = 'qty';
+        by.textContent = item.by ? `by ${item.by}` : '';
+        li.append(label, by, qty);
         if (!readOnly) {
           const del = document.createElement('button');
           del.className = 'ghost';
@@ -403,7 +412,7 @@
     const f = e.currentTarget;
     const { name, he } = bilingual(f.elements.name.value);
     // shortcut: every new item lands in Other, no category picker, upgrade when the list gets long to sort by aisle
-    update(addItem(items, name, groupOf(name), f.elements.qty.value, he));
+    update(addItem(items, name, groupOf(name), f.elements.qty.value, he, who));
     f.reset();
     suggestEl.hidden = true;
     nameInput.focus();

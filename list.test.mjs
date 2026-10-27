@@ -77,3 +77,8 @@ test('groupByCategory follows category order and skips empty groups', () => {
   const groups = groupByCategory(items);
   assert.deepEqual(groups.map(g => g.category), ['Fruits', 'Bakery']);
 });
+
+test('addItem records who added the item', () => {
+  assert.equal(addItem([], 'Milk', 'Dairy & Eggs', 1, undefined, 'Dana')[0].by, 'Dana');
+  assert.equal('by' in addItem([], 'Milk')[0], false);
+});
