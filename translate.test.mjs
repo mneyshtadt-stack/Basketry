@@ -1,7 +1,7 @@
 // Run with: node --test
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { translateItem, bilingual } from './translate.js';
+import { translateItem, bilingual, hebrewOf } from './translate.js';
 
 test('bilingual pairs English and Hebrew both ways', () => {
   assert.deepEqual(bilingual('חלב'), { name: 'milk', he: 'חלב' });
@@ -26,4 +26,13 @@ test('unknown Hebrew stays as typed', () => {
 
 test('English input passes through trimmed', () => {
   assert.equal(translateItem('  Yogurt '), 'Yogurt');
+});
+
+test('celery hearts Hebrew label maps to English', () => {
+  assert.deepEqual(bilingual('סלרי חתוך'), { name: 'celery hearts', he: 'סלרי חתוך' });
+});
+
+test('celery Hebrew label maps to English celery and back', () => {
+  assert.deepEqual(bilingual('סלרי עלים'), { name: 'celery', he: 'סלרי עלים' });
+  assert.equal(hebrewOf('celery'), 'סלרי עלים');
 });

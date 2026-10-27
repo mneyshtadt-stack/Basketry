@@ -90,6 +90,20 @@
     "artist": "André Karwath aka Aka",
     "licence": "CC BY-SA 2.5"
   },
+  "celery": {
+    "file": "celery-own.jpg",
+    "title": "Celery (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "celery hearts": {
+    "file": "celery-hearts-own.jpg",
+    "title": "Celery hearts (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "carrot": {
     "file": "carrot-own.jpg",
     "title": "Carrots (owner's own photo)",

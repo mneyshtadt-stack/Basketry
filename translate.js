@@ -8,7 +8,7 @@ export const HE_TO_EN = {
   'עגבנייה': 'tomato', 'עגבניות שרי': 'cherry tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'צ\'יה': 'chia seed', 'צ׳יה': 'chia seed', 'סודה לשתייה': 'baking soda', 'כרוב לבן': 'white cabbage', 'כרוב אדום': 'red cabbage', 'טבליות למדיח': 'dishwasher tablets', 'מלפפונים': 'cucumber',
   'בצל יבש': 'onion', 'בצל': 'onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apple',
   'תפוח אדמה': 'potato', 'בטטה': 'sweet potato', 'תפוחי אדמה': 'potato', 'בננה': 'banana', 'בננות': 'banana',
-  'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'קלמנטינה': 'clementine', 'גזר': 'carrot', 'צנונית': 'radish',
+  'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'קלמנטינה': 'clementine', 'גזר': 'carrot', 'צנונית': 'radish', 'סלרי עלים': 'celery', 'סלרי': 'celery', 'סלרי חתוך': 'celery hearts',
   'חסה': 'lettuce', 'חסה ערבית': 'romaine lettuce', 'חסה אייסברג': 'iceberg lettuce', 'פלפל': 'pepper', 'פלפל חריף': 'chili pepper', 'אבוקדו': 'avocado', 'משמש': 'apricot',
   'משמשים': 'apricot', 'מישמש': 'apricot', 'תות': 'strawberry', 'ענבים': 'grapes',
   'תותים': 'strawberry', 'תירס': 'corn', 'פטרוזיליה': 'parsley', 'כוסברה': 'coriander',
@@ -60,7 +60,7 @@ export function translateItem(name) {
 // Product group for each English name; used to file items and to filter the list.
 export const GROUP_FOR = {
   'Fruits': ['apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado'],
-  'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
+  'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
   'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'cottage', 'yogurt', 'butter', 'cream'],
   'Meat & Fish': ['meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],

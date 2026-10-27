@@ -13,6 +13,8 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **bread** - [Fresh made bread 05.jpg](https://commons.wikimedia.org/wiki/File:Fresh_made_bread_05.jpg) by FranHogan, CC BY-SA 4.0
 - **butter** - [Butter Stick at BUTTER Art Fair.jpg](https://commons.wikimedia.org/wiki/File:Butter_Stick_at_BUTTER_Art_Fair.jpg) by Cerebral726, CC BY-SA 4.0
 - **carrot** - Carrots (owner's own photo), project owner, Owner's own photo
+- **celery** - Celery (owner's own photo), project owner, Owner's own photo
+- **celery hearts** - Celery hearts (owner's own photo), project owner, Owner's own photo
 - **challah bread** - Challah (owner's own photo), project owner, Owner's own photo
 - **cheese** - Cheese (owner's own photo), project owner, Owner's own photo
 - **cherry tomato** - Cherry tomatoes (owner's own photo), project owner, Owner's own photo
