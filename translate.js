@@ -5,7 +5,7 @@ export const HE_TO_EN = {
   'חלב': 'milk', 'חלב סויה': 'soy milk', 'חלב דל לקטוז': 'lactose-free milk', 'לחם': 'bread', 'חלה': 'challah bread', 'פיתה': 'pita', 'פיתות': 'pita',
   'ביצה': 'egg', 'ביצים': 'egg', 'גבינה': 'cheese', 'גבינה צהובה': 'cheese', 'פרמזן': 'parmesan', 'סרדיניים': 'clupeidae', 'סרדינים': 'clupeidae', 'טונה': 'tuna', 'גבינה לבנה': 'cream cheese', 'בשר טחון': 'ground meat', 'חזה הודו': 'turkey breast', 'חזה עוף': 'chicken breast', 'שוקיים עוף': 'chicken drumsticks', 'כרעיים עוף': 'chicken leg quarters', 'לחם כוסמין': 'spelt bread', 'סלמון': 'salmon', 'סלמון מעושן': 'smoked salmon', 'בגט': 'baguette', 'שזיף': 'plum', 'קוטג\'': 'cottage', 'קוטג': 'cottage', 'קוטג׳': 'cottage', 'קוטג\'5%': 'cottage','קוטג 5%': 'cottage',
   'יוגורט': 'yogurt', 'חמאה': 'butter', 'שמנת': 'cream', 'גלידה': 'ice cream',
-  'עגבנייה': 'tomato', 'עגבניות שרי': 'cherry tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'צ\'יה': 'chia seed', 'צ׳יה': 'chia seed', 'סודה לשתייה': 'baking soda', 'כרוב לבן': 'white cabbage', 'כרוב אדום': 'red cabbage', 'מלפפונים': 'cucumber',
+  'עגבנייה': 'tomato', 'עגבניות שרי': 'cherry tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'צ\'יה': 'chia seed', 'צ׳יה': 'chia seed', 'סודה לשתייה': 'baking soda', 'כרוב לבן': 'white cabbage', 'כרוב אדום': 'red cabbage', 'טבליות למדיח': 'dishwasher tablets', 'מלפפונים': 'cucumber',
   'בצל יבש': 'onion', 'בצל': 'onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apple',
   'תפוח אדמה': 'potato', 'בטטה': 'sweet potato', 'תפוחי אדמה': 'potato', 'בננה': 'banana', 'בננות': 'banana',
   'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'קלמנטינה': 'clementine', 'גזר': 'carrot', 'צנונית': 'radish',
@@ -67,7 +67,7 @@ export const GROUP_FOR = {
   'Pantry': ['rice', 'pasta', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
   'Frozen': ['frozen pizza', 'pizza', 'ice cream'],
   'Drinks': ['water', 'juice', 'cola'],
-  'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries'],
+  'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries', 'dishwasher tablets'],
 };
 
 // The group for an English product name, or 'Other'.

@@ -691,5 +691,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "dishwasher tablets": {
+    "file": "dishwasher-tablets-own.jpg",
+    "title": "Dishwasher tablets (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
