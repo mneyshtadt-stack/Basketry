@@ -49,7 +49,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **grapes** - Grapes (owner's own photo), project owner, Owner's own photo
 - **green onion** - Onions (owner's own photo), project owner, Owner's own photo
 - **ground meat** - Ground meat (owner's own photo), project owner, Owner's own photo
-- **hummus** - [Homemade hummus and pita 03.jpg](https://commons.wikimedia.org/wiki/File:Homemade_hummus_and_pita_03.jpg) by Satdeep Gill, CC BY-SA 4.0
+- **hummus** - Hummus (owner's own photo), project owner, Owner's own photo
 - **ice cream** - [Apple cake with vanilla ice cream 2.jpg](https://commons.wikimedia.org/wiki/File:Apple_cake_with_vanilla_ice_cream_2.jpg) by W.carter, CC0
 - **iceberg lettuce** - Iceberg lettuce (owner's own photo), project owner, Owner's own photo
 - **juice** - [Orange juice 1 edit1.jpg](https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg) by Agency of the United States Department of Agriculture

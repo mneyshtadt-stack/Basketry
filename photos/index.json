@@ -315,11 +315,11 @@
     "licence": "CC BY 2.0"
   },
   "hummus": {
-    "file": "hummus.jpg",
-    "title": "Homemade hummus and pita 03.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Homemade_hummus_and_pita_03.jpg",
-    "artist": "Satdeep Gill",
-    "licence": "CC BY-SA 4.0"
+    "file": "hummus-own.jpg",
+    "title": "Hummus (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "tahini": {
     "file": "tahini.jpg",
