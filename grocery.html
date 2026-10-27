@@ -27,8 +27,10 @@
   button:disabled { opacity: .4; cursor: default; }
   button.ghost { background: transparent; color: var(--muted); border-color: transparent; }
   .bar { display: flex; gap: 8px; margin-bottom: 8px; }
-  .pick-row { display: flex; gap: 8px; margin-bottom: 8px; }
-  .pick-row select { flex: 1; min-width: 0; }
+  .add-row { display: flex; gap: 8px; }
+  .add-row select { flex: none; width: 120px; }
+  .add-row input[name="name"] { flex: 1; min-width: 0; }
+  .add-row input[name="qty"] { flex: none; width: 64px; }
   .add-wrap { position: relative; margin-bottom: 12px; }
   aside.side { display: none; }
   @media (min-width: 900px) {
@@ -99,11 +101,9 @@
     <input name="who" placeholder="Your name" autocomplete="name" required>
     <button type="submit">Join</button>
   </form>
-  <div class="pick-row">
-    <select id="group" aria-label="Choose a group"></select>
-  </div>
   <div class="add-wrap">
-  <form id="add">
+  <form id="add" class="add-row">
+    <select id="group" aria-label="Choose a group"></select>
     <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
     <button type="submit">Add</button>
