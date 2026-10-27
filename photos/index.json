@@ -91,11 +91,11 @@
     "licence": "CC BY-SA 2.5"
   },
   "carrot": {
-    "file": "carrot.jpg",
-    "title": "Carrots of many colors.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Carrots_of_many_colors.jpg",
-    "artist": "Stephen Ausmus",
-    "licence": "Public domain"
+    "file": "carrot-own.jpg",
+    "title": "Carrots (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "lettuce": {
     "file": "lettuce.jpg",

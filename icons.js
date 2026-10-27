@@ -41,7 +41,7 @@ export const ICON_FOR = {
   'biscuits': 'photos/biscuits.jpg',
   'bread': 'photos/bread.jpg',
   'butter': 'photos/butter.jpg',
-  'carrot': 'photos/carrot.jpg',
+  'carrot': 'photos/carrot-own.jpg',
   'cheese': 'photos/cheese-own.jpg',
   'chicken': 'photos/chicken.jpg',
   'chocolate': 'photos/chocolate.jpg',
