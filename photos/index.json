@@ -104,6 +104,13 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "kiwi": {
+    "file": "kiwi-own.jpg",
+    "title": "Kiwi (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "carrot": {
     "file": "carrot-own.jpg",
     "title": "Carrots (owner's own photo)",
