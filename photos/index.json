@@ -111,6 +111,13 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "buckwheat": {
+    "file": "buckwheat-own.jpg",
+    "title": "Buckwheat (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "carrot": {
     "file": "carrot-own.jpg",
     "title": "Carrots (owner's own photo)",

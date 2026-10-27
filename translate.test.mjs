@@ -28,6 +28,10 @@ test('English input passes through trimmed', () => {
   assert.equal(translateItem('  Yogurt '), 'Yogurt');
 });
 
+test('buckwheat Hebrew label maps to English buckwheat', () => {
+  assert.deepEqual(bilingual('כוסמת'), { name: 'buckwheat', he: 'כוסמת' });
+});
+
 test('kiwi Hebrew label maps to English kiwi', () => {
   assert.deepEqual(bilingual('קיווי'), { name: 'kiwi', he: 'קיווי' });
 });

@@ -12,6 +12,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **biscuits** - [Gurabija (гурабија,Qurabiya; Cuisine of Serbia).jpg](https://commons.wikimedia.org/wiki/File:Gurabija_(%D0%B3%D1%83%D1%80%D0%B0%D0%B1%D0%B8%D1%98%D0%B0,Qurabiya;_Cuisine_of_Serbia).jpg) by Petar Milošević, CC BY-SA 4.0
 - **bread** - [Fresh made bread 05.jpg](https://commons.wikimedia.org/wiki/File:Fresh_made_bread_05.jpg) by FranHogan, CC BY-SA 4.0
 - **butter** - [Butter Stick at BUTTER Art Fair.jpg](https://commons.wikimedia.org/wiki/File:Butter_Stick_at_BUTTER_Art_Fair.jpg) by Cerebral726, CC BY-SA 4.0
+- **buckwheat** - Buckwheat (owner's own photo), project owner, Owner's own photo
 - **carrot** - Carrots (owner's own photo), project owner, Owner's own photo
 - **celery** - Celery (owner's own photo), project owner, Owner's own photo
 - **celery hearts** - Celery hearts (owner's own photo), project owner, Owner's own photo
