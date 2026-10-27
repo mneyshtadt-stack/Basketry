@@ -663,5 +663,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "chia seed": {
+    "file": "chia-seed-own.jpg",
+    "title": "Chia seed (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }

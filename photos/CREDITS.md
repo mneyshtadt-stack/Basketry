@@ -15,6 +15,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **challah bread** - Challah (owner's own photo), project owner, Owner's own photo
 - **cheese** - Cheese (owner's own photo), project owner, Owner's own photo
 - **cherry tomato** - Cherry tomatoes (owner's own photo), project owner, Owner's own photo
+- **chia seed** - Chia seed (owner's own photo), project owner, Owner's own photo
 - **chicken** - [Chickens in market.jpg](https://commons.wikimedia.org/wiki/File:Chickens_in_market.jpg) by Tomás Castelazo, CC BY-SA 3.0
 - **chicken breast** - Chicken breast (owner's own photo), project owner, Owner's own photo
 - **chicken drumsticks** - Chicken drumsticks (owner's own photo), project owner, Owner's own photo
