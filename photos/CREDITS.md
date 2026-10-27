@@ -105,5 +105,6 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **tuna** - Tuna (owner's own photo), project owner, Owner's own photo
 - **turkey breast** - Turkey breast (owner's own photo), project owner, Owner's own photo
 - **water** - [Metal Water Bottles.jpeg](https://commons.wikimedia.org/wiki/File:Metal_Water_Bottles.jpeg) by Amraepowell, CC0
+- **white cabbage** - White cabbage (owner's own photo), project owner, Owner's own photo
 - **yellow onion** - Yellow onions (owner's own photo), project owner, Owner's own photo
 - **yogurt** - [Joghurt.jpg](https://commons.wikimedia.org/wiki/File:Joghurt.jpg) by No machine-readable author provided. Rainer Zenz assumed (based on copyright claims)., CC BY-SA 3.0

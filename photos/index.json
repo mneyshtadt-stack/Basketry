@@ -677,5 +677,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "white cabbage": {
+    "file": "white-cabbage-own.jpg",
+    "title": "White cabbage (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
