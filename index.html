@@ -269,7 +269,7 @@
   }
 
   function renderViewOptions() {
-    viewEl.replaceChildren(new Option('Current list', ''));
+    viewEl.replaceChildren(new Option(`Current list (${items.length})`, ''));
     for (const o of orders) {
       viewEl.append(new Option(`${o.date} · ${o.items.length} items`, o.id));
     }
@@ -281,6 +281,7 @@
   function renderSidebar() {
     const current = document.getElementById('side-current');
     current.classList.toggle('active', view === '');
+    current.textContent = `Current list (${items.length})`;
     current.onclick = () => { view = ''; render(); };
     const ordersEl = document.getElementById('side-orders');
     ordersEl.replaceChildren(...orders.map(o => {
