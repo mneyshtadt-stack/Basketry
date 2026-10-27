@@ -93,7 +93,7 @@ export const ICON_FOR = {
   'soy milk': 'photos/soy-milk.jpg',
   'strawberry': 'photos/strawberry.jpg',
   'sugar': 'photos/sugar.jpg',
-  'tahini': 'photos/tahini.jpg',
+  'tahini': 'photos/tahini-own.jpg',
   'tea': 'photos/tea.jpg',
   'toilet paper': 'photos/toilet-paper.jpg',
   'tomato': 'photos/tomato-own.jpg',

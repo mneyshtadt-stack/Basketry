@@ -322,11 +322,11 @@
     "licence": "Owner's own photo"
   },
   "tahini": {
-    "file": "tahini.jpg",
-    "title": "Tahini with oil.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Tahini_with_oil.JPG",
-    "artist": "Miansari66",
-    "licence": "CC0"
+    "file": "tahini-own.jpg",
+    "title": "Tahini (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "olives": {
     "file": "olives.jpg",
