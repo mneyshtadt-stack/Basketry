@@ -65,6 +65,7 @@
   li label { flex: 1; display: flex; gap: 10px; align-items: center; cursor: pointer; }
   li.done span { text-decoration: line-through; color: var(--muted); }
   .qty { color: var(--muted); font-size: .9rem; }
+  .by { color: var(--muted); font-size: .8rem; white-space: nowrap; }
   .empty { color: var(--muted); text-align: center; padding: 24px 0; }
   footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
 </style>
@@ -339,10 +340,14 @@
         qty.className = 'qty';
         qty.textContent = `× ${item.qty}`;
 
-        const by = document.createElement('span');
-        by.className = 'qty';
-        by.textContent = item.by ? `by ${item.by}` : '';
-        li.append(label, by, qty);
+        const extra = [];
+        if (item.by) {
+          const by = document.createElement('span');
+          by.className = 'by';
+          by.textContent = `by ${item.by}`;
+          extra.push(by);
+        }
+        li.append(label, ...extra, qty);
         if (!readOnly) {
           const del = document.createElement('button');
           del.className = 'ghost';
