@@ -395,7 +395,7 @@
       countEl.textContent = `${order.date} · ${order.items.length} items`;
     } else {
       const open = items.filter(i => !i.done).length;
-      countEl.textContent = `${open} to buy`;
+      countEl.textContent = `${items.length} items · ${open} to buy`;
     }
   }
 

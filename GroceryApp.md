@@ -74,5 +74,5 @@ No build step: deploy the folder as-is.
 2. Category picker or name-based guessing; "staples" list for quick re-adding.
 3. Change family code.
 
-- The current list shows its item count ("Current list (N)") in the dropdown and the sidebar; the count includes checked items.
+- The current list shows its item count ("Current list (N)") in the dropdown and the sidebar, and "N items · M to buy" under the header; the count includes checked items, "to buy" excludes them.
 - Who added: each phone enters a name on join (localStorage `basketry.name`); new items show "by <name>".
