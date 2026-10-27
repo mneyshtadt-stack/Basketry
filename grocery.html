@@ -22,6 +22,7 @@
   input[name="name"] { flex: 1; min-width: 0; }
   input[name="qty"] { width: 64px; }
   select, #order-search { flex: 1; min-width: 0; }
+  #order-search { min-width: 0; }
   button { cursor: pointer; background: var(--accent); color: #fff; border-color: var(--accent); }
   button:disabled { opacity: .4; cursor: default; }
   button.ghost { background: transparent; color: var(--muted); border-color: transparent; }
@@ -87,10 +88,10 @@
   <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
   <div class="bar">
     <select id="view" aria-label="Show list or order"></select>
+    <input type="search" id="order-search" placeholder="Search orders by item" aria-label="Search orders by item (English or Hebrew)" dir="auto">
     <button class="ghost" id="save-order" type="button">Save as order</button>
   </div>
   <div class="bar" id="orders-bar" hidden>
-    <input type="search" id="order-search" placeholder="Search orders by item (English or Hebrew)" aria-label="Search orders" dir="auto">
     <button class="ghost" id="more-orders" type="button"></button>
   </div>
   <form id="join" hidden>
