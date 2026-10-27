@@ -1,6 +1,7 @@
 // Pictures for grocery names (lowercase English). Photos are from Wikimedia Commons; see photos/CREDITS.md.
 // Items without a picture show a letter circle.
 export const ICON_FOR = {
+  'baking soda': 'photos/baking-soda-own.jpg',
   'chia seed': 'photos/chia-seed-own.jpg',
   'plum': 'photos/plum-own.jpg',
   'baguette': 'photos/baguette-own.jpg',

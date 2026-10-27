@@ -670,5 +670,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "baking soda": {
+    "file": "baking-soda-own.jpg",
+    "title": "Baking soda (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
