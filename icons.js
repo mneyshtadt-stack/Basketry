@@ -4,7 +4,7 @@ export const ICON_FOR = {
   'dishwasher tablets': 'photos/dishwasher-tablets-own.jpg',
   'red cabbage': 'photos/red-cabbage-own.jpg',
   'white cabbage': 'photos/white-cabbage-own.jpg',
-  'baking soda': 'photos/baking-soda-own.jpg',
+  'baking soda': 'photos/baking-soda-own2.jpg',
   'chia seed': 'photos/chia-seed-own.jpg',
   'plum': 'photos/plum-own.jpg',
   'baguette': 'photos/baguette-own.jpg',
