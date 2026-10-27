@@ -5,7 +5,7 @@ export const HE_TO_EN = {
   'חלב': 'milk', 'חלב סויה': 'soy milk', 'חלב דל לקטוז': 'lactose-free milk', 'לחם': 'bread', 'חלה': 'challah bread', 'פיתה': 'pita', 'פיתות': 'pita',
   'ביצה': 'egg', 'ביצים': 'egg', 'גבינה': 'cheese', 'גבינה צהובה': 'cheese', 'פרמזן': 'parmesan', 'סרדיניים': 'clupeidae', 'סרדינים': 'clupeidae', 'טונה': 'tuna', 'גבינה לבנה': 'cream cheese', 'בשר טחון': 'ground meat', 'חזה הודו': 'turkey breast', 'חזה עוף': 'chicken breast', 'שוקיים עוף': 'chicken drumsticks', 'כרעיים עוף': 'chicken leg quarters', 'לחם כוסמין': 'spelt bread', 'סלמון': 'salmon', 'סלמון מעושן': 'smoked salmon', 'בגט': 'baguette', 'שזיף': 'plum', 'קוטג\'': 'cottage', 'קוטג': 'cottage', 'קוטג׳': 'cottage', 'קוטג\'5%': 'cottage','קוטג 5%': 'cottage',
   'יוגורט': 'yogurt', 'חמאה': 'butter', 'שמנת': 'cream', 'גלידה': 'ice cream',
-  'עגבנייה': 'tomato', 'עגבניות שרי': 'cherry tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'צ\'יה': 'chia seed', 'צ׳יה': 'chia seed', 'סודה לשתייה': 'baking soda', 'כרוב לבן': 'white cabbage', 'מלפפונים': 'cucumber',
+  'עגבנייה': 'tomato', 'עגבניות שרי': 'cherry tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'צ\'יה': 'chia seed', 'צ׳יה': 'chia seed', 'סודה לשתייה': 'baking soda', 'כרוב לבן': 'white cabbage', 'כרוב אדום': 'red cabbage', 'מלפפונים': 'cucumber',
   'בצל יבש': 'onion', 'בצל': 'onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apple',
   'תפוח אדמה': 'potato', 'בטטה': 'sweet potato', 'תפוחי אדמה': 'potato', 'בננה': 'banana', 'בננות': 'banana',
   'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'קלמנטינה': 'clementine', 'גזר': 'carrot', 'צנונית': 'radish',
@@ -60,7 +60,7 @@ export function translateItem(name) {
 // Product group for each English name; used to file items and to filter the list.
 export const GROUP_FOR = {
   'Fruits': ['apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado'],
-  'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage'],
+  'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
   'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'cottage', 'yogurt', 'butter', 'cream'],
   'Meat & Fish': ['meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],

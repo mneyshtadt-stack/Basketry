@@ -82,6 +82,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **plum** - Plum (owner's own photo), project owner, Owner's own photo
 - **potato** - Potatoes (owner's own photo), project owner, Owner's own photo
 - **radish** - Radish (owner's own photo), project owner, Owner's own photo
+- **red cabbage** - Red cabbage (owner's own photo), project owner, Owner's own photo
 - **red onion** - Onions (owner's own photo), project owner, Owner's own photo
 - **rice** - [Rice Grains .png](https://commons.wikimedia.org/wiki/File:Rice_Grains_.png) by Hpannu7, CC BY-SA 4.0
 - **romaine lettuce** - Romaine lettuce (owner's own photo), project owner, Owner's own photo
