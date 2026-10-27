@@ -8,14 +8,14 @@ test('saveOrder ignores an empty list', () => {
   assert.equal(saveOrder([], []).length, 0);
 });
 
-test('saveOrder stores a snapshot, newest first, without done flags', () => {
+test('saveOrder stores a snapshot, newest first, keeping bought flags but not ids', () => {
   let items = addItem([], 'Milk', 'Dairy & Eggs', 2);
   items = toggleItem(items, items[0].id);
   let orders = saveOrder([], items, '2026-10-01');
   items = addItem(items, 'Bread', 'Bakery');
   orders = saveOrder(orders, items, '2026-10-08');
   assert.deepEqual(orders.map(o => o.date), ['2026-10-08', '2026-10-01']);
-  assert.deepEqual(orders[1].items, [{ name: 'Milk', qty: 2, category: 'Dairy & Eggs' }]);
+  assert.deepEqual(orders[1].items, [{ name: 'Milk', qty: 2, category: 'Dairy & Eggs', done: true }]);
 });
 
 test('later edits to the list do not change a saved order', () => {
@@ -24,7 +24,7 @@ test('later edits to the list do not change a saved order', () => {
   const copy = toggleItem(items, items[0].id);
   assert.equal(copy[0].done, true);
   assert.equal(orders[0].items[0].name, 'Eggs');
-  assert.equal('done' in orders[0].items[0], false);
+  assert.equal(orders[0].items[0].done, false);
 });
 
 test('findOrder returns the matching order or undefined', () => {

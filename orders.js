@@ -6,9 +6,10 @@ function newId() {
 }
 
 // Snapshots the current items as a new order, newest first. Empty lists are not saved.
+// Bought (done) flags are kept so the order shows what was bought; ids are not.
 export function saveOrder(orders, items, date = new Date().toISOString().slice(0, 10)) {
   if (items.length === 0) return orders;
-  const snapshot = items.map(({ id, done, ...kept }) => kept);
+  const snapshot = items.map(({ id, ...kept }) => kept);
   return [{ id: newId(), date, items: snapshot }, ...orders];
 }
 

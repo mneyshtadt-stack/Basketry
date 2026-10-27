@@ -328,7 +328,11 @@
         const icon = ICON_FOR[englishName(item).toLowerCase()];
         const pic = icon ? Object.assign(document.createElement('img'), { src: icon, alt: '', className: 'list-pic' }) : null;
         if (readOnly) {
-          label.append(...[pic, span].filter(Boolean));
+          const box = document.createElement('input');
+          box.type = 'checkbox';
+          box.checked = Boolean(item.done);
+          box.disabled = true;
+          label.append(box, ...[pic, span].filter(Boolean));
         } else {
           const box = document.createElement('input');
           box.type = 'checkbox';
