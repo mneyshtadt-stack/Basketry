@@ -254,7 +254,7 @@
   function showSuggestions() {
     const query = nameInput.value.trim();
     const pool = group ? groupCandidates() : knownNames;
-    const matches = query ? suggestMatches(pool, query) : (group ? (GROUP_FOR[group] ?? []).map(cap) : []);
+    const matches = query ? suggestMatches(pool, query, Infinity) : (group ? (GROUP_FOR[group] ?? []).map(cap) : []);
     suggestEl.hidden = matches.length === 0;
     if (matches.length === 0) return;
     const heading = document.createElement('h3');
