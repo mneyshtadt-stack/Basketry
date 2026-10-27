@@ -413,6 +413,7 @@
 
   saveBtn.addEventListener('click', () => {
     orders = saveOrder(orders, items);
+    items = [];
     persist();
     render();
   });
