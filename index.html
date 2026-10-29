@@ -39,7 +39,9 @@
   .add-row button { padding: 0 16px; }
   .add-wrap { position: relative; margin-bottom: 14px; }
   #join { flex-wrap: wrap; }
+  .join-title { flex-basis: 100%; margin: 4px 0 0; font-size: 1.3rem; font-weight: 700; }
   .join-hint { flex-basis: 100%; margin: 0 0 4px; color: var(--muted); }
+  .joining .seg, .joining .bar, .joining #orders-bar, .joining .add-wrap, .joining #list, .joining footer, .joining aside.side { display: none; }
   .seg { display: flex; gap: 4px; padding: 4px; margin-bottom: 10px; background: var(--line); border-radius: 12px; }
   .seg button { flex: 1; min-height: 40px; background: transparent; color: var(--muted); border-color: transparent; font-weight: 500; padding: 0 12px; }
   .seg button[aria-selected="true"] { background: var(--card); color: var(--fg); font-weight: 600; box-shadow: var(--shadow); }
@@ -100,7 +102,7 @@
   #count { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
 </style>
 </head>
-<body>
+<body class="joining">
 <main>
   <aside class="side" aria-label="Lists and orders">
     <div class="side-brand"><img src="icon.svg" alt="" width="32" height="32">Basketry</div>
@@ -116,8 +118,8 @@
   </aside>
   <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
   <div class="seg" role="tablist" aria-label="Current list or saved orders">
-    <button type="button" id="tab-current" role="tab">Current list</button>
-    <button type="button" id="tab-orders" role="tab">Saved orders</button>
+    <button type="button" id="tab-current" role="tab" aria-controls="list">Current list</button>
+    <button type="button" id="tab-orders" role="tab" aria-controls="list">Saved orders</button>
   </div>
   <div class="bar">
     <select id="view" aria-label="Show list or order"></select>
@@ -128,6 +130,7 @@
     <button class="ghost" id="more-orders" type="button"></button>
   </div>
   <form id="join" hidden>
+    <p class="join-title">Join your family list</p>
     <p class="join-hint">Everyone who types the same family code shares one list. You only do this once on each phone.</p>
     <input name="code" placeholder="Family code, e.g. cohen-home" autocomplete="off" required>
     <input name="who" placeholder="Your name (shown on items you add)" autocomplete="name" required>
@@ -189,6 +192,7 @@
     joinForm.hidden = true;
     try { localStorage.setItem('basketry.family', family); localStorage.setItem('basketry.name', me); } catch { /* asked again next visit */ }
   }
+  document.body.classList.remove('joining');
   const ref = doc(db, 'families', family);
   const who = me;
 
@@ -337,6 +341,7 @@
   function renderTabs() {
     const onOrders = view !== '';
     tabCurrent.textContent = `Current list (${items.length})`;
+    tabOrders.textContent = `Saved orders (${orders.length})`;
     tabCurrent.setAttribute('aria-selected', String(!onOrders));
     tabOrders.setAttribute('aria-selected', String(onOrders));
     viewEl.hidden = !onOrders;
