@@ -43,7 +43,7 @@
   .join-hint { flex-basis: 100%; margin: 0 0 4px; color: var(--muted); }
   .joining .seg, .joining .bar, .joining #orders-bar, .joining .add-wrap, .joining #list, .joining footer, .joining aside.side { display: none; }
   .seg { display: flex; gap: 4px; padding: 4px; margin-bottom: 10px; background: var(--line); border-radius: 12px; }
-  .seg button { flex: 1; min-height: 40px; background: transparent; color: var(--muted); border-color: transparent; font-weight: 500; padding: 0 12px; }
+  .seg button { flex: 1; min-height: 44px; background: transparent; color: var(--fg); border-color: transparent; font-weight: 500; padding: 0 12px; }
   .seg button[aria-selected="true"] { background: var(--card); color: var(--fg); font-weight: 600; box-shadow: var(--shadow); }
   .order-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px; margin-bottom: 8px; }
   .order-date { font-size: 1.1rem; font-weight: 700; }
@@ -54,22 +54,24 @@
   @media (max-width: 480px) {
     .bar { flex-wrap: wrap; }
     .bar #view { flex: 1 1 100%; }
-    .add-row { grid-template-columns: minmax(0, 1fr) 40px auto; }
-    .add-row select { grid-column: 1 / -1; justify-self: start; }
   }
   aside.side { display: none; }
   @media (min-width: 900px) {
     main { max-width: 1100px; display: grid; grid-template-columns: 260px minmax(0, 1fr); column-gap: 32px; align-items: start; }
     main > aside.side { display: flex; flex-direction: column; gap: 20px; grid-row: 1 / span 30; position: sticky; top: 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 16px; box-shadow: var(--shadow); }
     main > :not(aside.side) { grid-column: 2; min-width: 0; }
-    main > h1 { margin-top: 0; }
+    main > h1 { display: none; }
   }
   .side-brand { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; }
   .side-label { font-size: 12px; font-weight: 600; letter-spacing: .05em; color: var(--muted); margin-bottom: 6px; }
   .side-item { display: block; width: 100%; text-align: left; background: transparent; color: var(--fg); border: 0; border-radius: 10px; padding: 10px 12px; font-size: 15px; font-weight: 500; }
   .side-item:hover { background: var(--bg); }
   .side-item.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .side-sub { font-size: 13px; color: var(--muted); margin-top: -12px; }
   .side-foot { margin-top: auto; font-size: 13px; color: var(--muted); }
+  .side-foot summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+  .side-foot span { display: block; word-break: break-all; }
+  .side-item small { display: block; font-size: .8rem; font-weight: 400; color: var(--muted); margin-top: 2px; }
   .add-wrap form { margin-bottom: 0; }
   .suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 32px rgba(0, 0, 0, .16); padding: 14px; max-height: 60vh; overflow-y: auto; }
   .suggest h3 { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 10px; }
@@ -106,6 +108,7 @@
 <main>
   <aside class="side" aria-label="Lists and orders">
     <div class="side-brand"><img src="icon.svg" alt="" width="32" height="32">Basketry</div>
+    <div class="side-sub">Family Groceries · רשימת קניות</div>
     <div>
       <div class="side-label">LISTS</div>
       <button class="side-item" id="side-current" type="button">Current list</button>
@@ -114,9 +117,9 @@
       <div class="side-label">SAVED ORDERS</div>
       <div id="side-orders"></div>
     </div>
-    <div class="side-foot">Family code: <span id="side-family"></span></div>
+    <details class="side-foot"><summary>Show family code</summary><span id="side-family"></span></details>
   </aside>
-  <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
+  <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .95rem;">· Family Groceries · רשימת קניות</small></h1>
   <div class="seg" role="tablist" aria-label="Current list or saved orders">
     <button type="button" id="tab-current" role="tab" aria-controls="list">Current list</button>
     <button type="button" id="tab-orders" role="tab" aria-controls="list">Saved orders</button>
@@ -139,14 +142,14 @@
   <div class="add-wrap">
   <form id="add" class="add-row" hidden>
     <select id="group" aria-label="Choose a group"></select>
-    <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
+    <input name="name" dir="auto" placeholder="Add an item" aria-label="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
     <button type="submit">Add</button>
   </form>
     <div id="suggest" class="suggest" hidden></div>
   </div>
   <div id="list"></div>
-  <footer>
+  <footer id="foot">
     <button class="ghost" id="clear" type="button">Clear checked</button>
     <span class="qty" id="count"></span>
   </footer>
@@ -204,6 +207,7 @@
   const saveBtn = document.getElementById('save-order');
   const addForm = document.getElementById('add');
   const clearBtn = document.getElementById('clear');
+  const footerEl = document.getElementById('foot');
 
   // The whole family state (list and orders) lives in one Firestore document.
   function persist() {
@@ -229,6 +233,7 @@
   groupEl.addEventListener('change', () => {
     group = groupEl.value;
     nameInput.value = ''; // the name typed for the old group does not carry over
+    syncAdd();
     render();
     showSuggestions();
   });
@@ -246,11 +251,16 @@
   }
 
   const nameInput = addForm.elements.name;
+  const addBtn = addForm.querySelector('button');
+  // Add stays disabled until there is a name to add.
+  const syncAdd = () => { addBtn.disabled = !nameInput.value.trim(); };
+  syncAdd();
   const suggestEl = document.getElementById('suggest');
   nameInput.addEventListener('focus', showSuggestions);
   // Puts the picked name in the box; the item is added only when the form is submitted.
   function pickSuggestion(n) {
     nameInput.value = n;
+    syncAdd();
     suggestEl.hidden = true;
     nameInput.focus();
   }
@@ -303,7 +313,7 @@
     tiles.append(...matches.slice(0, 3).map(n => suggestionEl(n, query, true)));
     suggestEl.replaceChildren(heading, tiles, ...matches.slice(3).map(n => suggestionEl(n, query, false)));
   }
-  nameInput.addEventListener('input', showSuggestions);
+  nameInput.addEventListener('input', () => { showSuggestions(); syncAdd(); });
   // Select the default "1" on focus so typing a number replaces it instead of appending.
   addForm.elements.qty.addEventListener('focus', e => e.target.select());
   nameInput.addEventListener('blur', () => { suggestEl.hidden = true; });
@@ -376,7 +386,11 @@
         const b = document.createElement('button');
         b.type = 'button';
         b.className = 'side-item' + (view === o.id ? ' active' : '');
-        b.textContent = orderLabel(o);
+        const date = document.createElement('span');
+        date.textContent = o.date;
+        const count = document.createElement('small');
+        count.textContent = `${o.items.length} items · ${notBoughtCount(o)} not bought`;
+        b.replaceChildren(date, count);
         b.addEventListener('click', () => { view = o.id; render(); });
         return b;
       }),
@@ -395,6 +409,7 @@
 
     addForm.hidden = readOnly;
     clearBtn.hidden = readOnly || items.length === 0;
+    footerEl.hidden = !readOnly && items.length === 0;
     saveBtn.disabled = items.length === 0;
     saveBtn.hidden = view !== '' || items.length === 0;
 
@@ -403,7 +418,7 @@
       const p = document.createElement('p');
       p.className = 'empty';
       p.textContent = readOnly ? 'This order is empty.' : 'Nothing on the list yet.';
-      if (!readOnly) p.append(Object.assign(document.createElement('small'), { textContent: 'Type an item above, or tap a suggestion.' }));
+      if (!readOnly) p.append(Object.assign(document.createElement('small'), { textContent: 'Add your first item above to start.' }));
       listEl.append(p);
     }
     for (const group of groupByCategory(shown)) {
@@ -549,6 +564,7 @@
     // shortcut: every new item lands in Other, no category picker, upgrade when the list gets long to sort by aisle
     update(addItem(items, name, groupOf(name), f.elements.qty.value, he, who));
     f.reset();
+    syncAdd();
     suggestEl.hidden = true;
     nameInput.focus();
   });
