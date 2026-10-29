@@ -38,6 +38,8 @@
   .add-row input[name="qty"] { width: 40px; padding: 0 4px; text-align: center; }
   .add-row button { padding: 0 16px; }
   .add-wrap { position: relative; margin-bottom: 14px; }
+  #join { flex-wrap: wrap; }
+  .join-hint { flex-basis: 100%; margin: 0 0 4px; color: var(--muted); }
   @media (max-width: 480px) {
     .bar { flex-wrap: wrap; }
     .bar #view { flex: 1 1 100%; }
@@ -113,12 +115,13 @@
     <button class="ghost" id="more-orders" type="button"></button>
   </div>
   <form id="join" hidden>
-    <input name="code" placeholder="Family code (same on every phone)" autocomplete="off" required>
-    <input name="who" placeholder="Your name" autocomplete="name" required>
-    <button type="submit">Join</button>
+    <p class="join-hint">Everyone who types the same family code shares one list. You only do this once on each phone.</p>
+    <input name="code" placeholder="Family code, e.g. cohen-home" autocomplete="off" required>
+    <input name="who" placeholder="Your name (shown on items you add)" autocomplete="name" required>
+    <button type="submit">Join list</button>
   </form>
   <div class="add-wrap">
-  <form id="add" class="add-row">
+  <form id="add" class="add-row" hidden>
     <select id="group" aria-label="Choose a group"></select>
     <input name="name" dir="auto" placeholder="Add an item (Hebrew or English)" autocomplete="off" required>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
@@ -275,7 +278,7 @@
     suggestEl.hidden = matches.length === 0;
     if (matches.length === 0) return;
     const heading = document.createElement('h3');
-    heading.textContent = 'Suggestions';
+    heading.textContent = `Suggestions · ${matches.length}`;
     const tiles = document.createElement('div');
     tiles.className = 'tiles';
     tiles.append(...matches.slice(0, 3).map(n => suggestionEl(n, query, true)));
@@ -360,7 +363,7 @@
     const shown = order ? order.items : items;
 
     addForm.hidden = readOnly;
-    clearBtn.hidden = readOnly;
+    clearBtn.hidden = readOnly || items.length === 0;
     saveBtn.disabled = items.length === 0;
 
     listEl.replaceChildren();
