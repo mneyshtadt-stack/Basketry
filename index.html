@@ -216,11 +216,14 @@
 
   // The whole family state (list and orders) lives in one Firestore document.
   function persist() {
+    // Never write before the family list has loaded, or an empty local copy would overwrite the saved orders.
+    if (!loaded) return;
     setDoc(ref, { items, orders }).catch(err => console.error('Save failed', err));
   }
 
   let items = [];
   let orders = [];
+  let loaded = false; // true once the family document has arrived from Firestore
   let view = ''; // '' = current list, otherwise an order id
   let pendingDelete = ''; // order id waiting for a second tap to delete
   let orderQuery = ''; // item name typed in the order search
@@ -594,6 +597,7 @@
     .then(() => onSnapshot(ref, snap => {
       const data = snap.data();
       if (data) { items = data.items ?? []; orders = data.orders ?? []; }
+      loaded = true;
       render();
     }))
     .catch(err => {
