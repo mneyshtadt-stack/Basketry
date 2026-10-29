@@ -56,7 +56,7 @@ No build step: deploy the folder as-is.
 - Data: one Firestore document per family, `families/<code>`, holding `{ items, orders }`. Changing the item shape is safe; old items just lack new fields.
 - Family code is the only secret: anyone who knows it can read and change that list. Firebase config values are public identifiers; the rules protect the data.
 - `shortcut:` two phones editing at the same moment: last save wins. Upgrade to per-item writes if this bites.
-- `shortcut:` a family code is typed once per device (join form on first visit; the add row stays hidden until then); there is no way to switch codes in the app yet.
+- `shortcut:` a family code is typed once per device (join form on first visit; the list, tabs, add row and footer stay hidden until then, via `body.joining`); there is no way to switch codes in the app yet.
 - Storage writes are wrapped in try/catch: private mode or blocked storage degrades to an in-memory list.
 - On screens 900 px and wider, a sidebar (current list, saved orders, family code) sits beside the list (`aside.side`, `renderSidebar()`); on phones it is hidden and the layout is unchanged.
 - Tap a picture in the list to see it full size (a `<dialog>`; tap anywhere to close). The click is stopped so it doesn't tick the item.
