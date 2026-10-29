@@ -733,5 +733,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "mackerel": {
+    "file": "mackerel-own.jpg",
+    "title": "Mackerel (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
