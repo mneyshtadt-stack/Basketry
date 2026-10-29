@@ -55,7 +55,7 @@
     .bar { flex-wrap: wrap; }
     .bar #view { flex: 1 1 100%; }
     .add-row { grid-template-columns: minmax(0, 1fr) 40px auto; }
-    .add-row select { grid-column: 1 / -1; max-width: none; width: 100%; }
+    .add-row select { grid-column: 1 / -1; justify-self: start; }
   }
   aside.side { display: none; }
   @media (min-width: 900px) {
@@ -99,7 +99,7 @@
   .empty { color: var(--fg); text-align: center; padding: 44px 16px; line-height: 1.5; }
   .empty small { display: block; margin-top: 6px; font-size: .9rem; color: var(--muted); }
   footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line); }
-  #count { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
+  #count { color: var(--muted); background: none; padding: 0; font-size: .9rem; font-variant-numeric: tabular-nums; }
 </style>
 </head>
 <body class="joining">
@@ -396,6 +396,7 @@
     addForm.hidden = readOnly;
     clearBtn.hidden = readOnly || items.length === 0;
     saveBtn.disabled = items.length === 0;
+    saveBtn.hidden = view !== '' || items.length === 0;
 
     listEl.replaceChildren();
     if (shown.length === 0) {
