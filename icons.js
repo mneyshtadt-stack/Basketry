@@ -46,6 +46,7 @@ export const ICON_FOR = {
   'celery': 'photos/celery-own.jpg',
   'celery hearts': 'photos/celery-hearts-own.jpg',
   'ginger': 'photos/ginger-own.jpg',
+  'mackerel': 'photos/mackerel-own.jpg',
   'kiwi': 'photos/kiwi-own.jpg',
   'cheese': 'photos/cheese-own.jpg',
   'chicken': 'photos/chicken.jpg',
