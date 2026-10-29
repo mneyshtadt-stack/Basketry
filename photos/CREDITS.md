@@ -62,7 +62,7 @@ Edited Version by: Arad, Public domain
 - **laundry detergent** - Laundry detergent (owner's own photo), project owner, Owner's own photo
 - **lemon** - [Lemon.jpg](https://commons.wikimedia.org/wiki/File:Lemon.jpg) by André Karwath aka Aka, CC BY-SA 2.5
 - **lettuce** - [Lactuca sativa 'Ashbrook'.jpg](https://commons.wikimedia.org/wiki/File:Lactuca_sativa_%27Ashbrook%27.jpg) by DeFacto, CC BY-SA 4.0
-- **mayonnaise** - [Mayonnaise (1).jpg](https://commons.wikimedia.org/wiki/File:Mayonnaise_(1).jpg) by jules, CC BY 2.0
+- **mayonnaise** - Mayonnaise (owner's own photo), project owner, Owner's own photo
 - **meat** - [A fresh and uncooked meat seller trying to cut his meat to sell to his customer.jpg](https://commons.wikimedia.org/wiki/File:A_fresh_and_uncooked_meat_seller_trying_to_cut_his_meat_to_sell_to_his_customer.jpg) by Oreoluwa Adetimehin, CC BY-SA 4.0
 - **milk** - [Jug, milk (AM 1994.202-2).jpg](https://commons.wikimedia.org/wiki/File:Jug,_milk_(AM_1994.202-2).jpg) by Crown Lynn Potteries Ltd, CC BY 4.0
 - **oil** - Oil (owner's own photo), project owner, Owner's own photo

@@ -315,11 +315,11 @@
     "licence": "CC BY-SA 4.0"
   },
   "mayonnaise": {
-    "file": "mayonnaise.jpg",
-    "title": "Mayonnaise (1).jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Mayonnaise_(1).jpg",
-    "artist": "jules",
-    "licence": "CC BY 2.0"
+    "file": "mayonnaise-own.jpg",
+    "title": "Mayonnaise (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "hummus": {
     "file": "hummus-own.jpg",

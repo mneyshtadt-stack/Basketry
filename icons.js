@@ -73,7 +73,7 @@ export const ICON_FOR = {
   'laundry detergent': 'photos/laundry-detergent-own.jpg',
   'lemon': 'photos/lemon.jpg',
   'lettuce': 'photos/lettuce.jpg',
-  'mayonnaise': 'photos/mayonnaise.jpg',
+  'mayonnaise': 'photos/mayonnaise-own.jpg',
   'meat': 'photos/meat.jpg',
   'milk': 'photos/milk.jpg',
   'oil': 'photos/oil-own.jpg',
