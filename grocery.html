@@ -40,6 +40,15 @@
   .add-wrap { position: relative; margin-bottom: 14px; }
   #join { flex-wrap: wrap; }
   .join-hint { flex-basis: 100%; margin: 0 0 4px; color: var(--muted); }
+  .seg { display: flex; gap: 4px; padding: 4px; margin-bottom: 10px; background: var(--line); border-radius: 12px; }
+  .seg button { flex: 1; min-height: 40px; background: transparent; color: var(--muted); border-color: transparent; font-weight: 500; padding: 0 12px; }
+  .seg button[aria-selected="true"] { background: var(--card); color: var(--fg); font-weight: 600; box-shadow: var(--shadow); }
+  .order-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px; margin-bottom: 8px; }
+  .order-date { font-size: 1.1rem; font-weight: 700; }
+  .order-meta { color: var(--muted); font-size: .9rem; margin-top: 2px; }
+  .order-actions { display: flex; gap: 8px; margin-top: 12px; }
+  .order-actions button { flex: 1; }
+  .order-actions button.ghost { flex: none; color: #b3261e; }
   @media (max-width: 480px) {
     .bar { flex-wrap: wrap; }
     .bar #view { flex: 1 1 100%; }
@@ -106,6 +115,10 @@
     <div class="side-foot">Family code: <span id="side-family"></span></div>
   </aside>
   <h1><img src="icon.svg" alt="" width="36" height="36" style="vertical-align: middle; margin-right: 8px;">Basketry <small style="font-weight: normal; color: var(--muted); font-size: .8rem;">· Family Groceries · רשימת קניות</small></h1>
+  <div class="seg" role="tablist" aria-label="Current list or saved orders">
+    <button type="button" id="tab-current" role="tab">Current list</button>
+    <button type="button" id="tab-orders" role="tab">Saved orders</button>
+  </div>
   <div class="bar">
     <select id="view" aria-label="Show list or order"></select>
     <input type="search" id="order-search" placeholder="Search orders by item" aria-label="Search orders by item (English or Hebrew)" dir="auto">
@@ -182,6 +195,8 @@
   const listEl = document.getElementById('list');
   const countEl = document.getElementById('count');
   const viewEl = document.getElementById('view');
+  const tabCurrent = document.getElementById('tab-current');
+  const tabOrders = document.getElementById('tab-orders');
   const saveBtn = document.getElementById('save-order');
   const addForm = document.getElementById('add');
   const clearBtn = document.getElementById('clear');
@@ -318,6 +333,16 @@
     return new Date(`${month}-01T00:00:00`).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
   }
 
+  // The tabs pick between the current list and saved orders; the order picker and search only show for orders.
+  function renderTabs() {
+    const onOrders = view !== '';
+    tabCurrent.textContent = `Current list (${items.length})`;
+    tabCurrent.setAttribute('aria-selected', String(!onOrders));
+    tabOrders.setAttribute('aria-selected', String(onOrders));
+    viewEl.hidden = !onOrders;
+    orderSearch.hidden = !onOrders;
+  }
+
   function renderViewOptions() {
     viewEl.replaceChildren(new Option(`Current list (${items.length})`, ''));
     for (const { month, orders: list } of ordersByMonth(listedOrders())) {
@@ -328,7 +353,7 @@
     }
     viewEl.value = findOrder(orders, view) ? view : '';
     view = viewEl.value;
-    ordersBar.hidden = orders.length === 0;
+    ordersBar.hidden = view === '' || orders.length === 0;
     moreBtn.hidden = orderQuery !== '' || orders.length <= 12;
     moreBtn.textContent = showAllOrders ? 'Show fewer orders' : `Show ${recentOrders(orders).older.length} older orders`;
   }
@@ -357,6 +382,7 @@
   function render() {
     renderSidebar();
     renderViewOptions();
+    renderTabs();
     renderSuggestions();
     const order = findOrder(orders, view);
     const readOnly = Boolean(order);
@@ -431,7 +457,6 @@
       const copy = document.createElement('button');
       copy.type = 'button';
       copy.textContent = 'Copy this order to my list';
-      copy.style.marginTop = '16px';
       copy.addEventListener('click', () => {
         items = copyOrderToList(items, order);
         persist();
@@ -441,7 +466,6 @@
       const del = document.createElement('button');
       del.type = 'button';
       del.className = 'ghost';
-      del.style.marginTop = '8px';
       del.textContent = pendingDelete === order.id ? 'Tap again to delete this order' : 'Delete this order';
       del.addEventListener('click', () => {
         if (pendingDelete !== order.id) { pendingDelete = order.id; render(); return; }
@@ -451,7 +475,20 @@
         view = '';
         render();
       });
-      listEl.append(copy, del);
+      // Summary card at the top of the order: date, counts, and its two actions.
+      const card = document.createElement('div');
+      card.className = 'order-card';
+      const date = document.createElement('div');
+      date.className = 'order-date';
+      date.textContent = order.date;
+      const meta = document.createElement('div');
+      meta.className = 'order-meta';
+      meta.textContent = `${order.items.length} items · ${notBoughtCount(order)} not bought`;
+      const actions = document.createElement('div');
+      actions.className = 'order-actions';
+      actions.append(copy, del);
+      card.append(date, meta, actions);
+      listEl.prepend(card);
       countEl.textContent = orderLabel(order);
     } else {
       const open = items.filter(i => !i.done).length;
@@ -464,6 +501,17 @@
     persist();
     render();
   }
+
+  tabCurrent.addEventListener('click', () => {
+    view = '';
+    pendingDelete = '';
+    render();
+  });
+
+  tabOrders.addEventListener('click', () => {
+    if (view === '' && listedOrders().length > 0) view = listedOrders()[0].id;
+    render();
+  });
 
   viewEl.addEventListener('change', () => {
     view = viewEl.value;
