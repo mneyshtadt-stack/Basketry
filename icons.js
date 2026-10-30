@@ -49,6 +49,7 @@ export const ICON_FOR = {
   'mackerel': 'photos/mackerel-own.jpg',
   'courgette': 'photos/courgette-own.jpg',
   'zucchini': 'photos/zucchini-own.jpg',
+  'barramundi': 'photos/barramundi-own.jpg',
   'kiwi': 'photos/kiwi-own.jpg',
   'cheese': 'photos/cheese-own.jpg',
   'chicken': 'photos/chicken.jpg',

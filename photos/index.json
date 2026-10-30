@@ -754,5 +754,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "barramundi": {
+    "file": "barramundi-own.jpg",
+    "title": "Barramundi (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
