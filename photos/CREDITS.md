@@ -18,6 +18,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **celery hearts** - Celery hearts (owner's own photo), project owner, Owner's own photo
 - **ginger** - Ginger (owner's own photo), project owner, Owner's own photo
 - **mackerel** - Mackerel (owner's own photo), project owner, Owner's own photo
+- **courgette** - Courgette (owner's own photo), project owner, Owner's own photo
 - **kiwi** - Kiwi (owner's own photo), project owner, Owner's own photo
 - **challah bread** - Challah (owner's own photo), project owner, Owner's own photo
 - **cheese** - Cheese (owner's own photo), project owner, Owner's own photo

@@ -740,5 +740,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "courgette": {
+    "file": "courgette-own.jpg",
+    "title": "Courgette (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
