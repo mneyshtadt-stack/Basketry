@@ -761,5 +761,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "cooking cream": {
+    "file": "cooking-cream-own.jpg",
+    "title": "Cooking cream (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }

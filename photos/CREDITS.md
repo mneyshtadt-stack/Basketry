@@ -21,6 +21,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **courgette** - Courgette (owner's own photo), project owner, Owner's own photo
 - **zucchini** - Zucchini (owner's own photo), project owner, Owner's own photo
 - **barramundi** - Barramundi (owner's own photo), project owner, Owner's own photo
+- **cooking cream** - Cooking cream (owner's own photo), project owner, Owner's own photo
 - **kiwi** - Kiwi (owner's own photo), project owner, Owner's own photo
 - **challah bread** - Challah (owner's own photo), project owner, Owner's own photo
 - **cheese** - Cheese (owner's own photo), project owner, Owner's own photo
