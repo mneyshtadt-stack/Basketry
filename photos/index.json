@@ -768,5 +768,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "pomegranate": {
+    "file": "pomegranate-own.jpg",
+    "title": "Pomegranate (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
