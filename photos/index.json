@@ -747,5 +747,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "zucchini": {
+    "file": "zucchini-own.jpg",
+    "title": "Zucchini (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
