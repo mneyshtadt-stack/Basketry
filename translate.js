@@ -8,7 +8,7 @@ export const HE_TO_EN = {
   'עגבנייה': 'tomato', 'עגבניות שרי': 'cherry tomato', 'עגבניות': 'tomato', 'מלפפון': 'cucumber', 'צ\'יה': 'chia seed', 'צ׳יה': 'chia seed', 'סודה לשתייה': 'baking soda', 'כרוב לבן': 'white cabbage', 'כרוב אדום': 'red cabbage', 'טבליות למדיח': 'dishwasher tablets', 'מלפפונים': 'cucumber',
   'בצל יבש': 'onion', 'בצל': 'onion', 'שום': 'garlic', 'תפוח': 'apple', 'תפוחים': 'apple',
   'תפוח אדמה': 'potato', 'בטטה': 'sweet potato', 'תפוחי אדמה': 'potato', 'בננה': 'banana', 'בננות': 'banana',
-  'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'קלמנטינה': 'clementine', 'גזר': 'carrot', 'צנונית': 'radish', 'סלרי עלים': 'celery', 'סלרי': 'celery', 'סלרי חתוך': 'celery hearts', 'כוסמת': 'buckwheat',
+  'תפוז': 'orange', 'תפוזים': 'orange', 'לימון': 'lemon', 'קלמנטינה': 'clementine', 'גזר': 'carrot', 'צנונית': 'radish', 'סלרי': 'celery', 'סלרי חתוך': 'celery hearts', 'כוסמת': 'buckwheat',
   'חסה': 'lettuce', 'חסה ערבית': 'romaine lettuce', 'חסה אייסברג': 'iceberg lettuce', 'פלפל': 'pepper', 'פלפל חריף': 'chili pepper', 'אבוקדו': 'avocado', 'משמש': 'apricot',
   'משמשים': 'apricot', 'מישמש': 'apricot', 'תות': 'strawberry', 'ענבים': 'grapes',
   'תותים': 'strawberry', 'תירס': 'corn', 'פטרוזיליה': 'parsley', 'כוסברה': 'coriander',
@@ -70,7 +70,7 @@ export const GROUP_FOR = {
   'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries', 'dishwasher tablets'],
 };
 
-// One name per English product: 'סלרי' and 'סלרי עלים' both give celery, so only the first is kept.
+// One name per English product: 'סלרי' and a second label for the same product both give celery, so only the first is kept.
 export function uniqueByName(names) {
   const seen = new Set();
   return names.filter(n => {

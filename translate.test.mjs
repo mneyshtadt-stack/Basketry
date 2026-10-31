@@ -73,10 +73,10 @@ test('breadcrumbs Hebrew label maps to English breadcrumbs', () => {
 });
 
 test('suggestions keep one name per English product', () => {
-  assert.deepEqual(uniqueByName(['סלרי', 'סלרי עלים', 'Celery', 'celery hearts']), ['סלרי', 'celery hearts']);
+  assert.deepEqual(uniqueByName(['סלרי', 'סלרי', 'Celery', 'celery hearts']), ['סלרי', 'celery hearts']);
 });
 
 test('celery Hebrew label maps to English celery and back', () => {
-  assert.deepEqual(bilingual('סלרי עלים'), { name: 'celery', he: 'סלרי עלים' });
-  assert.equal(hebrewOf('celery'), 'סלרי עלים');
+  assert.deepEqual(bilingual('סלרי'), { name: 'celery', he: 'סלרי' });
+  assert.equal(hebrewOf('celery'), 'סלרי');
 });
