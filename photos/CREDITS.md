@@ -63,7 +63,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **iceberg lettuce** - Iceberg lettuce (owner's own photo), project owner, Owner's own photo
 - **juice** - [Orange juice 1 edit1.jpg](https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg) by Agency of the United States Department of Agriculture
 Edited Version by: Arad, Public domain
-- **ketchup** - [French Fries with Ketchup 02.jpg](https://commons.wikimedia.org/wiki/File:French_Fries_with_Ketchup_02.jpg) by Kritzolina, CC BY-SA 4.0
+- **ketchup** - Ketchup (owner's own photo), project owner, Owner's own photo
 - **lactose-free milk** - Lactose-free milk (owner's own photo), project owner, Owner's own photo
 - **laundry detergent** - Laundry detergent (owner's own photo), project owner, Owner's own photo
 - **lemon** - [Lemon.jpg](https://commons.wikimedia.org/wiki/File:Lemon.jpg) by André Karwath aka Aka, CC BY-SA 2.5

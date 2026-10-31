@@ -308,11 +308,11 @@
     "licence": "CC BY-SA 4.0"
   },
   "ketchup": {
-    "file": "ketchup.jpg",
-    "title": "French Fries with Ketchup 02.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:French_Fries_with_Ketchup_02.jpg",
-    "artist": "Kritzolina",
-    "licence": "CC BY-SA 4.0"
+    "file": "ketchup-own.jpg",
+    "title": "Ketchup (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "mayonnaise": {
     "file": "mayonnaise-own.jpg",

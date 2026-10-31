@@ -75,7 +75,7 @@ export const ICON_FOR = {
   'hummus': 'photos/hummus-own.jpg',
   'ice cream': 'photos/ice-cream.jpg',
   'juice': 'photos/juice.jpg',
-  'ketchup': 'photos/ketchup.jpg',
+  'ketchup': 'photos/ketchup-own.jpg',
   'laundry detergent': 'photos/laundry-detergent-own.jpg',
   'lemon': 'photos/lemon.jpg',
   'lettuce': 'photos/lettuce.jpg',
