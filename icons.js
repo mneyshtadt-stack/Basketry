@@ -55,7 +55,7 @@ export const ICON_FOR = {
   'breadcrumbs': 'photos/breadcrumbs-own.jpg',
   'kiwi': 'photos/kiwi-own.jpg',
   'cheese': 'photos/cheese-own.jpg',
-  'chicken': 'photos/chicken.jpg',
+  'chicken': 'photos/chicken-own.jpg',
   'chocolate': 'photos/chocolate.jpg',
   'coffee': 'photos/coffee.jpg',
   'cola': 'photos/cola.jpg',

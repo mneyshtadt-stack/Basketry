@@ -196,11 +196,11 @@
     "licence": "CC BY-SA 4.0"
   },
   "chicken": {
-    "file": "chicken.jpg",
-    "title": "Chickens in market.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Chickens_in_market.jpg",
-    "artist": "Tomás Castelazo",
-    "licence": "CC BY-SA 3.0"
+    "file": "chicken-own.jpg",
+    "title": "Chicken (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "fish": {
     "file": "fish.jpg",
