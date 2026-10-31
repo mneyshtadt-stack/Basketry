@@ -162,7 +162,7 @@
 <dialog class="zoom" id="zoom"><img id="zoom-img" alt=""></dialog>
 <script type="module">
   import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName, CATEGORIES } from './list.js';
-  import { bilingual, HE_TO_EN, groupOf, GROUP_FOR, hebrewOf } from './translate.js';
+  import { bilingual, HE_TO_EN, groupOf, GROUP_FOR, hebrewOf, uniqueByName } from './translate.js';
   import { ICON_FOR } from './icons.js';
   import { saveOrder, findOrder, copyOrderToList, deleteOrder, searchOrders, recentOrders, ordersByMonth, notBoughtCount } from './orders.js';
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
@@ -311,7 +311,7 @@
   function showSuggestions() {
     const query = nameInput.value.trim();
     const pool = group ? groupCandidates() : knownNames;
-    const matches = query ? suggestMatches(pool, query, Infinity) : (group ? (GROUP_FOR[group] ?? []).map(cap) : []);
+    const matches = uniqueByName(query ? suggestMatches(pool, query, Infinity) : (group ? (GROUP_FOR[group] ?? []).map(cap) : []));
     suggestEl.hidden = matches.length === 0;
     if (matches.length === 0) return;
     const heading = document.createElement('h3');

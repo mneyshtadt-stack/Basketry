@@ -70,6 +70,17 @@ export const GROUP_FOR = {
   'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries', 'dishwasher tablets'],
 };
 
+// One name per English product: 'סלרי' and 'סלרי עלים' both give celery, so only the first is kept.
+export function uniqueByName(names) {
+  const seen = new Set();
+  return names.filter(n => {
+    const key = bilingual(n).name.toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 // The group for an English product name, or 'Other'.
 export function groupOf(name) {
   for (const [group, names] of Object.entries(GROUP_FOR)) {
