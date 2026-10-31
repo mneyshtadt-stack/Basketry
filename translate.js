@@ -21,7 +21,7 @@ export const HE_TO_EN = {
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
   'אבקת כביסה': 'laundry detergent', 'סוללות': 'batteries',
   'פיצה': 'pizza', 'פיצה קפואה': 'frozen pizza',
-  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi', 'ג\'ינג\'ר': 'ginger', 'מקרל': 'mackerel', 'קישואים': 'courgette', 'זוקיני': 'zucchini', 'ברמונדי': 'barramundi', 'שמנת לבישול': 'cooking cream', 'רימונים': 'pomegranate', 'רימון': 'pomegranate',
+  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi', 'ג\'ינג\'ר': 'ginger', 'מקרל': 'mackerel', 'קישואים': 'courgette', 'זוקיני': 'zucchini', 'ברמונדי': 'barramundi', 'שמנת לבישול': 'cooking cream', 'רימונים': 'pomegranate', 'רימון': 'pomegranate', 'פירורי לחם': 'breadcrumbs',
   'בצל אדום': 'red onion', 'בצל ירוק': 'green onion',
 };
 
@@ -64,7 +64,7 @@ export const GROUP_FOR = {
   'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
   'Meat & Fish': ['barramundi', 'mackerel', 'meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],
-  'Pantry': ['rice', 'pasta', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
+  'Pantry': ['rice', 'pasta', 'breadcrumbs', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
   'Frozen': ['frozen pizza', 'pizza', 'ice cream'],
   'Drinks': ['water', 'juice', 'cola'],
   'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries', 'dishwasher tablets'],

@@ -68,6 +68,10 @@ test('pomegranate Hebrew label maps to English pomegranate', () => {
   assert.deepEqual(bilingual('רימונים'), { name: 'pomegranate', he: 'רימונים' });
 });
 
+test('breadcrumbs Hebrew label maps to English breadcrumbs', () => {
+  assert.deepEqual(bilingual('פירורי לחם'), { name: 'breadcrumbs', he: 'פירורי לחם' });
+});
+
 test('celery Hebrew label maps to English celery and back', () => {
   assert.deepEqual(bilingual('סלרי עלים'), { name: 'celery', he: 'סלרי עלים' });
   assert.equal(hebrewOf('celery'), 'סלרי עלים');

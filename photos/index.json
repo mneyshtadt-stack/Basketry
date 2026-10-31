@@ -775,5 +775,12 @@
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
+  },
+  "breadcrumbs": {
+    "file": "breadcrumbs-own.jpg",
+    "title": "Breadcrumbs (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   }
 }
