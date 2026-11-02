@@ -72,6 +72,10 @@ test('breadcrumbs Hebrew label maps to English breadcrumbs', () => {
   assert.deepEqual(bilingual('פירורי לחם'), { name: 'breadcrumbs', he: 'פירורי לחם' });
 });
 
+test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
+  assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
+});
+
 test('suggestions keep one name per English product', () => {
   assert.deepEqual(uniqueByName(['סלרי', 'סלרי', 'Celery', 'celery hearts']), ['סלרי', 'celery hearts']);
 });

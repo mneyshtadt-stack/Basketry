@@ -21,7 +21,7 @@ export const HE_TO_EN = {
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
   'אבקת כביסה': 'laundry detergent', 'סוללות': 'batteries',
   'פיצה': 'pizza', 'פיצה קפואה': 'frozen pizza',
-  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi', 'ג\'ינג\'ר': 'ginger', 'מקרל': 'mackerel', 'קישואים': 'courgette', 'זוקיני': 'zucchini', 'ברמונדי': 'barramundi', 'שמנת לבישול': 'cooking cream', 'רימונים': 'pomegranate', 'רימון': 'pomegranate', 'פירורי לחם': 'breadcrumbs',
+  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi', 'ג\'ינג\'ר': 'ginger', 'מקרל': 'mackerel', 'קישואים': 'courgette', 'זוקיני': 'zucchini', 'ברמונדי': 'barramundi', 'שמנת לבישול': 'cooking cream', 'רימונים': 'pomegranate', 'רימון': 'pomegranate', 'פירורי לחם': 'breadcrumbs', 'פטה כבשים': 'feta sheep cheese', 'פטה כבשים 20% פיראוס': 'feta sheep cheese',
   'בצל אדום': 'red onion', 'בצל ירוק': 'green onion',
 };
 

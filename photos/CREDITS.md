@@ -27,6 +27,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **kiwi** - Kiwi (owner's own photo), project owner, Owner's own photo
 - **challah bread** - Challah (owner's own photo), project owner, Owner's own photo
 - **cheese** - Cheese (owner's own photo), project owner, Owner's own photo
+- **feta sheep cheese** - Feta Sheep Cheese (owner's own photo), project owner, Owner's own photo
 - **cherry tomato** - Cherry tomatoes (owner's own photo), project owner, Owner's own photo
 - **chia seed** - Chia seed (owner's own photo), project owner, Owner's own photo
 - **chicken** - Chicken (owner's own photo), project owner, Owner's own photo
