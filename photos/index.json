@@ -209,12 +209,19 @@
     "artist": "Tomascastelazo",
     "licence": "CC BY-SA 3.0"
   },
+  "sausage": {
+    "file": "sausage-own.jpg",
+    "title": "Sausage (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "sausages": {
-    "file": "sausages.jpg",
-    "title": "Sausage making-H-5-edited2.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Sausage_making-H-5-edited2.jpg",
-    "artist": "László Szalai (Beyond silence)",
-    "licence": "CC BY-SA 3.0"
+    "file": "sausage-own.jpg",
+    "title": "Sausage (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "rice": {
     "file": "rice.png",

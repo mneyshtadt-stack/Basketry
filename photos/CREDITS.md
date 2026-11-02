@@ -101,7 +101,8 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **romaine lettuce** - Romaine lettuce (owner's own photo), project owner, Owner's own photo
 - **salmon** - Salmon (owner's own photo), project owner, Owner's own photo
 - **salt** - [Marakkanam Salt Pans.JPG](https://commons.wikimedia.org/wiki/File:Marakkanam_Salt_Pans.JPG) by Dey.sandip, CC BY 3.0
-- **sausages** - [Sausage making-H-5-edited2.jpg](https://commons.wikimedia.org/wiki/File:Sausage_making-H-5-edited2.jpg) by László Szalai (Beyond silence), CC BY-SA 3.0
+- **sausage** - Sausage (owner's own photo), project owner, Owner's own photo
+- **sausages** - Sausage (owner's own photo), project owner, Owner's own photo
 - **shampoo** - [Dove shampoo bottle in black background.jpg](https://commons.wikimedia.org/wiki/File:Dove_shampoo_bottle_in_black_background.jpg) by Ranjima np, CC0
 - **smoked salmon** - Smoked salmon (owner's own photo), project owner, Owner's own photo
 - **snack** - [SnackfoodRackDF.JPG](https://commons.wikimedia.org/wiki/File:SnackfoodRackDF.JPG) by AlejandroLinaresGarcia, CC BY-SA 4.0
