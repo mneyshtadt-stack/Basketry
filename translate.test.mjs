@@ -72,6 +72,11 @@ test('breadcrumbs Hebrew label maps to English breadcrumbs', () => {
   assert.deepEqual(bilingual('פירורי לחם'), { name: 'breadcrumbs', he: 'פירורי לחם' });
 });
 
+test('two cream-type cheeses keep separate English names', () => {
+  assert.deepEqual(bilingual('גבינת שמנת'), { name: 'cream cheese', he: 'גבינת שמנת' });
+  assert.deepEqual(bilingual('גבינה לבנה'), { name: 'white cheese', he: 'גבינה לבנה' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });
