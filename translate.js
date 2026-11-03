@@ -61,7 +61,7 @@ export function translateItem(name) {
 export const GROUP_FOR = {
   'Fruits': ['apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado', 'kiwi', 'pomegranate'],
   'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'ginger', 'courgette', 'zucchini', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
-  'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'white cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
+  'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'white cheese', 'feta sheep cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
   'Meat & Fish': ['barramundi fish', 'mackerel', 'chicken liver', 'beef liver', 'meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],
   'Pantry': ['rice', 'pasta', 'breadcrumbs', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
