@@ -58,6 +58,7 @@ export const ICON_FOR = {
   'cheese': 'photos/cheese-own.jpg',
   'feta sheep cheese': 'photos/feta-sheep-cheese-own.jpg',
   'chicken': 'photos/chicken-own.jpg',
+  'chicken liver': 'photos/chicken-liver-own.jpg',
   'chocolate': 'photos/chocolate.jpg',
   'coffee': 'photos/coffee.jpg',
   'cola': 'photos/cola.jpg',
