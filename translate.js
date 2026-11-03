@@ -21,7 +21,7 @@ export const HE_TO_EN = {
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
   'אבקת כביסה': 'laundry detergent', 'סוללות': 'batteries',
   'פיצה': 'pizza', 'פיצה קפואה': 'frozen pizza',
-  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi', 'ג\'ינג\'ר': 'ginger', 'מקרל': 'mackerel', 'קישואים': 'courgette', 'זוקיני': 'zucchini', 'ברמונדי': 'barramundi', 'שמנת לבישול': 'cooking cream', 'רימונים': 'pomegranate', 'רימון': 'pomegranate', 'פירורי לחם': 'breadcrumbs', 'פטה כבשים': 'feta sheep cheese', 'פטה כבשים 20% פיראוס': 'feta sheep cheese', 'כבד עוף': 'chicken liver', 'כבד עןף': 'chicken liver',
+  'אפרסק': 'peach', 'אפרסקים': 'peach', 'קיווי': 'kiwi', 'ג\'ינג\'ר': 'ginger', 'מקרל': 'mackerel', 'קישואים': 'courgette', 'זוקיני': 'zucchini', 'ברמונדי': 'barramundi', 'שמנת לבישול': 'cooking cream', 'רימונים': 'pomegranate', 'רימון': 'pomegranate', 'פירורי לחם': 'breadcrumbs', 'פטה כבשים': 'feta sheep cheese', 'פטה כבשים 20% פיראוס': 'feta sheep cheese', 'כבד עוף': 'chicken liver', 'כבד עןף': 'chicken liver', 'כבד בקר': 'beef liver',
   'בצל אדום': 'red onion', 'בצל ירוק': 'green onion',
 };
 
@@ -62,7 +62,7 @@ export const GROUP_FOR = {
   'Fruits': ['apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado', 'kiwi', 'pomegranate'],
   'Vegetables': ['tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'ginger', 'courgette', 'zucchini', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
   'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'white cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
-  'Meat & Fish': ['barramundi', 'mackerel', 'chicken liver', 'meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
+  'Meat & Fish': ['barramundi', 'mackerel', 'chicken liver', 'beef liver', 'meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'fish', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],
   'Pantry': ['rice', 'pasta', 'breadcrumbs', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
   'Frozen': ['frozen pizza', 'pizza', 'ice cream'],

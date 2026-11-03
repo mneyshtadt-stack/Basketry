@@ -482,6 +482,13 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "beef liver": {
+    "file": "beef-liver-own.jpg",
+    "title": "Beef liver (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "cheese": {
     "file": "cheese-own.jpg",
     "title": "Cheese (owner's own photo)",
