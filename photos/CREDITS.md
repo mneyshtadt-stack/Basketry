@@ -20,7 +20,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **mackerel** - Mackerel (owner's own photo), project owner, Owner's own photo
 - **courgette** - Courgette (owner's own photo), project owner, Owner's own photo
 - **zucchini** - Zucchini (owner's own photo), project owner, Owner's own photo
-- **barramundi** - Barramundi (owner's own photo), project owner, Owner's own photo
+- **barramundi fish** - Barramundi fish (owner's own photo), project owner, Owner's own photo
 - **cooking cream** - Cooking cream (owner's own photo), project owner, Owner's own photo
 - **pomegranate** - Pomegranate (owner's own photo), project owner, Owner's own photo
 - **breadcrumbs** - Breadcrumbs (owner's own photo), project owner, Owner's own photo
