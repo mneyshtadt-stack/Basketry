@@ -1,7 +1,7 @@
 // Run with: node --test
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
+import { addItem, toggleItem, removeItem, setQty, clearDone, groupByCategory, suggestNames, suggestMatches, displayName } from './list.js';
 
 test('displayName shows the Hebrew in brackets when known', () => {
   assert.equal(displayName({ name: 'Potatoes', he: 'תפוחי אדמה' }), 'Potatoes [תפוחי אדמה]');
@@ -81,4 +81,27 @@ test('groupByCategory follows category order and skips empty groups', () => {
 test('addItem records who added the item', () => {
   assert.equal(addItem([], 'Milk', 'Dairy & Eggs', 1, undefined, 'Dana')[0].by, 'Dana');
   assert.equal('by' in addItem([], 'Milk')[0], false);
+});
+
+test('adding the same product again makes one row with the quantities added', () => {
+  let items = addItem([], 'Breadcrumbs', 'Pantry', 1, 'פירורי לחם', 'Michael');
+  items = addItem(items, 'breadcrumbs', 'Pantry', 2, 'פירורי לחם', 'Dana');
+  assert.equal(items.length, 1);
+  assert.equal(items[0].qty, 3);
+  assert.equal(items[0].by, 'Michael');
+});
+
+test('a bought product added again is due again', () => {
+  let items = addItem([], 'Milk');
+  items = toggleItem(items, items[0].id);
+  items = addItem(items, 'Milk');
+  assert.equal(items[0].done, false);
+});
+
+test('setQty changes one row and clamps to at least 1', () => {
+  let items = addItem(addItem([], 'Milk'), 'Bread');
+  items = setQty(items, items[1].id, '4');
+  assert.deepEqual(items.map(i => i.qty), [1, 4]);
+  items = setQty(items, items[1].id, '0');
+  assert.equal(items[1].qty, 1);
 });

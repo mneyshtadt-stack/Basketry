@@ -9,10 +9,14 @@ export function addItem(items, name, category = 'Other', qty = 1, he, by) {
   if (!trimmed) return items;
   const clean = trimmed[0].toUpperCase() + trimmed.slice(1);
   const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+  const amount = Math.max(1, Number(qty) || 1);
+  // Same product already on the list: one row, quantities add up, and it is due again.
+  const same = items.find(i => i.name.toLowerCase() === clean.toLowerCase());
+  if (same) return items.map(i => (i.id === same.id ? { ...i, qty: i.qty + amount, done: false } : i));
   const cat = CATEGORIES.includes(category) ? category : 'Other';
   const hebrew = he ? { he: String(he).trim() } : {};
   const author = by ? { by: String(by).trim() } : {};
-  return [...items, { id, name: clean, qty: Math.max(1, Number(qty) || 1), category: cat, done: false, ...hebrew, ...author }];
+  return [...items, { id, name: clean, qty: amount, category: cat, done: false, ...hebrew, ...author }];
 }
 
 // "Potatoes [תפוחי אדמה]" when the Hebrew is known, otherwise just the name.
@@ -22,6 +26,11 @@ export function displayName(item) {
 
 export function toggleItem(items, id) {
   return items.map(i => (i.id === id ? { ...i, done: !i.done } : i));
+}
+
+// Sets one row's quantity; anything below 1 becomes 1.
+export function setQty(items, id, qty) {
+  return items.map(i => (i.id === id ? { ...i, qty: Math.max(1, Number(qty) || 1) } : i));
 }
 
 export function removeItem(items, id) {

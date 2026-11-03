@@ -102,6 +102,7 @@
   li.done span { text-decoration: line-through; color: var(--muted); }
   li.done .list-pic { opacity: .45; }
   .qty { color: var(--accent); background: var(--accent-soft); font-weight: 600; font-size: .85rem; border-radius: 999px; padding: 3px 10px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .qty input { width: 2.4em; border: 0; background: transparent; color: inherit; font: inherit; text-align: center; padding: 0; }
   .by { color: var(--muted); font-size: .8rem; white-space: nowrap; }
   .empty { color: var(--fg); text-align: center; padding: 44px 16px; line-height: 1.5; }
   .empty small { display: block; margin-top: 6px; font-size: .9rem; color: var(--muted); }
@@ -161,7 +162,7 @@
 </main>
 <dialog class="zoom" id="zoom"><img id="zoom-img" alt=""></dialog>
 <script type="module">
-  import { addItem, toggleItem, removeItem, clearDone, groupByCategory, suggestNames, suggestMatches, displayName, CATEGORIES } from './list.js';
+  import { addItem, toggleItem, removeItem, setQty, clearDone, groupByCategory, suggestNames, suggestMatches, displayName, CATEGORIES } from './list.js';
   import { bilingual, HE_TO_EN, groupOf, GROUP_FOR, hebrewOf, uniqueByName } from './translate.js';
   import { ICON_FOR } from './icons.js';
   import { saveOrder, findOrder, copyOrderToList, deleteOrder, searchOrders, recentOrders, ordersByMonth, notBoughtCount } from './orders.js';
@@ -458,7 +459,10 @@
 
         const qty = document.createElement('span');
         qty.className = 'qty';
-        qty.textContent = `× ${item.qty}`;
+        const amount = Object.assign(document.createElement('input'), { type: 'number', min: 1, value: item.qty, disabled: readOnly });
+        amount.setAttribute('aria-label', `Quantity of ${item.name}`);
+        amount.addEventListener('change', () => update(setQty(items, item.id, amount.value)));
+        qty.append('× ', amount);
 
         const extra = [];
         if (item.by) {
