@@ -71,7 +71,6 @@ export const ICON_FOR = {
   'cucumber': 'photos/cucumber.jpg',
   'dill': 'photos/dill.jpg',
   'egg': 'photos/egg-own.jpg',
-  'fish': 'photos/fish.jpg',
   'flour': 'photos/flour.jpg',
   'frozen pizza': 'photos/frozen-pizza.jpg',
   'garlic': 'photos/garlic.jpg',

@@ -202,13 +202,6 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
-  "fish": {
-    "file": "fish.jpg",
-    "title": "Ensenada fish market 2.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Ensenada_fish_market_2.jpg",
-    "artist": "Tomascastelazo",
-    "licence": "CC BY-SA 3.0"
-  },
   "sausage": {
     "file": "sausage-own.jpg",
     "title": "Sausage (owner's own photo)",
