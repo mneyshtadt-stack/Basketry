@@ -86,6 +86,10 @@ test('beef liver Hebrew label maps to English beef liver', () => {
   assert.deepEqual(bilingual('כבד בקר'), { name: 'beef liver', he: 'כבד בקר' });
 });
 
+test('soda Hebrew label maps to English soda water', () => {
+  assert.deepEqual(bilingual('סודה'), { name: 'soda water', he: 'סודה' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });

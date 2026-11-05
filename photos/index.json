@@ -279,6 +279,13 @@
     "artist": "Jacek Halicki",
     "licence": "CC BY-SA 4.0"
   },
+  "soda water": {
+    "file": "soda-water-own.jpg",
+    "title": "Soda water (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "water": {
     "file": "water.jpg",
     "title": "Metal Water Bottles.jpeg",
