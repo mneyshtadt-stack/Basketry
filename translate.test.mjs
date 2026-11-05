@@ -94,6 +94,10 @@ test('rigatoni Hebrew label maps to English rigatoni pasta', () => {
   assert.deepEqual(bilingual('ריגטוני'), { name: 'rigatoni pasta', he: 'ריגטוני' });
 });
 
+test('broccoli Hebrew label maps to English broccoli', () => {
+  assert.deepEqual(bilingual('ברוקולי'), { name: 'broccoli', he: 'ברוקולי' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });
