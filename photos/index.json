@@ -272,6 +272,13 @@
     "artist": "Jacek Halicki",
     "licence": "CC BY-SA 4.0"
   },
+  "grapefruit": {
+    "file": "grapefruit-own.jpg",
+    "title": "Grapefruit (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "dorade fish": {
     "file": "dorade-fish-own.jpg",
     "title": "Dorade fish (owner's own photo)",

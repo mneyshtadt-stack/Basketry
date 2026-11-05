@@ -106,6 +106,10 @@ test('dorade Hebrew label maps to English dorade fish', () => {
   assert.deepEqual(bilingual('דניס'), { name: 'dorade fish', he: 'דניס' });
 });
 
+test('grapefruit Hebrew label maps to English grapefruit', () => {
+  assert.deepEqual(bilingual('אשכולית'), { name: 'grapefruit', he: 'אשכולית' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });
