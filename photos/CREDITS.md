@@ -123,6 +123,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **toothpaste** - [Toothpasteonbrush.jpg](https://commons.wikimedia.org/wiki/File:Toothpasteonbrush.jpg) by Thegreenj, CC BY-SA 3.0
 - **tuna** - Tuna (owner's own photo), project owner, Owner's own photo
 - **turkey breast** - Turkey breast (owner's own photo), project owner, Owner's own photo
+- **dorade fish** - Dorade fish (owner's own photo), project owner, Owner's own photo
 - **cauliflower** - Cauliflower (owner's own photo), project owner, Owner's own photo
 - **broccoli** - Broccoli (owner's own photo), project owner, Owner's own photo
 - **rigatoni pasta** - Rigatoni pasta (owner's own photo), project owner, Owner's own photo
