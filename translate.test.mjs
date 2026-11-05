@@ -90,6 +90,10 @@ test('soda Hebrew label maps to English soda water', () => {
   assert.deepEqual(bilingual('סודה'), { name: 'soda water', he: 'סודה' });
 });
 
+test('rigatoni Hebrew label maps to English rigatoni pasta', () => {
+  assert.deepEqual(bilingual('ריגטוני'), { name: 'rigatoni pasta', he: 'ריגטוני' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });

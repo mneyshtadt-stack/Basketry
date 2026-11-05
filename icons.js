@@ -114,6 +114,7 @@ export const ICON_FOR = {
   'toothpaste': 'photos/toothpaste.jpg',
   'water': 'photos/water.jpg',
   'soda water': 'photos/soda-water-own.jpg',
+  'rigatoni pasta': 'photos/rigatoni-pasta-own.jpg',
   'yellow onion': 'photos/yellow-onion-own.jpg',
   'yogurt': 'photos/yogurt.jpg',
   'apples': 'photos/apple.jpg',

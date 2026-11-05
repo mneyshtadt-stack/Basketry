@@ -279,6 +279,13 @@
     "artist": "Jacek Halicki",
     "licence": "CC BY-SA 4.0"
   },
+  "rigatoni pasta": {
+    "file": "rigatoni-pasta-own.jpg",
+    "title": "Rigatoni pasta (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "soda water": {
     "file": "soda-water-own.jpg",
     "title": "Soda water (owner's own photo)",
