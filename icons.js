@@ -118,6 +118,7 @@ export const ICON_FOR = {
   'cauliflower': 'photos/cauliflower-own.jpg',
   'dorade fish': 'photos/dorade-fish-own.jpg',
   'grapefruit': 'photos/grapefruit-own.jpg',
+  'soup croutons': 'photos/soup-croutons-own.jpg',
   'yellow onion': 'photos/yellow-onion-own.jpg',
   'yogurt': 'photos/yogurt.jpg',
   'apples': 'photos/apple.jpg',
