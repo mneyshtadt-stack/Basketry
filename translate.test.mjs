@@ -118,6 +118,15 @@ test('frozen fries Hebrew label maps to English frozen french fries', () => {
   assert.deepEqual(bilingual("צ'יפס קפוא"), { name: "frozen french fries", he: "צ'יפס קפוא" });
 });
 
+test('cup-a-soup Hebrew label maps to English cup-a-soup', () => {
+  assert.deepEqual(bilingual('נמס בכוס מרק'), { name: 'cup-a-soup', he: 'נמס בכוס מרק' });
+});
+
+test('mushrooms Hebrew label maps to English mushrooms, both spellings', () => {
+  assert.deepEqual(bilingual('פטריות'), { name: 'mushrooms', he: 'פטריות' });
+  assert.deepEqual(bilingual('פתריות'), { name: 'mushrooms', he: 'פתריות' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });

@@ -279,6 +279,20 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "mushrooms": {
+    "file": "mushrooms-own.jpg",
+    "title": "Mushrooms (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "cup-a-soup": {
+    "file": "cup-a-soup-own.jpg",
+    "title": "Cup-a-Soup (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "soup croutons": {
     "file": "soup-croutons-own.jpg",
     "title": "Soup croutons (owner's own photo)",
