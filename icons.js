@@ -119,6 +119,7 @@ export const ICON_FOR = {
   'dorade fish': 'photos/dorade-fish-own.jpg',
   'grapefruit': 'photos/grapefruit-own.jpg',
   'soup croutons': 'photos/soup-croutons-own.jpg',
+  'frozen french fries': 'photos/frozen-french-fries-own.jpg',
   'yellow onion': 'photos/yellow-onion-own.jpg',
   'yogurt': 'photos/yogurt.jpg',
   'apples': 'photos/apple.jpg',

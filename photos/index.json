@@ -272,6 +272,13 @@
     "artist": "Jacek Halicki",
     "licence": "CC BY-SA 4.0"
   },
+  "frozen french fries": {
+    "file": "frozen-french-fries-own.jpg",
+    "title": "Frozen french fries (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "soup croutons": {
     "file": "soup-croutons-own.jpg",
     "title": "Soup croutons (owner's own photo)",

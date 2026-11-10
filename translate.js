@@ -15,7 +15,7 @@ export const HE_TO_EN = {
   'שמיר': 'dill', 'בשר': 'meat', 'עוף': 'chicken', 'נקניקיות': 'sausage',
   'אורז': 'rice', 'פסטה': 'pasta', 'קמח': 'flour', 'סוכר': 'sugar', 'מלח': 'salt',
   'שמן': 'oil', 'שמן זית': 'olive oil', 'קפה': 'coffee', 'תה': 'tea', 'מים': 'water',
-  'מיץ': 'juice', 'סודה': 'soda water', 'ריגטוני': 'rigatoni pasta', 'ברוקולי': 'broccoli', 'כרובית': 'cauliflower', 'דניס': 'dorade fish', 'אשכולית': 'grapefruit', 'שקדי מרק': 'soup croutons', 'קולה': 'cola', 'עוגיות': 'cookie', 'ביסקוויטים': 'biscuit',
+  'מיץ': 'juice', 'סודה': 'soda water', 'ריגטוני': 'rigatoni pasta', 'ברוקולי': 'broccoli', 'כרובית': 'cauliflower', 'דניס': 'dorade fish', 'אשכולית': 'grapefruit', 'שקדי מרק': 'soup croutons', 'צ\'יפס קפוא': 'frozen french fries', 'קולה': 'cola', 'עוגיות': 'cookie', 'ביסקוויטים': 'biscuit',
   'שוקולד': 'chocolate', 'חטיף': 'snack', 'קטשופ': 'ketchup', 'מיונז': 'mayonnaise',
   'חומוס': 'hummus', 'טחינה': 'tahini', 'זיתים': 'olive', 'סבון': 'soap',
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
@@ -65,7 +65,7 @@ export const GROUP_FOR = {
   'Meat & Fish': ['barramundi fish', 'dorade fish', 'mackerel', 'chicken liver', 'beef liver', 'meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],
   'Pantry': ['rice', 'pasta', 'rigatoni pasta', 'soup croutons', 'breadcrumbs', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
-  'Frozen': ['frozen pizza', 'pizza', 'ice cream'],
+  'Frozen': ['frozen french fries', 'frozen pizza', 'pizza', 'ice cream'],
   'Drinks': ['water', 'soda water', 'juice', 'cola'],
   'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries', 'dishwasher tablets'],
 };

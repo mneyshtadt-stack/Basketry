@@ -114,6 +114,10 @@ test('soup croutons Hebrew label maps to English soup croutons', () => {
   assert.deepEqual(bilingual('שקדי מרק'), { name: 'soup croutons', he: 'שקדי מרק' });
 });
 
+test('frozen fries Hebrew label maps to English frozen french fries', () => {
+  assert.deepEqual(bilingual("צ'יפס קפוא"), { name: "frozen french fries", he: "צ'יפס קפוא" });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });

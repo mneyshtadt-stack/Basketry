@@ -569,7 +569,7 @@
 
   saveBtn.addEventListener('click', () => {
     orders = saveOrder(orders, items);
-    items = [];
+    items = clearDone(items);  // unbought items carry over to the new list
     persist();
     render();
   });
