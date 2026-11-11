@@ -131,6 +131,10 @@ test('rice paper Hebrew label maps to English rice paper', () => {
   assert.deepEqual(bilingual('דפי אורז'), { name: 'rice paper', he: 'דפי אורז' });
 });
 
+test('nori Hebrew label maps to English sushi nori', () => {
+  assert.deepEqual(bilingual('אצות'), { name: 'sushi nori', he: 'אצות' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });

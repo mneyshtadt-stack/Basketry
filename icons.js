@@ -122,6 +122,7 @@ export const ICON_FOR = {
   'cup-a-soup': 'photos/cup-a-soup-own.jpg',
   'mushrooms': 'photos/mushrooms-own.jpg',
   'rice paper': 'photos/rice-paper-own.jpg',
+  'sushi nori': 'photos/sushi-nori-own.jpg',
   'frozen french fries': 'photos/frozen-french-fries-own.jpg',
   'yellow onion': 'photos/yellow-onion-own.jpg',
   'yogurt': 'photos/yogurt.jpg',

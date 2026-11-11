@@ -279,6 +279,13 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "sushi nori": {
+    "file": "sushi-nori-own.jpg",
+    "title": "Sushi nori (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "rice paper": {
     "file": "rice-paper-own.jpg",
     "title": "Rice paper (owner's own photo)",
