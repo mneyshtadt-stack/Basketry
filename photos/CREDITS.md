@@ -123,6 +123,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **tuna** - Tuna (owner's own photo), project owner, Owner's own photo
 - **turkey breast** - Turkey breast (owner's own photo), project owner, Owner's own photo
 - **frozen french fries** - Frozen french fries (owner's own photo), project owner, Owner's own photo
+- **rice paper** - Rice paper (owner's own photo), project owner, Owner's own photo
 - **mushrooms** - Mushrooms (owner's own photo), project owner, Owner's own photo
 - **cup-a-soup** - Cup-a-Soup (owner's own photo), project owner, Owner's own photo
 - **soup croutons** - Soup croutons (owner's own photo), project owner, Owner's own photo

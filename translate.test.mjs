@@ -127,6 +127,10 @@ test('mushrooms Hebrew label maps to English mushrooms, both spellings', () => {
   assert.deepEqual(bilingual('פתריות'), { name: 'mushrooms', he: 'פתריות' });
 });
 
+test('rice paper Hebrew label maps to English rice paper', () => {
+  assert.deepEqual(bilingual('דפי אורז'), { name: 'rice paper', he: 'דפי אורז' });
+});
+
 test('feta sheep cheese Hebrew label maps to English feta sheep cheese', () => {
   assert.deepEqual(bilingual('פטה כבשים'), { name: 'feta sheep cheese', he: 'פטה כבשים' });
 });
