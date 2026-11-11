@@ -441,7 +441,7 @@
       const ul = document.createElement('ul');
       for (const item of group.items) {
         const li = document.createElement('li');
-        li.className = item.done ? 'done' : '';
+        li.className = item.done && !readOnly ? 'done' : '';  // saved orders show the checkbox only, no strike-through
 
         const label = document.createElement('label');
         const span = document.createElement('span');
@@ -568,7 +568,7 @@
   });
 
   saveBtn.addEventListener('click', () => {
-    orders = saveOrder(orders, items);
+    orders = saveOrder(orders, items.filter(i => i.done));  // only bought items go into the order
     items = clearDone(items);  // unbought items carry over to the new list
     persist();
     render();
