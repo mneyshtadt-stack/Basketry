@@ -15,7 +15,7 @@ export const HE_TO_EN = {
   'שמיר': 'dill', 'בשר': 'meat', 'עוף': 'chicken', 'נקניקיות': 'sausage',
   'אורז': 'rice', 'פסטה': 'pasta', 'קמח': 'flour', 'סוכר': 'sugar', 'מלח': 'salt',
   'שמן': 'oil', 'שמן זית': 'olive oil', 'קפה': 'coffee', 'תה': 'tea', 'מים': 'water',
-  'מיץ': 'juice', 'סודה': 'soda water', 'ריגטוני': 'rigatoni pasta', 'ברוקולי': 'broccoli', 'תערובת אגוזים': 'mixed nuts', 'אצבעות מוצרלה': 'mozzarella sticks', 'שוקולד חלב': 'milk chocolate', 'כרובית': 'cauliflower', 'דניס': 'dorade fish', 'אשכולית': 'grapefruit', 'שקדי מרק': 'soup croutons', 'צ\'יפס קפוא': 'frozen french fries', 'אצות': 'sushi nori', 'דפי אורז': 'rice paper', 'פתריות': 'mushrooms', 'פטריות': 'mushrooms', 'נמס בכוס מרק': 'cup-a-soup', 'קולה': 'cola', 'עוגיות': 'cookie', 'ביסקוויטים': 'biscuit',
+  'מיץ': 'juice', 'סודה': 'soda water', 'ריגטוני': 'rigatoni pasta', 'ברוקולי': 'broccoli', 'תערובת אגוזים': 'mixed nuts', 'אצבעות מוצרלה': 'mozzarella sticks', 'אגס': 'pear', 'שוקולד חלב': 'milk chocolate', 'שמנת מתוקה': 'whipping cream', 'גבינה מגורדת': 'grated cheese', 'גריסי פנינה': 'pearl barley', 'כרובית': 'cauliflower', 'דניס': 'dorade fish', 'אשכולית': 'grapefruit', 'שקדי מרק': 'soup croutons', 'צ\'יפס קפוא': 'frozen french fries', 'אצות': 'sushi nori', 'דפי אורז': 'rice paper', 'פתריות': 'mushrooms', 'פטריות': 'mushrooms', 'נמס בכוס מרק': 'cup-a-soup', 'קולה': 'cola', 'עוגיות': 'cookie', 'ביסקוויטים': 'biscuit',
   'שוקולד': 'chocolate', 'חטיף': 'snack', 'קטשופ': 'ketchup', 'מיונז': 'mayonnaise',
   'חומוס': 'hummus', 'טחינה': 'tahini', 'זיתים': 'olive', 'סבון': 'soap',
   'נייר טואלט': 'toilet paper', 'שמפו': 'shampoo', 'משחת שיניים': 'toothpaste',
@@ -59,12 +59,12 @@ export function translateItem(name) {
 
 // Product group for each English name; used to file items and to filter the list.
 export const GROUP_FOR = {
-  'Fruits': ['grapefruit', 'apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado', 'kiwi', 'pomegranate'],
+  'Fruits': ['grapefruit', 'pear', 'apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado', 'kiwi', 'pomegranate'],
   'Vegetables': ['mushrooms', 'broccoli', 'cauliflower', 'tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'ginger', 'courgette', 'zucchini', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
-  'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'parmesan', 'cream cheese', 'white cheese', 'feta sheep cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
+  'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'grated cheese', 'parmesan', 'cream cheese', 'whipping cream', 'white cheese', 'feta sheep cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
   'Meat & Fish': ['barramundi fish', 'dorade fish', 'mackerel', 'chicken liver', 'beef liver', 'meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],
-  'Pantry': ['rice', 'rice paper', 'sushi nori', 'mixed nuts', 'milk chocolate', 'pasta', 'rigatoni pasta', 'soup croutons', 'cup-a-soup', 'breadcrumbs', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
+  'Pantry': ['rice', 'rice paper', 'sushi nori', 'mixed nuts', 'milk chocolate', 'pearl barley', 'pasta', 'rigatoni pasta', 'soup croutons', 'cup-a-soup', 'breadcrumbs', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
   'Frozen': ['frozen french fries', 'mozzarella sticks', 'frozen pizza', 'pizza', 'ice cream'],
   'Drinks': ['water', 'soda water', 'juice', 'cola'],
   'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries', 'dishwasher tablets'],

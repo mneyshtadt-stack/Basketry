@@ -279,6 +279,34 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "pear": {
+    "file": "pear-own.jpg",
+    "title": "Pear (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "pearl barley": {
+    "file": "pearl-barley-own.jpg",
+    "title": "Pearl barley (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "grated cheese": {
+    "file": "grated-cheese-own.jpg",
+    "title": "Grated cheese (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "whipping cream": {
+    "file": "whipping-cream-own.jpg",
+    "title": "Whipping cream (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "milk chocolate": {
     "file": "milk-chocolate-own.jpg",
     "title": "Milk chocolate (owner's own photo)",

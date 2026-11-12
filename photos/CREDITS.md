@@ -127,6 +127,10 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **mixed nuts** - Mixed nuts (owner's own photo), project owner, Owner's own photo
 - **mozzarella sticks** - Mozzarella sticks (owner's own photo), project owner, Owner's own photo
 - **milk chocolate** - Milk chocolate (owner's own photo), project owner, Owner's own photo
+- **whipping cream** - Whipping cream (owner's own photo), project owner, Owner's own photo
+- **grated cheese** - Grated cheese (owner's own photo), project owner, Owner's own photo
+- **pearl barley** - Pearl barley (owner's own photo), project owner, Owner's own photo
+- **pear** - Pear (owner's own photo), project owner, Owner's own photo
 - **rice paper** - Rice paper (owner's own photo), project owner, Owner's own photo
 - **mushrooms** - Mushrooms (owner's own photo), project owner, Owner's own photo
 - **cup-a-soup** - Cup-a-Soup (owner's own photo), project owner, Owner's own photo
