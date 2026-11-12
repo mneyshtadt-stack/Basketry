@@ -124,6 +124,9 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **turkey breast** - Turkey breast (owner's own photo), project owner, Owner's own photo
 - **frozen french fries** - Frozen french fries (owner's own photo), project owner, Owner's own photo
 - **sushi nori** - Sushi nori (owner's own photo), project owner, Owner's own photo
+- **mixed nuts** - Mixed nuts (owner's own photo), project owner, Owner's own photo
+- **mozzarella sticks** - Mozzarella sticks (owner's own photo), project owner, Owner's own photo
+- **milk chocolate** - Milk chocolate (owner's own photo), project owner, Owner's own photo
 - **rice paper** - Rice paper (owner's own photo), project owner, Owner's own photo
 - **mushrooms** - Mushrooms (owner's own photo), project owner, Owner's own photo
 - **cup-a-soup** - Cup-a-Soup (owner's own photo), project owner, Owner's own photo

@@ -279,6 +279,27 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "milk chocolate": {
+    "file": "milk-chocolate-own.jpg",
+    "title": "Milk chocolate (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "mozzarella sticks": {
+    "file": "mozzarella-sticks-own.jpg",
+    "title": "Mozzarella sticks (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "mixed nuts": {
+    "file": "mixed-nuts-own.jpg",
+    "title": "Mixed nuts (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "sushi nori": {
     "file": "sushi-nori-own.jpg",
     "title": "Sushi nori (owner's own photo)",
