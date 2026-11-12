@@ -61,11 +61,11 @@ export function translateItem(name) {
 export const GROUP_FOR = {
   'Fruits': ['grapefruit', 'pear', 'apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado', 'kiwi', 'pomegranate'],
   'Vegetables': ['mushrooms', 'broccoli', 'cauliflower', 'tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'ginger', 'courgette', 'zucchini', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
-  'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'grated cheese', 'parmesan', 'cream cheese', 'whipping cream', 'white cheese', 'feta sheep cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
+  'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'grated cheese', 'mozzarella sticks', 'parmesan', 'cream cheese', 'whipping cream', 'white cheese', 'feta sheep cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
   'Meat & Fish': ['barramundi fish', 'dorade fish', 'mackerel', 'chicken liver', 'beef liver', 'meat', 'ground meat', 'chicken', 'chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'pita', 'baguette', 'spelt bread'],
   'Pantry': ['rice', 'rice paper', 'sushi nori', 'mixed nuts', 'milk chocolate', 'pearl barley', 'pasta', 'rigatoni pasta', 'soup croutons', 'cup-a-soup', 'breadcrumbs', 'buckwheat', 'chia seed', 'baking soda', 'flour', 'sugar', 'salt', 'oil', 'olive oil', 'ketchup', 'mayonnaise', 'hummus', 'tahini', 'olive', 'cookie', 'biscuit', 'chocolate', 'snack', 'coffee', 'tea'],
-  'Frozen': ['frozen french fries', 'mozzarella sticks', 'frozen pizza', 'pizza', 'ice cream'],
+  'Frozen': ['frozen french fries', 'frozen pizza', 'pizza', 'ice cream'],
   'Drinks': ['water', 'soda water', 'juice', 'cola'],
   'Household': ['soap', 'toilet paper', 'shampoo', 'toothpaste', 'laundry detergent', 'batteries', 'dishwasher tablets'],
 };
