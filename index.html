@@ -354,7 +354,7 @@
 
   // "2026-10-08 · 12 items · 5 not bought"
   function orderLabel(o) {
-    return `${o.date} · ${o.items.length} items · ${notBoughtCount(o)} not bought`;
+    return `${o.date} · ${o.items.length} items${notBoughtCount(o) ? ` · ${notBoughtCount(o)} not bought` : ''}`;
   }
 
   function monthLabel(month) {
@@ -403,7 +403,7 @@
         const date = document.createElement('span');
         date.textContent = o.date;
         const count = document.createElement('small');
-        count.textContent = `${o.items.length} items · ${notBoughtCount(o)} not bought`;
+        count.textContent = `${o.items.length} items${notBoughtCount(o) ? ` · ${notBoughtCount(o)} not bought` : ''}`;
         b.replaceChildren(date, count);
         b.addEventListener('click', () => { view = o.id; render(); });
         return b;
@@ -521,7 +521,7 @@
       date.textContent = order.date;
       const meta = document.createElement('div');
       meta.className = 'order-meta';
-      meta.textContent = `${order.items.length} items · ${notBoughtCount(order)} not bought`;
+      meta.textContent = `${order.items.length} items${notBoughtCount(order) ? ` · ${notBoughtCount(order)} not bought` : ''}`;
       const actions = document.createElement('div');
       actions.className = 'order-actions';
       actions.append(copy, del);
