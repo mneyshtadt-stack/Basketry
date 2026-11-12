@@ -9,6 +9,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **baking soda** - Baking soda (owner's own photo), project owner, Owner's own photo
 - **banana** - [Cavendish banana from Maracaibo.jpg](https://commons.wikimedia.org/wiki/File:Cavendish_banana_from_Maracaibo.jpg) by Wilfredor, CC BY-SA 3.0
 - **batteries** - [Lithium-Ion Cell cylindric.JPG](https://commons.wikimedia.org/wiki/File:Lithium-Ion_Cell_cylindric.JPG) by RudolfSimon, CC BY-SA 3.0
+- **biscuit** - Biscuit (owner's own photo), project owner, Owner's own photo
 - **biscuits** - [Gurabija (гурабија,Qurabiya; Cuisine of Serbia).jpg](https://commons.wikimedia.org/wiki/File:Gurabija_(%D0%B3%D1%83%D1%80%D0%B0%D0%B1%D0%B8%D1%98%D0%B0,Qurabiya;_Cuisine_of_Serbia).jpg) by Petar Milošević, CC BY-SA 4.0
 - **bread** - [Fresh made bread 05.jpg](https://commons.wikimedia.org/wiki/File:Fresh_made_bread_05.jpg) by FranHogan, CC BY-SA 4.0
 - **butter** - [Butter Stick at BUTTER Art Fair.jpg](https://commons.wikimedia.org/wiki/File:Butter_Stick_at_BUTTER_Art_Fair.jpg) by Cerebral726, CC BY-SA 4.0
