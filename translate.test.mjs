@@ -175,3 +175,23 @@ test('pearl barley Hebrew label maps to English pearl barley', () => {
 test('pear Hebrew label maps to English pear', () => {
   assert.deepEqual(bilingual('אגס'), { name: 'pear', he: 'אגס' });
 });
+
+test('tomato paste Hebrew label maps to English tomato paste', () => {
+  assert.deepEqual(bilingual('רסק עגבניות'), { name: 'tomato paste', he: 'רסק עגבניות' });
+});
+
+test('raspberry syrup Hebrew label maps to English raspberry syrup', () => {
+  assert.deepEqual(bilingual("ויטמינצ'יק פטל"), { name: 'raspberry syrup', he: "ויטמינצ'יק פטל" });
+});
+
+test('corn thins Hebrew label maps to English corn thins', () => {
+  assert.deepEqual(bilingual('פריכיות תירס'), { name: 'corn thins', he: 'פריכיות תירס' });
+});
+
+test('raspberry Hebrew label maps to English raspberry', () => {
+  assert.deepEqual(bilingual('פטל'), { name: 'raspberry', he: 'פטל' });
+});
+
+test('sea bass Hebrew label maps to English sea bass fish', () => {
+  assert.deepEqual(bilingual('לברק'), { name: 'sea bass fish', he: 'לברק' });
+});

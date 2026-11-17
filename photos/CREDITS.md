@@ -101,7 +101,7 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **radish** - Radish (owner's own photo), project owner, Owner's own photo
 - **red cabbage** - Red cabbage (owner's own photo), project owner, Owner's own photo
 - **red onion** - Red onion (owner's own photo), project owner, Owner's own photo
-- **rice** - [Rice Grains .png](https://commons.wikimedia.org/wiki/File:Rice_Grains_.png) by Hpannu7, CC BY-SA 4.0
+- **rice** - Rice (owner's own photo), project owner, Owner's own photo
 - **romaine lettuce** - Romaine lettuce (owner's own photo), project owner, Owner's own photo
 - **salmon** - Salmon (owner's own photo), project owner, Owner's own photo
 - **salt** - [Marakkanam Salt Pans.JPG](https://commons.wikimedia.org/wiki/File:Marakkanam_Salt_Pans.JPG) by Dey.sandip, CC BY 3.0
@@ -132,6 +132,11 @@ This work was made by Masum-al-Hasan Rocky and released under the license(s) sta
 - **grated cheese** - Grated cheese (owner's own photo), project owner, Owner's own photo
 - **pearl barley** - Pearl barley (owner's own photo), project owner, Owner's own photo
 - **pear** - Pear (owner's own photo), project owner, Owner's own photo
+- **tomato paste** - Tomato paste (owner's own photo), project owner, Owner's own photo
+- **raspberry** - Raspberry (owner's own photo), project owner, Owner's own photo
+- **sea bass fish** - Sea bass fish (owner's own photo), project owner, Owner's own photo
+- **raspberry syrup** - Raspberry syrup (owner's own photo), project owner, Owner's own photo
+- **corn thins** - Corn thins (owner's own photo), project owner, Owner's own photo
 - **rice paper** - Rice paper (owner's own photo), project owner, Owner's own photo
 - **mushrooms** - Mushrooms (owner's own photo), project owner, Owner's own photo
 - **cup-a-soup** - Cup-a-Soup (owner's own photo), project owner, Owner's own photo

@@ -217,11 +217,11 @@
     "licence": "Owner's own photo"
   },
   "rice": {
-    "file": "rice.png",
-    "title": "Rice Grains .png",
-    "page": "https://commons.wikimedia.org/wiki/File:Rice_Grains_.png",
-    "artist": "Hpannu7",
-    "licence": "CC BY-SA 4.0"
+    "file": "rice-own.jpg",
+    "title": "Rice (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "pasta": {
     "file": "pasta.jpg",
@@ -275,6 +275,41 @@
   "frozen french fries": {
     "file": "frozen-french-fries-own.jpg",
     "title": "Frozen french fries (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "corn thins": {
+    "file": "corn-thins-own.jpg",
+    "title": "Corn thins (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "sea bass fish": {
+    "file": "sea-bass-own.jpg",
+    "title": "Sea bass fish (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "raspberry": {
+    "file": "raspberry-own.jpg",
+    "title": "Raspberry (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "raspberry syrup": {
+    "file": "raspberry-syrup-own.jpg",
+    "title": "Raspberry syrup (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "tomato paste": {
+    "file": "tomato-paste-own.jpg",
+    "title": "Tomato paste (owner's own photo)",
     "page": "",
     "artist": "project owner",
     "licence": "Owner's own photo"
