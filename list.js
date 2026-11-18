@@ -16,7 +16,7 @@ export function addItem(items, name, category = 'Other', qty = 1, he, by) {
   const cat = CATEGORIES.includes(category) ? category : 'Other';
   const hebrew = he ? { he: String(he).trim() } : {};
   const author = by ? { by: String(by).trim() } : {};
-  return [...items, { id, name: clean, qty: amount, category: cat, done: false, ...hebrew, ...author }];
+  return [...items, { id, name: clean, qty: amount, category: cat, done: false, ...hebrew, ...author, at: new Date().toISOString() }];
 }
 
 // "Potatoes [תפוחי אדמה]" when the Hebrew is known, otherwise just the name.

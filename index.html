@@ -61,7 +61,6 @@
     .bar #view { flex: 1 1 100%; }
     li { flex-wrap: wrap; gap: 8px; padding: 8px 4px 8px 10px; }
     .list-pic { width: 44px; height: 44px; }
-    .by { order: 5; flex: 1 0 100%; padding-left: 96px; margin-top: -6px; font-size: .75rem; white-space: normal; }
     .qty { padding: 3px 8px; }
     li button.ghost { padding: 0 6px; }
   }
@@ -108,7 +107,8 @@
   li.done .list-pic { opacity: .45; }
   .qty { color: var(--accent); background: var(--accent-soft); font-weight: 600; font-size: .85rem; border-radius: 999px; padding: 3px 10px; white-space: nowrap; font-variant-numeric: tabular-nums; }
   .qty input { width: 2.4em; border: 0; background: transparent; color: inherit; font: inherit; text-align: center; padding: 0; }
-  .by { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+  .txt { display: flex; flex-direction: column; min-width: 0; }
+  .by { color: var(--muted); font-size: .8rem; font-weight: 400; white-space: nowrap; }
   .empty { color: var(--fg); text-align: center; padding: 44px 16px; line-height: 1.5; }
   .empty small { display: block; margin-top: 6px; font-size: .9rem; color: var(--muted); }
   footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line); }
@@ -446,6 +446,16 @@
         const label = document.createElement('label');
         const span = document.createElement('span');
         span.textContent = displayName({ ...item, name: englishName(item) });
+        const txt = document.createElement('div');
+        txt.className = 'txt';
+        txt.append(span);
+        if (item.by) {
+          const by = document.createElement('span');
+          by.className = 'by';
+          const when = item.at ? new Date(item.at).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }) : '';
+          by.textContent = when ? `by ${item.by} · ${when}` : `by ${item.by}`;
+          txt.append(by);
+        }
         const icon = ICON_FOR[englishName(item).toLowerCase()];
         const pic = icon ? Object.assign(document.createElement('img'), { src: icon, alt: '', className: 'list-pic' }) : null;
         if (readOnly) {
@@ -453,13 +463,13 @@
           box.type = 'checkbox';
           box.checked = Boolean(item.done);
           box.disabled = true;
-          label.append(box, ...[pic, span].filter(Boolean));
+          label.append(box, ...[pic, txt].filter(Boolean));
         } else {
           const box = document.createElement('input');
           box.type = 'checkbox';
           box.checked = item.done;
           box.addEventListener('change', () => update(toggleItem(items, item.id)));
-          label.append(box, ...[pic, span].filter(Boolean));
+          label.append(box, ...[pic, txt].filter(Boolean));
         }
 
         const qty = document.createElement('span');
@@ -469,14 +479,7 @@
         amount.addEventListener('change', () => update(setQty(items, item.id, amount.value)));
         qty.append('× ', amount);
 
-        const extra = [];
-        if (item.by) {
-          const by = document.createElement('span');
-          by.className = 'by';
-          by.textContent = `by ${item.by}`;
-          extra.push(by);
-        }
-        li.append(label, ...extra, qty);
+        li.append(label, qty);
         if (!readOnly) {
           const del = document.createElement('button');
           del.className = 'ghost';

@@ -105,3 +105,10 @@ test('setQty changes one row and clamps to at least 1', () => {
   items = setQty(items, items[1].id, '0');
   assert.equal(items[1].qty, 1);
 });
+
+test('addItem stores when a new item was added', () => {
+  const before = Date.now();
+  const [item] = addItem([], 'Milk', 'Dairy & Eggs', 1, '', 'Dana');
+  assert.equal(item.by, 'Dana');
+  assert.ok(Date.parse(item.at) >= before);
+});

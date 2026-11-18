@@ -41,7 +41,7 @@ test('saveOrder stores a snapshot, newest first, keeping bought flags but not id
   items = addItem(items, 'Bread', 'Bakery');
   orders = saveOrder(orders, items, '2026-10-08');
   assert.deepEqual(orders.map(o => o.date), ['2026-10-08', '2026-10-01']);
-  assert.deepEqual(orders[1].items, [{ name: 'Milk', qty: 2, category: 'Dairy & Eggs', done: true }]);
+  assert.deepEqual(orders[1].items.map(({ at, ...rest }) => rest), [{ name: 'Milk', qty: 2, category: 'Dairy & Eggs', done: true }]);
 });
 
 test('later edits to the list do not change a saved order', () => {
