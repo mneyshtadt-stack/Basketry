@@ -286,6 +286,20 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "english breakfast tea": {
+    "file": "english-breakfast-tea-own.jpg",
+    "title": "English breakfast tea (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
+  "burrata cheese": {
+    "file": "burrata-cheese-own.jpg",
+    "title": "Burrata cheese (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "sea bass fish": {
     "file": "sea-bass-own.jpg",
     "title": "Sea bass fish (owner's own photo)",

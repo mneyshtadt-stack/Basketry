@@ -135,6 +135,8 @@ export const ICON_FOR = {
   'raspberry syrup': 'photos/raspberry-syrup-own.jpg',
   'raspberry': 'photos/raspberry-own.jpg',
   'sea bass fish': 'photos/sea-bass-own.jpg',
+  'burrata cheese': 'photos/burrata-cheese-own.jpg',
+  'english breakfast tea': 'photos/english-breakfast-tea-own.jpg',
   'corn thins': 'photos/corn-thins-own.jpg',
   'frozen french fries': 'photos/frozen-french-fries-own.jpg',
   'yellow onion': 'photos/yellow-onion-own.jpg',
