@@ -16,6 +16,8 @@ v1 with Firebase sync: the list and saved orders live in one Firestore document,
 - `orders.js` - saved orders: snapshot the list (`saveOrder`), find one, copy one back into the list (`copyOrderToList`).
 - `list.test.mjs`, `translate.test.mjs`, `orders.test.mjs` - unit tests (node:test).
 - `firestore.rules` - Firestore security rules. Paste into Firebase console → Firestore → Rules.
+- `functions/` - Firebase Cloud Function `fetchShufersalPrices` (region europe-west1). When you tap "Get Shufersal prices" on a saved order, it fetches prices for the bought items from openisraelisupermarkets.co.il (Shufersal only: chain code 7290027600007) and the page shows the total. `prices.js` holds `PRODUCT_MAP` (our English name -> product id, add entries to price more items) and the summary logic; `prices.test.mjs` tests it (`npm test` inside `functions/`). The API token is a Firebase secret named `OPEN_SUPERMARKETS_TOKEN`, never in the code or the page.
+- `firebase.json`, `.firebaserc` - Firebase project config (project `basketry-28d9d`). Deploy the function with `firebase deploy --only functions`; it needs the Blaze plan, `firebase login`, and the secret set once with `firebase functions:secrets:set OPEN_SUPERMARKETS_TOKEN`.
 - `index.html` - identical copy of `grocery.html`, so the GitHub Pages root opens the app. Copy `grocery.html` over it whenever the app changes (`cp grocery.html index.html`).
 - `sw.js` - service worker: network-first; the cached app shell is used only when offline.
 - `manifest.webmanifest` - PWA metadata (name, colours, standalone display, icons). Chrome needs a PNG icon of at least 192 px to offer install, so `icon-512.png` is listed first.

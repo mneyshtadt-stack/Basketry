@@ -1,0 +1,11 @@
+{
+  "name": "basketry-functions",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "engines": { "node": "22" },
+  "scripts": { "test": "node --test" },
+  "dependencies": {
+    "firebase-functions": "^6.3.2"
+  }
+}

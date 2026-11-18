@@ -174,6 +174,7 @@
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
   import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js';
   import { initializeFirestore, persistentLocalCache, doc, onSnapshot, setDoc } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js';
+  import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-functions.js';
 
   // Public project identifiers, not secrets. Access is controlled by the Firestore security rules.
   const firebaseConfig = {
@@ -186,6 +187,8 @@
   };
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+  // Shufersal price lookup; the API token lives on the server (see functions/).
+  const fetchPrices = httpsCallable(getFunctions(app, 'europe-west1'), 'fetchShufersalPrices');
   // Offline edits are kept on the phone and sent when the connection returns.
   const db = initializeFirestore(app, { localCache: persistentLocalCache() });
 
@@ -504,6 +507,23 @@
         view = '';
         render();
       });
+      const priceBtn = document.createElement('button');
+      priceBtn.type = 'button';
+      priceBtn.textContent = order.shufersal ? 'Refresh Shufersal prices' : 'Get Shufersal prices';
+      priceBtn.addEventListener('click', async () => {
+        priceBtn.disabled = true;
+        priceBtn.textContent = 'Getting prices…';
+        try {
+          const res = await fetchPrices({ names: order.items.filter(i => i.done).map(englishName) });
+          order.shufersal = res.data.prices;
+          persist();
+          render();
+        } catch (err) {
+          console.error('Price lookup failed', err);
+          priceBtn.disabled = false;
+          priceBtn.textContent = 'Price lookup failed, tap to retry';
+        }
+      });
       const del = document.createElement('button');
       del.type = 'button';
       del.className = 'ghost';
@@ -527,8 +547,15 @@
       meta.textContent = `${order.items.length} items${notBoughtCount(order) ? ` · ${notBoughtCount(order)} not bought` : ''}`;
       const actions = document.createElement('div');
       actions.className = 'order-actions';
-      actions.append(copy, del);
-      card.append(date, meta, actions);
+      actions.append(copy, priceBtn, del);
+      const pricesLine = document.createElement('div');
+      pricesLine.className = 'order-meta';
+      if (order.shufersal) {
+        const priced = order.items.filter(i => order.shufersal[englishName(i).toLowerCase()]?.found);
+        const total = priced.reduce((sum, i) => sum + order.shufersal[englishName(i).toLowerCase()].avg * i.qty, 0);
+        pricesLine.textContent = priced.length ? `Shufersal: ₪${total.toFixed(2)} for ${priced.length} of ${order.items.length} items` : 'Shufersal: no prices found for these items';
+      }
+      card.append(date, meta, pricesLine, actions);
       listEl.prepend(card);
       countEl.textContent = orderLabel(order);
     } else {
