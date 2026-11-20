@@ -54,7 +54,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **white cheese** - White cheese (owner's own photo), project owner, Owner's own photo
 - **cucumber** - [Cucumber Slices (Alabama Extension).jpg](https://commons.wikimedia.org/wiki/File:Cucumber_Slices_(Alabama_Extension).jpg) by Alabama Extension, CC0
 - **dill** - [Aneth FR 2012.jpg](https://commons.wikimedia.org/wiki/File:Aneth_FR_2012.jpg) by JLPC, CC BY-SA 3.0
-- **dishwasher tablets** - Dishwasher tablets (owner's own photo), project owner, Owner's own photo
+- **dishwasher pods** - Dishwasher pods (owner's own photo), project owner, Owner's own photo
 - **egg** - Eggs (owner's own photo), project owner, Owner's own photo
 - **eggs** - Eggs (owner's own photo), project owner, Owner's own photo
 - **flour** - Flour (owner's own photo), project owner, Owner's own photo
