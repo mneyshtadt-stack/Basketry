@@ -109,6 +109,7 @@
   .qty input { width: 2.4em; border: 0; background: transparent; color: inherit; font: inherit; text-align: center; padding: 0; }
   .txt { display: flex; flex-direction: column; min-width: 0; }
   .by { color: var(--muted); font-size: .8rem; font-weight: 400; white-space: nowrap; }
+  .nb { color: #b3261e; font-size: .8rem; font-weight: 600; }
   .empty { color: var(--fg); text-align: center; padding: 44px 16px; line-height: 1.5; }
   .empty small { display: block; margin-top: 6px; font-size: .9rem; color: var(--muted); }
   footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line); }
@@ -463,6 +464,9 @@
           const when = item.at ? new Date(item.at).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }) : '';
           by.textContent = when ? `by ${item.by} · ${when}` : `by ${item.by}`;
           txt.append(by);
+        }
+        if (readOnly && !item.done) {
+          txt.append(Object.assign(document.createElement('span'), { className: 'nb', textContent: 'not bought' }));
         }
         const icon = ICON_FOR[englishName(item).toLowerCase()];
         const pic = icon ? Object.assign(document.createElement('img'), { src: icon, alt: '', className: 'list-pic' }) : null;
