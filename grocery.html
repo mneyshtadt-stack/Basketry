@@ -462,7 +462,8 @@
 
         const label = document.createElement('label');
         const span = document.createElement('span');
-        span.textContent = displayName({ ...item, name: englishName(item) });
+        const en = englishName(item);
+        span.textContent = displayName({ ...item, name: en, he: hebrewOf(en) || item.he });
         const txt = document.createElement('div');
         txt.className = 'txt';
         txt.append(span);
