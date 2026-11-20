@@ -231,11 +231,11 @@
     "licence": "CC BY-SA 4.0"
   },
   "flour": {
-    "file": "flour.jpg",
-    "title": "Home made sour dough bread.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Home_made_sour_dough_bread.jpg",
-    "artist": "Tomascastelazo",
-    "licence": "CC BY-SA 4.0"
+    "file": "flour-own.jpg",
+    "title": "Flour (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
   },
   "salt": {
     "file": "salt.jpg",

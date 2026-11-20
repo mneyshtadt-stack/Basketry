@@ -36,12 +36,13 @@
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
   .bar { display: flex; gap: 8px; margin-bottom: 10px; }
   #save-order { background: var(--accent-soft); color: var(--accent); border-color: transparent; white-space: nowrap; }
-  .add-row { display: grid; grid-template-columns: auto minmax(0, 1fr) 40px auto; gap: 8px; }
+  .add-row { display: grid; grid-template-columns: auto minmax(0, 1fr) 40px; gap: 8px; }
   .add-row select { flex: none; width: auto; max-width: 140px; }
-  .add-row input[name="name"] { flex: none; width: 100%; font-weight: 600; }
+  .add-row .pill { grid-column: 2; display: flex; align-items: center; gap: 6px; min-width: 0; background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: 4px 4px 4px 14px; }
+  .add-row input[name="name"] { flex: 1; min-width: 0; width: auto; border: 0; background: transparent; box-shadow: none; padding: 0; font-weight: 600; }
   .add-row input[name="name"]::placeholder { font-weight: 700; color: var(--accent); opacity: 1; }
   .add-row input[name="qty"] { width: 40px; padding: 0 4px; text-align: center; }
-  .add-row button { padding: 0 16px; }
+  .add-row .pill button { flex: none; width: 44px; height: 44px; min-height: 0; padding: 0; border-radius: 50%; font-size: 1.6rem; line-height: 1; }
   .add-wrap { position: relative; margin-bottom: 14px; }
   #join { flex-wrap: wrap; }
   .join-title { flex-basis: 100%; margin: 4px 0 0; font-size: 1.3rem; font-weight: 700; }
@@ -63,6 +64,11 @@
     .list-pic { width: 44px; height: 44px; }
     .qty { padding: 3px 8px; }
     li button.ghost { padding: 0 6px; }
+    .add-row { grid-template-columns: minmax(0, 1fr) 72px; }
+    .add-row select { grid-row: 1; grid-column: 1; max-width: none; width: 100%; min-height: 48px; }
+    .add-row input[name="qty"] { grid-row: 1; grid-column: 2; width: 100%; min-height: 48px; font-size: 1.05rem; }
+    .add-row .pill { grid-row: 2; grid-column: 1 / -1; min-height: 56px; }
+    .add-row input[name="name"] { font-size: 1.1rem; }
   }
   aside.side { display: none; }
   @media (min-width: 900px) {
@@ -154,9 +160,11 @@
   <div class="add-wrap">
   <form id="add" class="add-row" hidden>
     <select id="group" aria-label="Choose a group"></select>
-    <input name="name" dir="auto" placeholder="Add an item" aria-label="Add an item (Hebrew or English)" autocomplete="off" required>
+    <div class="pill">
+      <input name="name" dir="auto" placeholder="Search or add an item" aria-label="Search or add an item (Hebrew or English)" autocomplete="off" required>
+      <button type="submit" aria-label="Add item">+</button>
+    </div>
     <input name="qty" type="number" min="1" value="1" aria-label="Quantity">
-    <button type="submit">Add</button>
   </form>
     <div id="suggest" class="suggest" hidden></div>
   </div>
