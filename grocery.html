@@ -607,7 +607,7 @@
   });
 
   saveBtn.addEventListener('click', () => {
-    orders = saveOrder(orders, items.filter(i => i.done));  // only bought items go into the order
+    orders = saveOrder(orders, items);  // every item is recorded; unbought ones show a "not bought" tag
     items = clearDone(items);  // unbought items carry over to the new list
     persist();
     render();
