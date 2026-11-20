@@ -203,3 +203,7 @@ test('burrata Hebrew label maps to English burrata cheese', () => {
 test('English breakfast tea Hebrew label maps to English breakfast tea', () => {
   assert.deepEqual(bilingual('תה אינגליש ברקפסט'), { name: 'english breakfast tea', he: 'תה אינגליש ברקפסט' });
 });
+
+test('small challah Hebrew label maps to English small challah', () => {
+  assert.deepEqual(bilingual('חלה קטנה'), { name: 'small challah', he: 'חלה קטנה' });
+});

@@ -31,6 +31,7 @@ export const ICON_FOR = {
   'romaine lettuce': 'photos/romaine-own.jpg',
   'radish': 'photos/radish-own.jpg',
   'challah bread': 'photos/challah-own.jpg',
+  'small challah': 'photos/small-challah-own.jpg',
   'lactose-free milk': 'photos/lactose-free-milk-own.jpg',
   'peach': 'photos/peach-own.jpg',
   'peaches': 'photos/peach-own.jpg',
