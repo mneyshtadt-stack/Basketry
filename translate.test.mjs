@@ -147,6 +147,7 @@ test('celery Hebrew label maps to English celery and back', () => {
   assert.deepEqual(bilingual('סלרי'), { name: 'celery', he: 'סלרי' });
   assert.equal(hebrewOf('celery'), 'סלרי');
   assert.equal(hebrewOf('Dishwasher pods'), 'קפסולות למדיח');
+  assert.equal(bilingual('רוטב צ\'ילי מתוק').name, 'sweet chili sauce');
 });
 
 test('mixed nuts Hebrew label maps to English mixed nuts', () => {

@@ -783,6 +783,13 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "sweet chili sauce": {
+    "file": "sweet-chili-sauce-own.jpg",
+    "title": "Sweet chili sauce (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "grapes": {
     "file": "grapes-own.jpg",
     "title": "Grapes (owner's own photo)",

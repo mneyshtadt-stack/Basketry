@@ -39,6 +39,7 @@ Photos from Wikimedia Commons, each used under the licence listed. Images were r
 - **chicken drumsticks** - Chicken drumsticks (owner's own photo), project owner, Owner's own photo
 - **chicken leg quarters** - Chicken leg quarters (owner's own photo), project owner, Owner's own photo
 - **chili pepper** - Chili pepper (owner's own photo), project owner, Owner's own photo
+- **sweet chili sauce** - Sweet chili sauce (owner's own photo), project owner, Owner's own photo
 - **chocolate** - [Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg](https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg) by Daria YakovlevaMinor edits made by Subsidiary account, CC0
 - **clementine** - Clementines (owner's own photo), project owner, Owner's own photo
 - **clupeidae** - Clupeidae / sardines (owner's own photo), project owner, Owner's own photo
