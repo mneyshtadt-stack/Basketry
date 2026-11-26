@@ -12,7 +12,7 @@ export const HE_TO_EN = {
   'חסה': 'lettuce', 'חסה ערבית': 'romaine lettuce', 'חסה אייסברג': 'iceberg lettuce', 'פלפל': 'pepper', 'פלפל חריף': 'chili pepper', 'אבוקדו': 'avocado', 'משמש': 'apricot',
   'משמשים': 'apricot', 'מישמש': 'apricot', 'תות': 'strawberry', 'ענבים': 'grapes',
   'תותים': 'strawberry', 'תירס': 'corn', 'פטרוזיליה': 'parsley', 'כוסברה': 'coriander',
-  'שמיר': 'dill', 'בשר': 'meat', 'סטייק': 'steak', 'עוף': 'chicken', 'נקניקיות': 'sausage',
+  'שמיר': 'dill', 'בשר': 'meat', 'סטייק': 'steak', 'סלק': 'beet','עוף': 'chicken', 'נקניקיות': 'sausage',
   'אורז': 'rice', 'פסטה': 'pasta', 'קמח': 'flour', 'סוכר': 'sugar', 'מלח': 'salt',
   'שמן': 'oil', 'שמן זית': 'olive oil', 'קפה': 'coffee', 'תה': 'tea', 'מים': 'water',
   'מיץ': 'juice', 'סודה': 'soda water', 'ריגטוני': 'rigatoni pasta', 'ברוקולי': 'broccoli', 'תערובת אגוזים': 'mixed nuts', 'אצבעות מוצרלה': 'mozzarella sticks', 'אגס': 'pear', 'שוקולד חלב': 'milk chocolate', 'שמנת מתוקה': 'whipping cream', 'גבינה מגורדת': 'grated cheese', 'גריסי פנינה': 'pearl barley', 'רסק עגבניות': 'tomato paste', 'ויטמינצ\'יק פטל': 'raspberry syrup', 'פריכיות תירס': 'corn thins', 'פטל': 'raspberry', 'לברק': 'sea bass fish', 'גבינת בוראטה': 'burrata cheese', 'תה אינגליש ברקפסט': 'english breakfast tea', 'חלה קטנה': 'small challah', 'כרובית': 'cauliflower', 'דניס': 'dorade fish', 'אשכולית': 'grapefruit', 'שקדי מרק': 'soup croutons', 'צ\'יפס קפוא': 'frozen french fries', 'אצות': 'sushi nori', 'דפי אורז': 'rice paper', 'פתריות': 'mushrooms', 'פטריות': 'mushrooms', 'נמס בכוס מרק': 'cup-a-soup', 'קולה': 'cola', 'עוגיות': 'cookie', 'ביסקוויטים': 'biscuit',
@@ -60,7 +60,7 @@ export function translateItem(name) {
 // Product group for each English name; used to file items and to filter the list.
 export const GROUP_FOR = {
   'Fruits': ['grapefruit', 'pear', 'raspberry', 'apple', 'banana', 'orange', 'lemon', 'clementine', 'apricot', 'strawberry', 'grapes', 'peach', 'plum', 'avocado', 'kiwi', 'pomegranate'],
-  'Vegetables': ['mushrooms', 'broccoli', 'cauliflower', 'tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'celery', 'celery hearts', 'ginger', 'courgette', 'zucchini', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
+  'Vegetables': ['mushrooms', 'broccoli', 'cauliflower', 'tomato', 'cherry tomato', 'cucumber', 'onion', 'red onion', 'green onion', 'garlic', 'potato', 'sweet potato', 'carrot', 'radish', 'beet', 'celery', 'celery hearts', 'ginger', 'courgette', 'zucchini', 'lettuce', 'romaine lettuce', 'iceberg lettuce', 'pepper', 'chili pepper', 'corn', 'parsley', 'coriander', 'dill', 'white cabbage', 'red cabbage'],
   'Dairy & Eggs': ['milk', 'soy milk', 'lactose-free milk', 'egg', 'cheese', 'grated cheese', 'mozzarella sticks', 'burrata cheese', 'parmesan', 'cream cheese', 'whipping cream', 'white cheese', 'feta sheep cheese', 'cottage', 'yogurt', 'butter', 'cream', 'cooking cream'],
   'Meat & Fish': ['barramundi fish', 'dorade fish', 'sea bass fish', 'mackerel', 'chicken liver', 'beef liver', 'meat', 'ground meat', 'steak', 'chicken','chicken breast', 'chicken drumsticks', 'chicken leg quarters', 'turkey breast', 'salmon', 'smoked salmon', 'tuna', 'clupeidae', 'sausage'],
   'Bakery': ['bread', 'challah bread', 'small challah', 'pita', 'baguette', 'spelt bread'],

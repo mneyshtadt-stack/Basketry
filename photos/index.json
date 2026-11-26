@@ -797,6 +797,13 @@
     "artist": "project owner",
     "licence": "Owner's own photo"
   },
+  "beet": {
+    "file": "beet-own.jpg",
+    "title": "Beet (owner's own photo)",
+    "page": "",
+    "artist": "project owner",
+    "licence": "Owner's own photo"
+  },
   "grapes": {
     "file": "grapes-own.jpg",
     "title": "Grapes (owner's own photo)",

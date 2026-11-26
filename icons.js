@@ -28,6 +28,7 @@ export const ICON_FOR = {
   'chili pepper': 'photos/chili-pepper-own.jpg',
   'sweet chili sauce': 'photos/sweet-chili-sauce-own.jpg',
   'steak': 'photos/steak-own.jpg',
+  'beet': 'photos/beet-own.jpg',
   'cherry tomato': 'photos/cherry-tomato-own.jpg',
   'iceberg lettuce': 'photos/iceberg-own.jpg',
   'romaine lettuce': 'photos/romaine-own.jpg',
